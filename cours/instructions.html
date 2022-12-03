@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr-ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="./favicon.ico">
+        <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+        <title>Quantum Aquarium - Instructions</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css?family=Roboto");
+            *{margin:0;padding:0;box-sizing:border-box}body{height:100%;background:linear-gradient(to bottom,#02ffff 15%,#01b6e5);background-repeat:repeat-x;font-family:Roboto;font-size:24px;color:#555;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#logo{margin-left:auto;margin-right:auto;width:1060px;height:338px;background-image:url(./images/logo.png),url(./images/flair.png);background-repeat:no-repeat;background-position:center}#copyright{margin-left:auto;margin-right:auto;width:400px;font-size:18px;height:80px;text-align:center}#instructions{margin-left:auto;margin-right:auto;margin-top:-100px;margin-bottom:100px;width:1060px;display:flex;flex-direction:column;line-height:24px}#instructions .instruction{padding:12px 12px 12px 12px;cursor:pointer}#instructions .instruction:nth-child(odd){background-color:#02ffff}#instructions .instruction:hover{background-color:#01b4bb;transition-duration:250ms;color:#000}#instructions .instruction.check{color:#fff;background-color:#01b4bb}#instructions .instruction.check .text{text-decoration:line-through}#instructions .instruction.check .fish::after{content:" 🐟"}
+        </style>
+    </head>
+    <body>
+        <div id="logo"></div>
+        <div id="instructions">
+            <instruction v-for="instruction in instructions" ref="instructions" :num="instruction.num" :checked="instruction.check" :text="instruction.text" @changed="changed()">
+        </div>
+        <div id="copyright">Copyright (c) 2022 Maxime Larrivée-Roy<br>Collège Montmorency</div>
+        <script>
+            const text = `
+                Le nombre de poissons de chaque couleur ainsi que le nombre de poissons morts doivent être affiché dans le header.
+                Le nombre de bulles doit être configurable par la propriété "nbbubble" de l'app.
+                Le nombre de poissons doit être configurable par la propriété "nbfish" de l'app.
+                Utilisez l'attribut "ref" sur la composante "fish" afin de pouvoir y accèder par l'app ultérieurement.
+                Lorsqu'un poisson est initialisé, il doit émettre l'évènement "ready" et appeller la méthode "alive()" pour démarrer son cycle de vie.
+                L'évènement "ready" du poisson doit être capté par l'app et appeller la méthode "fishready()" avec l'index du poisson.
+                Dans la méthode "fishready()", incrémentez la propriété correspondant à la couleur du poisson. (Nombre total de poissons <couleur>)
+                Lorsqu'appellée, la méthode "alive()" de la composante fish doit démarrer un timer aléatoire entre 10 et 30 secondes. Ce timer doit appeller la méthode "starve()". Utilisez la propriété "timerstarve" pour sauvegarder le timer. Il détermine le temps avant que le poisson ait faim.
+                Lorsqu'appellée, la méthode "starving()" de la composante fish doit à son tour démarrer un timer aléatoire entre 5 et 15 secondes. Ce timer doit appeller la méthode "die()". Utilisez la propriété "timerdie" Pour sauvegarder le timer. Il détermine le temps avant que le poisson meurt de faim.
+                Lorsqu'appellée, la méthode "die()" doit émettre l'évènement "died" et appliquer le style "display: none;" au container du poisson (this.container). Étant donné que le poisson prend 1 seconde à mourir, vous devez utilisez un timer afin de créer un délai pour envoyer l'évènement et appliquer le style.
+                L'évènement "died" du poisson doit être capté par l'app et appeller la méthode "fishdied()" avec l'index du poisson.
+                Dans la méthode "fishdied()", décrémentez la propriété correspondant à la couleur du poisson. (Nombre total de poissons <couleur>)
+                Toujours dans la méthode "fishdied()", incrémentez la propriété "this.dead" (Nombre de poissons morts) afin de garder le compte dans le header.
+                Toujours dans la méthode "fishdied()", lorsque "this.dead" atteind la valeur correspondant au nombre total de poisson (this.nbfish) celà signifie que la partie est terminée. Vous devez donc appeller la méthode "gameover()".
+                Lorsque la partie se termine, l'aquarium tourne au rouge et une tête de mort s'affiche. Faites en sorte que lorsque l'on clique sur la tête de mort (div id="skull"), la méthode "retry()" de l'app soit appellée.
+                Il est maintenant temps de nourir les poissons. Dans le template de la composante "fish", faites en sorte que lorsque l'on clique sur le poisson (div id="fish_{num}"), la méthode "feed()" du poisson soit appellée.
+                Dans la méthode "feed()" de la composante "fish", si l'état du poisson est "alive" (en santé), annulez le timer "timerstarve" et appellez la méthode "die()".
+                Toujours dans la méthode "feed()" de la composante "fish", si l'état du poisson est "starving" (affamé), annulez le timer "timerdie" et appellez la méthode "alive()" afin de réinitialiser l'état du poisson.
+                Renommez votre dossier de travail  au format suivant: [nom de famille]_[prénom].
+                Zippez votre dossier et joignez-le au Devoir "Examen Quantum Aquarium" dans Teams.
+            `;
+            app=Vue.createApp({data(){var instructions=[],cookieValue=localStorage.getItem("quantum.aquarium.instructions.checked"),checks="string"==typeof cookieValue?cookieValue.split(","):[];return text.trim().split("\n").forEach((str,idx)=>{instructions.push({num:idx+1,check:checks.includes(String(idx+1)),text:str.trim()})}),{instructions:instructions}},methods:{changed(){var checked=[];this.$refs.instructions.forEach(elm=>{elm.check&&checked.push(elm.num)}),localStorage.setItem("quantum.aquarium.instructions.checked",checked.join(","))}}});app.component("instruction",{props:["num","text","checked"],data:()=>({check:!1,div:null}),created(){this.checked&&(this.check=!0),this.$nextTick(()=>{this.div=document.getElementById("instruction_"+this.num),this.check&&this.checkDiv()})},methods:{uncheckDiv(){this.div.classList.remove("check"),this.check=!1},checkDiv(){this.div.classList.add("check"),this.check=!0},checkClick(event){this.check?this.uncheckDiv():this.checkDiv(),this.$emit("changed")}},template:'\n    <div :id="\'instruction_\'+num" class="instruction" @click="checkClick($event)">\n        <span class="text"><strong>{{ num }}.</strong> {{ text }}</span><span class="fish"></span>\n    </div>'}),app.mount("#instructions");
+        </script>
+    </body>
+</html>
