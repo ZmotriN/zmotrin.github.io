@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr-ca">
+    <head>
+        <script>
+            const project = 'interactivite-web.bacon';
+            const steps = `
+                Bacon ipsum dolor amet sirloin shoulder ground round, meatball pig biltong picanha pancetta swine ribeye turkey doner buffalo boudin.
+                Rump chuck cupim, jerky cow flank swine shankle capicola ground round turkey burgdoggen buffalo tongue.
+                Boudin fatback shank tail bacon drumstick sausage, tongue short loin. Boudin shoulder ball tip t-bone kevin landjaeger.
+                Tenderloin pork chop beef venison chuck pork kevin shankle meatball.
+                Tail boudin short loin shoulder hamburger chislic prosciutto turkey beef tongue t-bone pastrami swine spare ribs.
+                Prosciutto pastrami shankle tri-tip, pork loin tail venison short ribs chislic cupim tongue beef sirloin ham hock.
+                Venison tongue pig rump pork chop frankfurter ham hock. Shank ham hock pastrami filet mignon.
+                Tenderloin tongue buffalo, pork chop pig chuck pork ball tip pork loin pancetta turducken beef jowl sirloin ham.
+                Rump kielbasa andouille salami, pastrami doner flank pork belly sausage biltong brisket frankfurter jerky.
+                Short loin shoulder sausage pork belly pastrami pork jowl, salami chislic strip steak cupim bresaola buffalo pork loin.
+                Chicken turducken pork loin shankle pastrami chislic jowl drumstick.
+            `;
+        </script>
+        <title>Instructions</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="https://www.cmontmorency.qc.ca/wp-content/themes/axial/images/favicon.ico">
+        <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+        <style>@import url(https://fonts.googleapis.com/css?family=Roboto);*{margin:0;padding:0;box-sizing:border-box}body{height:100%;background:linear-gradient(to bottom,#dadada,#fff);background-repeat:repeat-x;font-family:Roboto;font-size:20px;line-height:20px;color:#555;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#logo{margin-left:auto;margin-right:auto;width:1060px;height:250px;background-image:url(https://www.cmontmorency.qc.ca/wp-content/uploads/2018/03/Logomo_1400.png);background-size:contain;background-repeat:no-repeat;background-position:center}#copyright{width:600px;margin-left:auto;margin-right:auto;margin-top:60px;font-size:18px;text-align:center;height:80px}#instructions{margin-left:auto;margin-right:auto;margin-top:20px;width:1060px;display:flex;flex-direction:column;line-height:24px}#instructions .instruction{padding:12px 12px 12px 12px;cursor:pointer}#instructions .instruction:nth-child(odd){background-color:#fff}#instructions .instruction:hover{background-color:#b3c000;transition-duration:250ms;color:#000}#instructions .instruction.check{color:#fff;background-color:#b3c000}#instructions .instruction.check .text{text-decoration:line-through}#instructions .instruction.check .fish::after{content:" ✓"}</style>
+    </head>
+    <body>
+        <div id="logo"></div>
+        <div id="instructions">
+            <instruction
+                v-for="instruction in instructions"
+                ref="instructions"
+                :num="instruction.num"
+                :checked="instruction.check"
+                :text="instruction.text"
+                @changed="changed()"
+            >
+        </div>
+        <div id="copyright">Copyright (c) 2022 Collège Montmorency<br>Techniques d'intégration multimédia</div>
+        <script>app=Vue.createApp({data(){var instructions=[],cookieValue=localStorage.getItem(project+".instructions.checked"),checks="string"==typeof cookieValue?cookieValue.split(","):[];return steps.trim().split("\n").forEach((str,idx)=>{instructions.push({num:idx+1,check:checks.includes(String(idx+1)),text:str.trim()})}),{instructions:instructions}},methods:{changed(){var checked=[];this.$refs.instructions.forEach(elm=>{elm.check&&checked.push(elm.num)}),localStorage.setItem(project+".instructions.checked",checked.join(","))}}});app.component("instruction",{props:["num","text","checked"],data:()=>({check:!1,div:null}),created(){this.checked&&(this.check=!0),this.$nextTick(()=>{this.div=document.getElementById("instruction_"+this.num),this.check&&this.checkDiv()})},methods:{uncheckDiv(){this.div.classList.remove("check"),this.check=!1},checkDiv(){this.div.classList.add("check"),this.check=!0},checkClick(event){this.check?this.uncheckDiv():this.checkDiv(),this.$emit("changed")}},template:'\n    <div :id="\'instruction_\'+num" class="instruction" @click="checkClick($event)">\n        <span class="text"><strong>{{ num }}.</strong> {{ text }}</span><span class="fish"></span>\n    </div>'}),app.mount("#instructions");</script>
+    </body>
+</html>
