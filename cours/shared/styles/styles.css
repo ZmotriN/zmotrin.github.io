@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Rubik");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +14,15 @@ body {
   padding-bottom: 100px;
   font-family: Rubik;
   font-size: 18px;
+}
+body span.inline-code {
+  font-family: Consolas, Inconsolata;
+  background-color: rgb(209, 204, 204);
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 16px;
 }
 body a {
   color: black;
@@ -69,27 +79,26 @@ body footer {
 }
 body footer #copyright {
   padding-top: 40px;
+  font-size: 16px;
 }
 body #contents {
   width: 770px;
 }
+body #contents ul {
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+body #contents ul li {
+  margin-top: 10px;
+}
 body #contents p {
   padding-left: 25px;
   padding-right: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   line-height: 28px;
 }
 body #contents p:before {
   content: "        ";
-}
-body #contents p span.inline-code {
-  font-family: Consolas;
-  background-color: rgb(209, 204, 204);
-  padding-left: 6px;
-  padding-right: 6px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  font-size: 16px;
 }
 body #contents div.title {
   display: flex;
@@ -132,6 +141,11 @@ body #contents div.title div.chain.copied {
 body #contents div.title div.chain.copied + div {
   opacity: 100%;
   transition-duration: 200ms;
+}
+body #contents iframe.codepen {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 25px;
 }
 body #contents_table {
   position: fixed;

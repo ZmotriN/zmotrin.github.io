@@ -76,6 +76,30 @@ app.component('tabledesmatieres', {
 
 
 
+app.component('codepen', {
+    props: ['id', 'title'],
+    data() {
+        return {
+            user: 'ZmotriN',
+            theme: 'light',
+            // theme: '39618',
+        }
+    },
+    template: `
+        <iframe
+            class="codepen"
+            title="Flex-direction"
+            scrolling="no"
+            :src="'https://codepen.io/' + user + '/embed/' + id + '?default-tab=html%2Cresult&theme-id=' + theme"
+            frameborder="no"
+            loading="lazy"
+            allowtransparency="true"
+            allowfullscreen="true"
+        ></iframe>
+    `
+});
+
+
 
 
 
