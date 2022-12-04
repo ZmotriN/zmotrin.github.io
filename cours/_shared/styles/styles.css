@@ -1,0 +1,138 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Rubik");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, #ffc5c5, 20%, #ffffff);
+  background-repeat: repeat-x;
+  padding-bottom: 100px;
+  font-family: Rubik;
+  font-size: 18px;
+}
+body a {
+  color: black;
+  text-decoration: none;
+  background-image: linear-gradient(0deg, #ff003a, #ff003a);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 20%;
+}
+body a:hover {
+  background-size: 100% 100%;
+  background-position: top;
+  transition-duration: 200ms;
+}
+body header {
+  position: fixed;
+  height: 200px;
+  width: 250px;
+}
+body header #logo {
+  position: relative;
+  top: 60px;
+  width: 250px;
+  height: 80px;
+  background-image: url("/cours/_shared/images/tim-logo.png");
+}
+body #subhead {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 56px;
+}
+body #subhead #breadcrumb {
+  font-size: 24px;
+}
+body #subhead #title {
+  font-size: 60px;
+}
+body article {
+  width: 1070px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100%;
+  min-height: calc(100vh - 200px - 100px - 40px);
+  margin-top: 40px;
+}
+body footer {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #ffc5c5, 50%, #ffffff);
+}
+body #contents {
+  width: 770px;
+}
+body #contents p {
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 50px;
+}
+body #contents p:before {
+  content: "        ";
+}
+body #contents div.title {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+body #contents div.title h1 {
+  font-size: 36px;
+  vertical-align: middle;
+  margin-right: 25px;
+}
+body #contents div.title div.linkcopied {
+  line-height: 36px;
+  margin-left: 20px;
+  opacity: 0%;
+}
+body #contents div.title div.chain {
+  transition-duration: 200ms;
+  height: 36px;
+  width: 36px;
+  padding: 4px;
+  text-align: center;
+  vertical-align: center;
+  border-radius: 50%;
+  display: inline;
+  background-color: #ffc5c5;
+}
+body #contents div.title div.chain:hover {
+  cursor: pointer;
+  transform: rotate(-180deg);
+  transition-duration: 200ms;
+  background-color: #fa6b6b;
+}
+body #contents div.title div.chain.copied {
+  background-color: rgb(131, 255, 115);
+  transform: rotate(-360deg);
+}
+body #contents div.title div.chain.copied + div {
+  opacity: 100%;
+  transition-duration: 200ms;
+}
+body #contents_table {
+  position: fixed;
+  margin-left: 820px;
+  width: 250px;
+  text-align: right;
+}
+body #contents_table .contents_table__table {
+  padding-top: 20px;
+}
+body #contents_table .contents_table__table strong {
+  text-decoration: underline;
+}
+body #contents_table .contents_table__table li {
+  margin: 10px 0;
+  list-style-type: none;
+}/*# sourceMappingURL=styles.css.map */
