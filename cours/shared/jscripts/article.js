@@ -25,9 +25,6 @@ app.component('grostitre', {
     },
     created() {
         this.$root.addToTableOfContents(this.id, this.name)
-        // this.$nextTick(() => {
-            
-        // });
     },
 
     methods: {
@@ -61,17 +58,9 @@ app.component('tabledesmatieres', {
     },
     created() {
         this.$nextTick(() => {
-            // console.log(this.$root.tableOfContents);
-            // this.$root.$refs.grostitre.map(element => {
-            //     console.log(element);
-            // });
-            // this.list = '<li><a href="#grostitre">Gros titre</a></li>';
             let lis = '';
-            this.$root.tableOfContents.forEach(el => {
-                lis += '<li><a href="#' + el.id + '">' + el.name + '</a></li>';
-            });
+            this.$root.tableOfContents.forEach(el => { lis += '<li><a href="#' + el.id + '">' + el.name + '</a></li>'; });
             this.list = lis;
-
         });
     },
     methods: {
