@@ -37,7 +37,7 @@ body header #logo {
   top: 60px;
   width: 250px;
   height: 80px;
-  background-image: url("/cours/_shared/images/tim-logo.png");
+  background-image: url("/cours/shared/images/tim-logo.png");
 }
 body #subhead {
   background-color: rgba(0, 0, 0, 0.1);
