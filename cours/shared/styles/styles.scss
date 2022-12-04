@@ -44,7 +44,6 @@ body {
     font-family: Rubik;
     font-size: 18px;
 
-
     a {
         color: black;
         text-decoration: none;
@@ -52,7 +51,6 @@ body {
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: 100% 20%;
-        // transition-duration: 200ms;
 
         &:hover {
             background-size: 100% 100%;
@@ -63,6 +61,7 @@ body {
 
 
     header {
+        margin-left: 60px;
         position: fixed;
         height: 200px;
         width: 250px;
@@ -74,7 +73,7 @@ body {
             width: 250px;
             height: 80px;
             // background-color: red;
-            background-image: url("/cours/_shared/images/tim-logo.png");
+            background-image: url("/cours/shared/images/tim-logo.png");
         }
             
     }
@@ -115,6 +114,12 @@ body {
         width: 100%;
         height: $footer_height;
         background: linear-gradient(to top, #ffc5c5, 50%, #ffffff);
+        text-align: center;
+
+        #copyright {
+            padding-top: 40px;
+            // background-color: red;
+        }
     
     }
 
@@ -142,30 +147,22 @@ body {
             padding-right: 25px;
 
             h1 {
-
-
                 font-size: 36px;
                 vertical-align: middle;
                 margin-right: 25px;
-
             }
-
 
             div.linkcopied {
                 line-height: 36px;
                 margin-left: 20px;
                 opacity: 0%;
-              }
-
+            }
 
             div.chain {
                 transition-duration: 200ms;
-                // margin-left: 25px;
-                
                 height: 36px;
                 width: 36px;
                 padding: 4px;
-                // font-size: 24px;
                 text-align: center;
                 vertical-align: center;
                 border-radius: 50%;
@@ -183,11 +180,9 @@ body {
                     background-color: rgb(131, 255, 115);
                     transform: rotate(-360deg);
 
-
                     & + div {
                         opacity: 100%;
                         transition-duration: 200ms;
-                        
                     }
 
                 }
@@ -213,13 +208,11 @@ body {
         .contents_table__table {
             // background-color: rgba(255, 0, 0, 20%);
             padding-top: 20px;
-            strong {
-                text-decoration: underline;
-            }
 
             li {
-                margin: 10px 0;
+                margin-top: 10px;
                 list-style-type: none;
+                font-size: 16px;
             }
         }
 

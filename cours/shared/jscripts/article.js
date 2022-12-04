@@ -10,7 +10,6 @@ const app = Vue.createApp({
                 id: id,
                 name: name,
             });
-            // console.log(id + " "+name);
         },
     }
 });
@@ -50,7 +49,6 @@ app.component('grostitre', {
 
 
 app.component('tabledesmatieres', {
-    // props: ['name', 'id'],
     data() {
         return {
             list: '',
@@ -69,7 +67,7 @@ app.component('tabledesmatieres', {
     template: `
         <div id="contents_table">
             <div class="contents_table__table">
-                <strong>Table des matières</strong>
+                <a href="#top"><strong>Table des matières</strong></a>
                 <ul v-html="list"></ul>
             </div>
         </div>
