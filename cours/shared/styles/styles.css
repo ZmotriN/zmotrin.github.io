@@ -100,6 +100,10 @@ body #contents p {
 body #contents p:before {
   content: "        ";
 }
+body #contents h2 {
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
 body #contents div.title {
   display: flex;
   padding-top: 20px;
