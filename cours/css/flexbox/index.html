@@ -7,6 +7,7 @@
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="/cours/shared/styles/styles.css">
         <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+        <script src="/cours/shared/jscripts/main.js"></script>
         <title>Flexbox</title>
     </head>
     <body>
@@ -15,7 +16,7 @@
             <div id="logo"></div>
         </header>
         <main>
-            
+            <!-- MAIN HEADER EOF -->
             <div id="subhead">
                 <div id="breadcrumb"><a href="#">Cours</a> > <a href="#">CSS</a> ></div>
                 <div id="title">Flexbox</div>
@@ -23,7 +24,8 @@
             <article>
                 <tabledesmatieres></tabledesmatieres>
                 <div id="contents">
-                    
+                    <!-- ARTICLE HEADER EOF -->
+
                     <p>Contrairement aux autres valeurs de display qui influencent uniquement l'affichage des éléments par rapport aux autres dans la page, la propriété <span class="inline-code">display: flex;</span> ou <span class="inline-code">display: flex;</span> influence aussi l'affichage de ses enfants en les positionnant dans un corridor sur l'axe des X ou Y, en modifiant leur dimension, leur ordre, etc. afin de remplir l'espace disponible le plus adéquatement possible.</p>
 
                     <grostitre name="flex-direction" id="flex-direction"></grostitre>
@@ -36,29 +38,16 @@
                     </ul>
 
                     <h2>flex-direction: row vs column</h2>
-                    <codepen id="xxzQBzN" title="flex-direction: row vs column"></codepen>
+                    <codepen id="xxzQBzN"></codepen>
 
                     <h2>flex-direction: row-reverse vs column-reverse</h2>
-                    <codepen id="WNyYBpN" title="flex-direction: row-reverse vs column-reverse"></codepen>
-                    
+                    <codepen id="WNyYBpN"></codepen>
 
+                    <doclink title="flex-direction" href="https://www.w3schools.com/cssref/css3_pr_flex-direction.php"></doclink>
+                    <doclink title="flex-direction" href="https://developer.mozilla.org/fr/docs/Web/CSS/flex-direction"></doclink>
 
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br></p>
+                    <exercice id="flexbox-zombie-part-1"></exercice>
 
-                    <grostitre name="Gros Titre 3" id="grostitre3"></grostitre>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br></p>
-
-                    <grostitre name="Gros Titre 4" id="grostitre4"></grostitre>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br></p>
-
-                    <grostitre name="Gros Titre 5" id="grostitre5"></grostitre>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br></p>
-
-                    <grostitre name="Gros Titre 6" id="grostitre6"></grostitre>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br></p>
-
-                    <grostitre name="Gros Titre 7" id="grostitre7"></grostitre>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br></p>
 
                     <grostitre name="Gros Titre 8" id="grostitre8"></grostitre>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br></p>
@@ -69,11 +58,13 @@
                     <grostitre name="Gros Titre 10" id="grostitre10"></grostitre>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br></p>
 
-                    
+                <!-- ARTICLE FOOTER SOF -->
                 </div>
             </article>
+            <script src="/cours/shared/jscripts/article.js"></script>
+        
+        <!-- MAIN FOOTER SOF -->
         </main>
-        <script src="/cours/shared/jscripts/article.js"></script>
         <footer>
             <div id="copyright">Copyright (c) 2022 Collège Montmorency<br>Techniques d'intégration multimédia</div>
         </footer>

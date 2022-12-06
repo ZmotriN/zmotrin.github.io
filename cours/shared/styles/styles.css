@@ -15,7 +15,8 @@ body {
   font-family: Rubik;
   font-size: 18px;
 }
-body span.inline-code {
+
+span.inline-code {
   font-family: Consolas, Inconsolata;
   background-color: rgb(209, 204, 204);
   padding-left: 6px;
@@ -24,7 +25,8 @@ body span.inline-code {
   padding-bottom: 4px;
   font-size: 16px;
 }
-body a {
+
+a {
   color: black;
   text-decoration: none;
   background-image: linear-gradient(0deg, #ff003a, #ff003a);
@@ -32,24 +34,26 @@ body a {
   background-repeat: no-repeat;
   background-size: 100% 15%;
 }
-body a:hover {
+a:hover {
   background-size: 100% 100%;
   transition-duration: 200ms;
 }
-body header {
+
+header {
   margin-left: 60px;
   position: fixed;
   height: 200px;
   width: 250px;
 }
-body header #logo {
+header #logo {
   position: relative;
   top: 60px;
   width: 250px;
   height: 80px;
   background-image: url("/cours/shared/images/tim-logo.png");
 }
-body #subhead {
+
+#subhead {
   background-color: rgba(0, 0, 0, 0.1);
   width: 100%;
   height: 200px;
@@ -58,70 +62,73 @@ body #subhead {
   text-align: center;
   padding-top: 56px;
 }
-body #subhead #breadcrumb {
+#subhead #breadcrumb {
   font-size: 24px;
 }
-body #subhead #title {
+#subhead #title {
   font-size: 60px;
 }
-body article {
+
+article {
   width: 1070px;
   margin-left: auto;
   margin-right: auto;
   min-height: calc(100vh - 200px - 100px - 40px);
   margin-top: 40px;
 }
-body footer {
+
+footer {
   width: 100%;
   height: 100px;
   background: linear-gradient(to top, #ffc5c5, 50%, #ffffff);
   text-align: center;
 }
-body footer #copyright {
+footer #copyright {
   padding-top: 40px;
   font-size: 16px;
 }
-body #contents {
+
+#contents {
   width: 770px;
 }
-body #contents ul {
+#contents ul {
   margin-left: 25px;
   margin-bottom: 25px;
 }
-body #contents ul li {
+#contents ul li {
   margin-top: 10px;
 }
-body #contents p {
+#contents p {
   padding-left: 25px;
   padding-right: 25px;
   margin-bottom: 25px;
   line-height: 28px;
 }
-body #contents p:before {
+#contents p:before {
   content: "        ";
 }
-body #contents h2 {
+#contents h2 {
   margin-left: 25px;
   margin-bottom: 25px;
 }
-body #contents div.title {
+#contents div.title {
   display: flex;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 25px;
   padding-right: 25px;
 }
-body #contents div.title h1 {
+#contents div.title h1 {
   font-size: 36px;
   vertical-align: middle;
   margin-right: 25px;
 }
-body #contents div.title div.linkcopied {
+#contents div.title div.linkcopied {
   line-height: 36px;
   margin-left: 20px;
   opacity: 0%;
 }
-body #contents div.title div.chain {
+#contents div.title div.chain {
   transition-duration: 200ms;
   height: 36px;
   width: 36px;
@@ -132,35 +139,140 @@ body #contents div.title div.chain {
   display: inline;
   background-color: #ffc5c5;
 }
-body #contents div.title div.chain:hover {
+#contents div.title div.chain:hover {
   cursor: pointer;
   transform: rotate(-180deg);
   transition-duration: 200ms;
   background-color: #fa6b6b;
 }
-body #contents div.title div.chain.copied {
-  background-color: rgb(131, 255, 115);
+#contents div.title div.chain.copied {
+  background-color: #83ff73;
   transform: rotate(-360deg);
 }
-body #contents div.title div.chain.copied + div {
+#contents div.title div.chain.copied + div {
   opacity: 100%;
   transition-duration: 200ms;
 }
-body #contents iframe.codepen {
+#contents iframe.codepen {
   width: 100%;
   height: 400px;
   margin-bottom: 25px;
 }
-body #contents_table {
+#contents .doclink {
+  display: inline-block;
+  position: relative;
+  background-image: none;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  border-radius: 24px;
+}
+#contents .doclink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -1;
+  background-color: #ff0000;
+  border-radius: 24px;
+}
+#contents .doclink:hover {
+  color: white;
+}
+#contents .doclink:hover::before {
+  opacity: 8;
+}
+#contents .doclink .doclink-title {
+  position: relative;
+  top: -2px;
+  margin-left: 8px;
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Consolas, Inconsolas;
+}
+#contents .doclink .doclink-icon {
+  background-image: url("/cours/shared/images/doclink-icon.png");
+  background-size: 24px 24px;
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+#contents .doclink.css3 .doclink-icon {
+  background-image: url("/cours/shared/images/css3-icon.png");
+}
+#contents .doclink.css3::before {
+  background-color: #004ce8;
+}
+#contents .doclink.w3schools .doclink-icon {
+  background-image: url("/cours/shared/images/w3schools-icon.png");
+}
+#contents .doclink.w3schools::before {
+  background-color: #009a68;
+}
+#contents .doclink.mozilla .doclink-icon {
+  background-image: url("/cours/shared/images/mozilla-icon.png");
+}
+#contents .doclink.mozilla::before {
+  background-color: #ff1a00;
+}
+#contents a.exercice {
+  display: block;
+  background-image: linear-gradient(0deg, #87ceeb, 20%, #f0f8fc);
+  width: 100%;
+  height: 140px;
+  background-color: #f0f8fc;
+  margin-bottom: 25px;
+}
+#contents a.exercice div.exercice-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+#contents a.exercice div.exercice-container div.exercice-thumb {
+  width: 186px;
+  height: 100%;
+}
+#contents a.exercice div.exercice-container div.exercice-abstract {
+  width: calc(100% - 186px);
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 25px;
+}
+#contents a.exercice div.exercice-container div.exercice-abstract em {
+  background-color: skyblue;
+  padding: 4px;
+  border-radius: 4px;
+  font-style: normal;
+  font-size: 12px;
+  color: white;
+  line-height: 24px;
+}
+#contents a.exercice div.exercice-container div.exercice-abstract span.exercice-title {
+  line-height: 36px;
+  font-size: 24px;
+  font-weight: bold;
+}
+#contents a.exercice div.exercice-container div.exercice-abstract span.exercice-description {
+  font-size: 14px;
+}
+
+#contents_table {
   position: fixed;
   margin-left: 820px;
   width: 250px;
   text-align: right;
 }
-body #contents_table .contents_table__table {
+#contents_table .contents_table__table {
   padding-top: 20px;
 }
-body #contents_table .contents_table__table li {
+#contents_table .contents_table__table li {
   margin-top: 10px;
   list-style-type: none;
   font-size: 16px;
