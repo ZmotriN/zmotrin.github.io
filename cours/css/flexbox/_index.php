@@ -1,30 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr-ca">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/x-icon" href="/favicon.ico">
-        <link rel="stylesheet" href="/cours/shared/styles/styles.css">
-        <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-        <script src="/cours/shared/jscripts/main.js"></script>
-        <title>Flexbox</title>
-    </head>
-    <body>
-        <a id="top"></a>
-        <header>
-            <div id="logo"></div>
-        </header>
-        <main>
-            <!-- MAIN HEADER EOF -->
-            <div id="subhead">
-                <div id="breadcrumb"><a href="#">Cours</a> > <a href="#">CSS</a> ></div>
-                <div id="title">Flexbox</div>
-            </div>
-            <article>
-                <tabledesmatieres></tabledesmatieres>
-                <div id="contents">
-                    <!-- ARTICLE HEADER EOF -->
+<?php print_article_header(); ?>
+
 <p>Contrairement aux autres valeurs de display qui influencent uniquement l'affichage des éléments par rapport aux autres dans la page, la propriété <span class="inline-code">display: flex;</span> ou <span class="inline-code">display: flex;</span> influence aussi l'affichage de ses enfants en les positionnant dans un corridor sur l'axe des X ou Y, en modifiant leur dimension, leur ordre, etc. afin de remplir l'espace disponible le plus adéquatement possible.</p>
 
 <grostitre name="flex-direction" id="flex-direction"></grostitre>
@@ -57,14 +32,4 @@
 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br></p>
 
 
-                    <!-- ARTICLE FOOTER SOF -->
-                </div>
-            </article>
-            <script src="/cours/shared/jscripts/article.js"></script>
-        <!-- MAIN FOOTER SOF -->
-        </main>
-        <footer>
-            <div id="copyright">Copyright (c) 2022 Collège Montmorency<br>Techniques d'intégration multimédia</div>
-        </footer>
-    </body>
-</html>
+<?php print_article_footer(); ?>
