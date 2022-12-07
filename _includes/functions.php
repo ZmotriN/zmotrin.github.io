@@ -1,6 +1,21 @@
 <?php
 
 
+function print_header() {
+    switch($PAGE->type) {
+        case 'article': print_article_header(); break;
+        default: print_main_header();
+    }
+}
+
+
+function print_footer() {
+    switch($PAGE->type) {
+        case 'article': print_article_footer(); break;
+        default: print_main_footer();
+    }
+}
+
 
 function print_main_header() {
     include('main_header.php');

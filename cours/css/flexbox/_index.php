@@ -1,9 +1,9 @@
-<?php print_article_header(); ?>
+<?php print_header(); ?>
 
 <p>Contrairement aux autres valeurs de display qui influencent uniquement l'affichage des éléments par rapport aux autres dans la page, la propriété <span class="inline-code">display: flex;</span> ou <span class="inline-code">display: flex;</span> influence aussi l'affichage de ses enfants en les positionnant dans un corridor sur l'axe des X ou Y, en modifiant leur dimension, leur ordre, etc. afin de remplir l'espace disponible le plus adéquatement possible.</p>
 
 <grostitre name="flex-direction" id="flex-direction"></grostitre>
-<p>Comme son nom l'indique, la valeur de cette propriété définit la direction qu'auront ses enfants. Valeurs possibles:</p>
+<p>Comme son nom l'indique, la valeur de cette propriété définit la direction qu'auront ses enfants.<br><br>Valeurs possibles:</p>
 <ul>
     <li><span class="inline-code">row</span> &#8594; <em>(défaut)</em></li>
     <li><span class="inline-code">row-reverse</span> &#8592;</li>
@@ -22,13 +22,16 @@
 
 <exercice id="flexbox-zombie-part-1"></exercice>
 
-<grostitre name="Gros Titre 8" id="grostitre8"></grostitre>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br></p>
+<grostitre name="justify-content" id="justify-content"></grostitre>
+<p>Un peu comme Word ou Google Doc, flexbox vous permet de justifier votre contenu horizontalement ↔️ afin atteindre l'affichage désiré.<br><br>Possibilités:<br></p>
+<ul>
+    <li><span class="inline-code">flex-start</span> <em>(défaut)</em></li>
+    <li><span class="inline-code">flex-end</span></li>
+    <li><span class="inline-code">center</span></li>
+    <li><span class="inline-code">space-between</span></li>
+    <li><span class="inline-code">space-around</span></li>
+    <li><span class="inline-code">space-evenly</span></li>
+    <li>etc.</li>
+</ul>
 
-<grostitre name="Gros Titre 9" id="grostitre9"></grostitre>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br></p>
-
-<grostitre name="Gros Titre 10" id="grostitre10"></grostitre>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br></p>
-
-<?php print_article_footer(); ?>
+<?php print_footer(); ?>

@@ -1,12 +1,11 @@
 {
     "liveServer.settings.port": 5501,
     "emeraldwalk.runonsave": {
-
         "autoClearConsole": true,
         "commands": [
             {
                 "match": ".*\\.php$",
-                "cmd": "pxs pxpros \"${file}\""
+                "cmd": "pxpros \"${file}\""
             }
         ]
     }
