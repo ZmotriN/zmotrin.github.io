@@ -1,7 +1,7 @@
 
             <div id="subhead">
                 <div id="breadcrumb"><a href="#">Cours</a> > <a href="#">CSS</a> ></div>
-                <div id="title"><?php echo $WBX->pagename; ?></div>
+                <div id="title"><?php echo $PAGE->title; ?></div>
             </div>
             <article>
                 <tabledesmatieres></tabledesmatieres>

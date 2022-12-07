@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="/cours/shared/styles/styles.css">
         <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
         <script src="/cours/shared/jscripts/main.js"></script>
-        <title><?php echo $WBX->pagename; ?></title>
+        <title><?php echo $PAGE->title; ?></title>
     </head>
     <body>
         <a id="top"></a>

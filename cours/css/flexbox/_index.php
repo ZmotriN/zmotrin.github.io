@@ -31,5 +31,4 @@
 <grostitre name="Gros Titre 10" id="grostitre10"></grostitre>
 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti totam libero, illum recusandae impedit veritatis modi deserunt distinctio commodi nostrum maiores praesentium ipsum. Adipisci aut eligendi a fugiat et?<br></p>
 
-
 <?php print_article_footer(); ?>
