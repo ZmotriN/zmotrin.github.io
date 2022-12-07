@@ -95,8 +95,7 @@ app.component('exercice', {
     props: ['id'],
     data() {
         let exroot = '/cours/shared/exercices/' + this.id + '/';
-        let exjson = exroot + 'details.json';
-        let exdetails = syncjson(exjson);
+        let exdetails = syncjson(exroot + 'details.json');
         let url = typeof exdetails.url == 'undefined' ? exroot : exdetails.url;
         return {
             name: exdetails.name,
@@ -124,7 +123,6 @@ app.component('doclink', {
     data() {
         let site = '';
         let url = new URL(this.href);
-        // console.log(url.hostname);
         switch(url.hostname) {
             case 'www.w3schools.com': site = 'w3schools'; break;
             case 'developer.mozilla.org': site = 'mozilla'; break;
@@ -139,6 +137,8 @@ app.component('doclink', {
             </div>
         </a>`
 });
+
+
 
 app.component('dots', {
     data() {

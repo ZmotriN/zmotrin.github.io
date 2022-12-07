@@ -1,6 +1,20 @@
 <?php
 
 
+function print_breadcrumb() {
+    $root = realpath($PAGE->root);
+    $parent = pathinfo(pathinfo($PAGE->file, PATHINFO_DIRNAME), PATHINFO_DIRNAME);
+    while($parent != $root) {
+        if(!is_file(($jsonfile = $parent.'\\'.'_index.json'))) break;
+        if(!$data = json_decode(file_get_contents($jsonfile))) break;
+        $link = str_replace([$root, '\\'], ['', '/'], $parent)."/";
+        $nodes[] = '<a href="'.$link.'">'.$data->title.'</a>';
+        $parent = pathinfo($parent, PATHINFO_DIRNAME);
+    }
+    if(!empty($nodes)) echo join(' > ', array_reverse($nodes)).' >';
+}
+
+
 function print_header() {
     switch($PAGE->type) {
         case 'article': print_article_header(); break;

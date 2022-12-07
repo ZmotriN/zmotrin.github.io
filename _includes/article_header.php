@@ -1,6 +1,6 @@
 
             <div id="subhead">
-                <div id="breadcrumb"><a href="#">Cours</a> > <a href="#">CSS</a> ></div>
+                <div id="breadcrumb"><?php print_breadcrumb(); ?></div>
                 <div id="title"><?php echo $PAGE->title; ?></div>
             </div>
             <article>
