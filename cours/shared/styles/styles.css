@@ -107,9 +107,22 @@ footer #copyright {
 #contents p:before {
   content: "        ";
 }
+#contents img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
 #contents h2 {
   margin-left: 25px;
   margin-bottom: 25px;
+}
+#contents div.spacer {
+  width: 100px;
+  color: #aaaaaa;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 #contents div.title {
   display: flex;

@@ -140,6 +140,19 @@ app.component('doclink', {
         </a>`
 });
 
-
+app.component('dots', {
+    data() {
+        return { }
+    },
+    template: `
+        <div class="spacer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">
+                <rect width="256" height="128" fill="none"/>
+                <circle cx="128" cy="128" r="6"/>
+                <circle cx="64" cy="128" r="6"/>
+                <circle cx="192" cy="128" r="6"/>
+            </svg>
+        </div>`
+});
 
 app.mount('body');
