@@ -1,4 +1,6 @@
-
+/******************************************************
+ *                     Main App                       *
+ ******************************************************/
 const app = Vue.createApp({
     data() { return { tableOfContents: [] } },
     methods: {
@@ -12,6 +14,9 @@ const app = Vue.createApp({
 });
 
 
+/******************************************************
+ *           Composante Table des matières            *
+ ******************************************************/
 app.component('tabledesmatieres', {
     data() { return { list: '' } },
     created() {
@@ -31,6 +36,9 @@ app.component('tabledesmatieres', {
 });
 
 
+/******************************************************
+ *               Composante Gros Titre                *
+ ******************************************************/
 app.component('grostitre', {
     props: ['name', 'id'],
     created() {
@@ -57,6 +65,9 @@ app.component('grostitre', {
 });
 
 
+/******************************************************
+ *                 Composante Codepen                 *
+ ******************************************************/
 app.component('codepen', {
     props: ['id', 'title'],
     data() {
@@ -78,6 +89,9 @@ app.component('codepen', {
 });
 
 
+/******************************************************
+ *                Composante Exercice                 *
+ ******************************************************/
 app.component('exercice', {
     props: ['id'],
     data() {
@@ -104,6 +118,9 @@ app.component('exercice', {
 });
 
 
+/******************************************************
+ *                Composante Doclink                  *
+ ******************************************************/
 app.component('doclink', {
     props: ['title', 'href'],
     data() {
@@ -125,6 +142,9 @@ app.component('doclink', {
 });
 
 
+/******************************************************
+ *                  Composante Dots                   *
+ ******************************************************/
 app.component('dots', {
     template: `
         <div class="spacer">
@@ -138,6 +158,9 @@ app.component('dots', {
 });
 
 
+/******************************************************
+ *                  Composante Clip                   *
+ ******************************************************/
 app.component('clip', {
     props: ['src'],
     data() {
@@ -170,6 +193,9 @@ app.component('clip', {
 });
 
 
+/******************************************************
+ *                Composante Checklist                *
+ ******************************************************/
 app.component('checklist', {
     props: ['id'],
     data() {
@@ -235,8 +261,7 @@ app.component('checklist', {
 
 
 
-
-
-
-
+/******************************************************
+ *                     Mount App                      *
+ ******************************************************/
 app.mount('body');
