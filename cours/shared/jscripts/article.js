@@ -170,4 +170,73 @@ app.component('clip', {
 });
 
 
+app.component('checklist', {
+    props: ['id'],
+    data() {
+        let listdata = syncjson(this.id + '.json');
+        if(!listdata) return {};
+        let cookieValue = localStorage.getItem(this.cookiename());
+        if(typeof cookieValue == 'string') {
+            var checks = cookieValue.split(',').map((val) => { return parseInt(val); });
+            if(checks.length != listdata.list.length){
+                checks = [];
+                listdata.list.forEach(() => { checks.push(0); });
+            }
+        } else {
+            var checks = [];
+            listdata.list.forEach(() => { checks.push(0); });
+        }
+        return {
+            list: listdata.list,
+            checks: checks,
+            progressbar: null
+         }
+    },
+    created() {
+        this.$nextTick(() => {
+            this.progressbar = document.getElementById(this.id + '-progressbar');
+            this.updateProgressBar();
+        });
+    },
+    methods: {
+        cookiename() {
+            let hash = cyrb53(window.location.pathname);
+            return 'exercice-' + this.id + '-' + hash;
+        },
+        click(event,i) {
+            let target = event.currentTarget;
+            if(this.checks[i]) {
+                this.checks[i] = 0;
+                target.classList.remove('checked');
+            } else {
+                this.checks[i] = 1;
+                target.classList.add('checked');
+            }
+            this.updateProgressBar();
+            localStorage.setItem(this.cookiename(), this.checks.join(','));
+        },
+        updateProgressBar() {
+            let total = 0;
+            this.checks.forEach(val => { total += val; });
+            let progress = (total / this.checks.length * 100).toFixed(0);
+            this.progressbar.style.backgroundSize = progress + '% 100%';
+        }
+    },
+    template: `
+        <div class="checklist">
+            <div :id="this.id + '-progressbar'" class="progressbar"></div>
+            <ol>
+                <li v-for="(line, i) in this.list" :class="this.checks[i]?'checked':''" @click="click($event,i)">{{ line }}<span class="checkmark"></span></li>
+            </ol>
+        </div>
+    
+    `
+});
+
+
+
+
+
+
+
 app.mount('body');

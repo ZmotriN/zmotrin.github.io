@@ -389,12 +389,10 @@ footer {
 
     }
 
-
-
     .video-js {
         width: 100%;
         margin-bottom: 25px;
-        
+
         button.vjs-big-play-button {
             color: #ff003a;
             top: 50%;
@@ -402,6 +400,49 @@ footer {
             transform: translate(-50%, -50%);
         }
     }
+
+
+    div.checklist {
+        ol {
+            margin-left: 25px;
+            margin-bottom: 25px;
+    
+            li {
+                cursor: pointer;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                font-size: 18px;
+                line-height: 18px;
+                transition-duration: 200ms;
+
+                &:hover {
+                    background-color: #fde8ed;
+                }
+            
+                &.checked {
+                    text-decoration: line-through;
+                    transition-duration: 200ms;
+                    &::marker {
+                        content: '\2713   '
+                    }
+                }
+            
+            }
+        }
+
+        div.progressbar {
+            width: 100%;
+            height: 4px;
+            background-image: linear-gradient(0deg, #ff003a, #ff003a);
+            background-color: #fde8ed;
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: 0% 100%;
+            transition-duration: 250ms;
+        }
+
+    }
+
 
 
 }
