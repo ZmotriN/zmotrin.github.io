@@ -125,7 +125,6 @@ app.component('doclink', {
 });
 
 
-
 app.component('dots', {
     template: `
         <div class="spacer">
@@ -137,5 +136,40 @@ app.component('dots', {
             </svg>
         </div>`
 });
+
+
+app.component('clip', {
+    props: ['src'],
+    data() {
+        let name = this.src.split('.').shift();
+        let id = name.split('/').pop();
+        let details = syncjson(name + '.json');
+        let track = undefined;
+        details.media.track.forEach(elm => { if(elm['@type'] == 'Video') { track = elm; }});
+        if(track == undefined) return {};
+        let ratio = (track.Height / track.Width * 100).toFixed(2);
+        return {
+            id: id,
+            name: name,
+            width: track.Width,
+            height: track.Height,
+            ratio: ratio
+        }
+    },
+    template: `
+        <video
+            :id="this.id"
+            :width="this.width"
+            :height="this.height"
+            :poster="this.name + '.jpg'"
+            data-setup='{"fluid": true}'
+            class="video-js"
+            controls
+            preload="auto"
+        >
+            <source :src="this.src" type="video/mp4" />
+        </video>`
+});
+
 
 app.mount('body');

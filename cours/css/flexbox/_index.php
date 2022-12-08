@@ -105,6 +105,12 @@
 
 <p>L'inspecteur est d'une aide précieuse lorsque l'on manipule les éléments flexbox. Dans le DOM tree, les éléments en <span class="inline-code">display: flex;</span> ou <span class="inline-code">display: inline-flex;</span> sont mis en évidence grâce à un badge contenant le mot "flex". Lorsque cliqué, ce badge met en évidence la zone prise dans la page par le flexbox en question.</p>
 <p>Lorsque l'on examine les propriétés CSS appliquées à cet élément on remarque à la droite de la propriété <span class="inline-code">display</span> un icône rappelant une grille. Lorsque cliqué, cet icône affiche différentes propriétés en lien avec flexbox, par exemple: <span class="inline-code">flex-direction</span>, <span class="inline-code">justify-content</span>, <span class="inline-code">align-items</span>, etc. Les valeurs disponibles pour ces propriétés sont illustrées avec des icônes permettant d'identifier ou de tester rapidement la valeur souhaitée.</p>
+<clip src="videos/flex-inspecteur.mp4"></clip>
+
+<dots></dots>
+
+<grostitre name="Résumé vidéo" id="resume-video"></grostitre>
+<clip src="videos/css_flexbox_in_100_seconds.mp4"></clip>
 
 
 <?php print_footer(); ?>

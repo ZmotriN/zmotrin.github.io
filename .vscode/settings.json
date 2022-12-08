@@ -1,6 +1,8 @@
 {
     "liveServer.settings.port": 5501,
     "emeraldwalk.runonsave": {
+
+
         "autoClearConsole": true,
         "commands": [
             {
@@ -8,5 +10,6 @@
                 "cmd": "pxpros \"${file}\""
             }
         ]
-    }
+    },
+    "liveServer.settings.wait": 1000
 }

@@ -282,6 +282,16 @@ footer #copyright {
 #contents a.exercice div.exercice-container div.exercice-abstract span.exercice-description {
   font-size: 14px;
 }
+#contents .video-js {
+  width: 100%;
+  margin-bottom: 25px;
+}
+#contents .video-js button.vjs-big-play-button {
+  color: #ff003a;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 #contents_table {
   position: fixed;
