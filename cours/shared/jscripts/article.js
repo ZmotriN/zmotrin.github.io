@@ -122,18 +122,47 @@ app.component('exercice', {
  *                Composante Doclink                  *
  ******************************************************/
 app.component('doclink', {
-    props: ['title', 'href'],
+    props: ['title', 'href', 'spacer'],
     data() {
         let site = '';
-        let url = new URL(this.href);
-        switch(url.hostname) {
-            case 'www.w3schools.com': site = 'w3schools'; break;
-            case 'developer.mozilla.org': site = 'mozilla'; break;
+        
+        try {
+            let url = new URL(this.href);
+            switch(url.hostname) {
+                case 'www.w3schools.com': site = 'w3schools'; break;
+                case 'developer.mozilla.org': site = 'mozilla'; break;
+                case 'codepen.io': site = 'codepen'; break;
+            }
+        } catch(e) {
+            site = '';
+        }
+        
+        
+        if(this.spacer == 'true') {
+            site += ' spacer';
         }
         return { class: site }
     },
     template: `
         <a :class="'doclink ' + this.class" target="_blank" :href="this.href">
+            <div class="doclink-container">
+                <div class="doclink-icon"></div>
+                <span class="doclink-title">{{ title }}</span>
+            </div>
+        </a>`
+});
+
+
+/******************************************************
+ *                Composante Interne                  *
+ ******************************************************/
+ app.component('interne', {
+    props: ['title', 'href', 'spacer'],
+    data() {
+        return {}
+    },
+    template: `
+        <a class="doclink" target="_blank" :href="this.href">
             <div class="doclink-container">
                 <div class="doclink-icon"></div>
                 <span class="doclink-title">{{ title }}</span>

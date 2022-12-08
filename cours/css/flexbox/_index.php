@@ -115,5 +115,6 @@
 <grostitre name="Résumé vidéo" id="resume-video"></grostitre>
 <clip src="videos/css_flexbox_in_100_seconds.mp4"></clip>
 
+<dots></dots>
 
 <?php print_footer(); ?>

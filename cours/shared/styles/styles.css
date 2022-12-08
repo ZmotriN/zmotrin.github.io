@@ -217,6 +217,9 @@ footer #copyright {
   height: 24px;
   border-radius: 50%;
 }
+#contents .doclink.spacer {
+  margin-left: 25px;
+}
 #contents .doclink.css3 .doclink-icon {
   background-image: url("/cours/shared/images/css3-icon.png");
 }
@@ -234,6 +237,12 @@ footer #copyright {
 }
 #contents .doclink.mozilla::before {
   background-color: #ff1a00;
+}
+#contents .doclink.codepen .doclink-icon {
+  background-image: url("/cours/shared/images/codepen-icon.png");
+}
+#contents .doclink.codepen::before {
+  background-color: #000000;
 }
 #contents a.exercice {
   display: block;

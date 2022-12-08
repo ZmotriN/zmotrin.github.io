@@ -303,6 +303,10 @@ footer {
         }
     }
 
+    .doclink.spacer {
+        margin-left: 25px;
+    }
+
     .doclink.css3 {
         .doclink-icon {
             background-image: url('/cours/shared/images/css3-icon.png');
@@ -327,6 +331,16 @@ footer {
         }
         &::before {
             background-color: #ff1a00;
+        }
+    }
+
+    .doclink.codepen {
+        // margin-left: 25px;
+        .doclink-icon {
+            background-image: url('/cours/shared/images/codepen-icon.png');
+        }
+        &::before {
+            background-color: #000000;
         }
     }
 
