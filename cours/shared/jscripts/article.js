@@ -1,10 +1,6 @@
 
 const app = Vue.createApp({
-    data() {
-        return {
-            tableOfContents: []
-        }
-    },
+    data() { return { tableOfContents: [] } },
     methods: {
         addToTableOfContents(id, name) {
             this.tableOfContents.push({
@@ -16,13 +12,8 @@ const app = Vue.createApp({
 });
 
 
-
 app.component('tabledesmatieres', {
-    data() {
-        return {
-            list: '',
-        }
-    },
+    data() { return { list: '' } },
     created() {
         this.$nextTick(() => {
             let lis = '';
@@ -40,11 +31,10 @@ app.component('tabledesmatieres', {
 });
 
 
-
 app.component('grostitre', {
     props: ['name', 'id'],
     created() {
-        this.$root.addToTableOfContents(this.id, this.name)
+        this.$root.addToTableOfContents(this.id, this.name);
     },
     methods: {
         click(event) {
@@ -67,14 +57,11 @@ app.component('grostitre', {
 });
 
 
-
-
 app.component('codepen', {
     props: ['id', 'title'],
     data() {
         return {
             user: 'ZmotriN',
-            // theme: 'light',
             theme: '39618',
         }
     },
@@ -106,7 +93,7 @@ app.component('exercice', {
     template: `
         <a class="exercice" target="_blank" :href="this.url">
             <div class="exercice-container">
-                <div class="exercice-thumb" :style="'background-image: url(\\'/cours/shared/exercices/' + this.id + '/thumb.jpg\\')'"></div>
+                <div class="exercice-thumb" :style="'background-image: url(\\'/cours/shared/exercices/' + this.id + '/images/thumb.jpg\\')'"></div>
                 <div class="exercice-abstract">
                     <em>EXERCICE</em><br>
                     <span class="exercice-title">{{ name }}</span><br>
@@ -115,7 +102,6 @@ app.component('exercice', {
             </div>
         </a>`
 });
-
 
 
 app.component('doclink', {
@@ -141,9 +127,6 @@ app.component('doclink', {
 
 
 app.component('dots', {
-    data() {
-        return { }
-    },
     template: `
         <div class="spacer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">
