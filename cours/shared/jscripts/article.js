@@ -147,13 +147,11 @@ app.component('clip', {
         let track = undefined;
         details.media.track.forEach(elm => { if(elm['@type'] == 'Video') { track = elm; }});
         if(track == undefined) return {};
-        let ratio = (track.Height / track.Width * 100).toFixed(2);
-        return {
+        else return {
             id: id,
             name: name,
             width: track.Width,
-            height: track.Height,
-            ratio: ratio
+            height: track.Height
         }
     },
     template: `

@@ -18,6 +18,7 @@ function print_breadcrumb() {
 function print_header() {
     switch($PAGE->type) {
         case 'article': print_article_header(); break;
+        case 'exercice': print_exercice_header(); break;
         default: print_main_header();
     }
 }
@@ -26,6 +27,7 @@ function print_header() {
 function print_footer() {
     switch($PAGE->type) {
         case 'article': print_article_footer(); break;
+        case 'exercice': print_exercice_footer(); break;
         default: print_main_footer();
     }
 }
@@ -49,5 +51,17 @@ function print_article_header() {
 
 function print_article_footer() {
     include('article_footer.php');
+    print_main_footer();
+}
+
+
+function print_exercice_header() {
+    print_main_header(); 
+    include('exercice_header.php');
+}
+
+
+function print_exercice_footer() {
+    include('exercice_footer.php');
     print_main_footer();
 }
