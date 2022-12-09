@@ -318,6 +318,8 @@ footer #copyright {
 }
 #contents div.checklist ol li.checked {
   text-decoration: line-through;
+  -webkit-text-decoration-color: #ff003a;
+          text-decoration-color: #ff003a;
   transition-duration: 200ms;
 }
 #contents div.checklist ol li.checked::marker {

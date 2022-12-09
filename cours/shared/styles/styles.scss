@@ -435,6 +435,7 @@ footer {
             
                 &.checked {
                     text-decoration: line-through;
+                    text-decoration-color: #ff003a;
                     transition-duration: 200ms;
                     &::marker {
                         content: '\2713   '
