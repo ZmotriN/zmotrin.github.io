@@ -260,11 +260,9 @@ app.component('checklist', {
         <div class="checklist">
             <div :id="this.id + '-progressbar'" class="progressbar"></div>
             <ol>
-                <li v-for="(line, i) in this.list" :class="this.checks[i]?'checked':''" @click="click($event,i)">{{ line }}<span class="checkmark"></span></li>
+                <li v-for="(line, i) in this.list" :class="this.checks[i]?'checked':''" @click="click($event,i)">{{ line }}</li>
             </ol>
-        </div>
-    
-    `
+        </div>`
 });
 
 
