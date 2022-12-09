@@ -113,7 +113,6 @@
 <exercice id="flexbox-froggy"></exercice>
 <exercice id="flexbox-defense"></exercice>
 
-
 <dots></dots>
 
 <grostitre name="Résumé vidéo" id="resume-video"></grostitre>
