@@ -38,6 +38,7 @@ function print_breadcrumb() {
     global $PAGE;
     $root = realpath($PAGE->root);
     $parent = pathinfo(pathinfo($PAGE->file, PATHINFO_DIRNAME), PATHINFO_DIRNAME);
+    $page = str_replace([$root, '\\'], ['', '/'], pathinfo($PAGE->file, PATHINFO_DIRNAME));
     // while($parent != $root) {
     while(true) {
         if(!is_file(($file = $parent.S.'_index.php'))) break;
@@ -45,10 +46,11 @@ function print_breadcrumb() {
         // if($data->type != 'list') break;
         if($data->type != 'list' && $data->type != 'article') break;
         $link = str_replace([$root, '\\'], ['', '/'], $parent)."/";
-        $page = str_replace([$root, '\\'], ['', '/'], pathinfo($PAGE->file, PATHINFO_DIRNAME));
+        
         $backwards = count(explode('/',str_replace($link, '', $page)));
+        // if($link == '/') $backwards++;
         $href = join('/', array_fill(0, $backwards, '..')).'/';
-        $nodes[] = '<a href="'.$href.'">'.$data->title.'</a>';
+        $nodes[] = '<a href="'.$href.'">'.$data->title.' '.$link.'</a>';
         $parent = pathinfo($parent, PATHINFO_DIRNAME);
     }
     if(!empty($nodes)) echo join(' > ', array_reverse($nodes)).' >';

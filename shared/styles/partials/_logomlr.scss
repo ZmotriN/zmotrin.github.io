@@ -1,0 +1,151 @@
+.logomlr {
+    --light-speed: 2s;
+    --beige:  #c5c2a1;
+    --orange: #ff003cc0;
+    margin-top: 40px;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0;
+
+    .line {
+        text-align: center;
+        .led {
+            position: relative;
+            display: inline-block;
+            width: 4%;
+            aspect-ratio: 1/1;
+            margin: 0.35%;
+            border-radius: 50%;
+            animation-play-state: paused;
+        }
+    }
+
+    &:hover {
+        .led {
+            animation-play-state: running;
+        }
+    }
+
+    .line:nth-child(1) .led:nth-child(1),
+    .line:nth-child(1) .led:nth-child(2),
+    .line:nth-child(1) .led:nth-child(7),
+    .line:nth-child(1) .led:nth-child(8),
+    .line:nth-child(1) .led:nth-child(10),
+    .line:nth-child(1) .led:nth-child(11),
+    .line:nth-child(1) .led:nth-child(16),
+    .line:nth-child(1) .led:nth-child(17),
+    .line:nth-child(1) .led:nth-child(18),
+    .line:nth-child(1) .led:nth-child(19),
+    .line:nth-child(1) .led:nth-child(20),
+    .line:nth-child(2) .led:nth-child(1),
+    .line:nth-child(2) .led:nth-child(2),
+    .line:nth-child(2) .led:nth-child(3),
+    .line:nth-child(2) .led:nth-child(6),
+    .line:nth-child(2) .led:nth-child(7),
+    .line:nth-child(2) .led:nth-child(8),
+    .line:nth-child(2) .led:nth-child(10),
+    .line:nth-child(2) .led:nth-child(11),
+    .line:nth-child(2) .led:nth-child(16),
+    .line:nth-child(2) .led:nth-child(17),
+    .line:nth-child(2) .led:nth-child(18),
+    .line:nth-child(2) .led:nth-child(19),
+    .line:nth-child(2) .led:nth-child(20),
+    .line:nth-child(2) .led:nth-child(21),
+    .line:nth-child(3) .led:nth-child(1),
+    .line:nth-child(3) .led:nth-child(2),
+    .line:nth-child(3) .led:nth-child(3),
+    .line:nth-child(3) .led:nth-child(4),
+    .line:nth-child(3) .led:nth-child(5),
+    .line:nth-child(3) .led:nth-child(6),
+    .line:nth-child(3) .led:nth-child(7),
+    .line:nth-child(3) .led:nth-child(8),
+    .line:nth-child(3) .led:nth-child(10),
+    .line:nth-child(3) .led:nth-child(11),
+    .line:nth-child(3) .led:nth-child(16),
+    .line:nth-child(3) .led:nth-child(17),
+    .line:nth-child(3) .led:nth-child(20),
+    .line:nth-child(3) .led:nth-child(21),
+    .line:nth-child(4) .led:nth-child(1),
+    .line:nth-child(4) .led:nth-child(2),
+    .line:nth-child(4) .led:nth-child(3),
+    .line:nth-child(4) .led:nth-child(4),
+    .line:nth-child(4) .led:nth-child(5),
+    .line:nth-child(4) .led:nth-child(6),
+    .line:nth-child(4) .led:nth-child(7),
+    .line:nth-child(4) .led:nth-child(8),
+    .line:nth-child(4) .led:nth-child(10),
+    .line:nth-child(4) .led:nth-child(11),
+    .line:nth-child(4) .led:nth-child(16),
+    .line:nth-child(4) .led:nth-child(17),
+    .line:nth-child(4) .led:nth-child(18),
+    .line:nth-child(4) .led:nth-child(19),
+    .line:nth-child(4) .led:nth-child(20),
+    .line:nth-child(4) .led:nth-child(21),
+    .line:nth-child(5) .led:nth-child(1),
+    .line:nth-child(5) .led:nth-child(2),
+    .line:nth-child(5) .led:nth-child(4),
+    .line:nth-child(5) .led:nth-child(5),
+    .line:nth-child(5) .led:nth-child(7),
+    .line:nth-child(5) .led:nth-child(8),
+    .line:nth-child(5) .led:nth-child(10),
+    .line:nth-child(5) .led:nth-child(11),
+    .line:nth-child(5) .led:nth-child(16),
+    .line:nth-child(5) .led:nth-child(17),
+    .line:nth-child(5) .led:nth-child(18),
+    .line:nth-child(5) .led:nth-child(19),
+    .line:nth-child(5) .led:nth-child(20),
+    .line:nth-child(6) .led:nth-child(1),
+    .line:nth-child(6) .led:nth-child(2),
+    .line:nth-child(6) .led:nth-child(4),
+    .line:nth-child(6) .led:nth-child(5),
+    .line:nth-child(6) .led:nth-child(7),
+    .line:nth-child(6) .led:nth-child(8),
+    .line:nth-child(6) .led:nth-child(10),
+    .line:nth-child(6) .led:nth-child(11),
+    .line:nth-child(6) .led:nth-child(16),
+    .line:nth-child(6) .led:nth-child(17),
+    .line:nth-child(6) .led:nth-child(19),
+    .line:nth-child(6) .led:nth-child(20),
+    .line:nth-child(7) .led:nth-child(1),
+    .line:nth-child(7) .led:nth-child(2),
+    .line:nth-child(7) .led:nth-child(7),
+    .line:nth-child(7) .led:nth-child(8),
+    .line:nth-child(7) .led:nth-child(10),
+    .line:nth-child(7) .led:nth-child(11),
+    .line:nth-child(7) .led:nth-child(12),
+    .line:nth-child(7) .led:nth-child(13),
+    .line:nth-child(7) .led:nth-child(14),
+    .line:nth-child(7) .led:nth-child(16),
+    .line:nth-child(7) .led:nth-child(17),
+    .line:nth-child(7) .led:nth-child(19),
+    .line:nth-child(7) .led:nth-child(20),
+    .line:nth-child(7) .led:nth-child(21),
+    .line:nth-child(8) .led:nth-child(1),
+    .line:nth-child(8) .led:nth-child(2),
+    .line:nth-child(8) .led:nth-child(7),
+    .line:nth-child(8) .led:nth-child(8),
+    .line:nth-child(8) .led:nth-child(10),
+    .line:nth-child(8) .led:nth-child(11),
+    .line:nth-child(8) .led:nth-child(12),
+    .line:nth-child(8) .led:nth-child(13),
+    .line:nth-child(8) .led:nth-child(14),
+    .line:nth-child(8) .led:nth-child(16),
+    .line:nth-child(8) .led:nth-child(17),
+    .line:nth-child(8) .led:nth-child(20),
+    .line:nth-child(8) .led:nth-child(21)
+    {
+        animation-name: leds;
+        animation-duration: var(--light-speed);
+        animation-iteration-count: infinite;
+        animation-delay: calc(0s - (var(--light-speed) * var(--nb)));
+        
+    }
+}
+
+@keyframes leds {
+    from { background-color: var(--beige); }
+    to { background-color: var(--orange); }
+}

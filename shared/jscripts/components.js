@@ -3,7 +3,8 @@
  ******************************************************/
 const app = Vue.createApp({
     data() {
-        let darkmode = localStorage.getItem('darkmode') === 'true';
+        localStorage.setItem('darkmode', 'true');
+        let darkmode = true; //localStorage.getItem('darkmode') === 'true';
         return {
             sounds: false,
             codepens: [],
@@ -15,14 +16,19 @@ const app = Vue.createApp({
         }
     },
     mounted() {
-        if(this.$refs.lightswitch == undefined) return;
+        // if(this.$refs.lightswitch == undefined) return;
+        
         this.theme = this.darkmode ? 'dark' : 'light';
         document.body.className = this.darkmode ? 'dark' : 'light';
-        this.$refs.lightswitch.className = this.darkmode ? 'lightswitch--off' : 'lightswitch--on';
-        if(this.sounds) {
-            this.lightswitchoff = new Howl({ src: [shared + 'sounds/lightswitch-off.webm', shared + 'sounds/lightswitch-off.mp3'], preload: true });
-            this.lightswitchon = new Howl({src: [shared + 'sounds/lightswitch-on.webm', shared + 'sounds/lightswitch-on.mp3'], preload: true });
-        }
+
+        // this.theme = 'dark';
+        // document.body.className = 'dark';
+
+        // this.$refs.lightswitch.className = this.darkmode ? 'lightswitch--off' : 'lightswitch--on';
+        // if(this.sounds) {
+        //     this.lightswitchoff = new Howl({ src: [shared + 'sounds/lightswitch-off.webm', shared + 'sounds/lightswitch-off.mp3'], preload: true });
+        //     this.lightswitchon = new Howl({src: [shared + 'sounds/lightswitch-on.webm', shared + 'sounds/lightswitch-on.mp3'], preload: true });
+        // }
     },
     methods: {
         goToTop(){

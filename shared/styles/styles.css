@@ -52,6 +52,169 @@
   margin-top: 2px;
 }
 
+.logomlr {
+  --light-speed: 2s;
+  --beige: #c5c2a1;
+  --orange: #ff003cc0;
+  margin-top: 40px;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0;
+}
+.logomlr .line {
+  text-align: center;
+}
+.logomlr .line .led {
+  position: relative;
+  display: inline-block;
+  width: 4%;
+  aspect-ratio: 1/1;
+  margin: 0.35%;
+  border-radius: 50%;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.logomlr:hover .led {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+.logomlr .line:nth-child(1) .led:nth-child(1),
+.logomlr .line:nth-child(1) .led:nth-child(2),
+.logomlr .line:nth-child(1) .led:nth-child(7),
+.logomlr .line:nth-child(1) .led:nth-child(8),
+.logomlr .line:nth-child(1) .led:nth-child(10),
+.logomlr .line:nth-child(1) .led:nth-child(11),
+.logomlr .line:nth-child(1) .led:nth-child(16),
+.logomlr .line:nth-child(1) .led:nth-child(17),
+.logomlr .line:nth-child(1) .led:nth-child(18),
+.logomlr .line:nth-child(1) .led:nth-child(19),
+.logomlr .line:nth-child(1) .led:nth-child(20),
+.logomlr .line:nth-child(2) .led:nth-child(1),
+.logomlr .line:nth-child(2) .led:nth-child(2),
+.logomlr .line:nth-child(2) .led:nth-child(3),
+.logomlr .line:nth-child(2) .led:nth-child(6),
+.logomlr .line:nth-child(2) .led:nth-child(7),
+.logomlr .line:nth-child(2) .led:nth-child(8),
+.logomlr .line:nth-child(2) .led:nth-child(10),
+.logomlr .line:nth-child(2) .led:nth-child(11),
+.logomlr .line:nth-child(2) .led:nth-child(16),
+.logomlr .line:nth-child(2) .led:nth-child(17),
+.logomlr .line:nth-child(2) .led:nth-child(18),
+.logomlr .line:nth-child(2) .led:nth-child(19),
+.logomlr .line:nth-child(2) .led:nth-child(20),
+.logomlr .line:nth-child(2) .led:nth-child(21),
+.logomlr .line:nth-child(3) .led:nth-child(1),
+.logomlr .line:nth-child(3) .led:nth-child(2),
+.logomlr .line:nth-child(3) .led:nth-child(3),
+.logomlr .line:nth-child(3) .led:nth-child(4),
+.logomlr .line:nth-child(3) .led:nth-child(5),
+.logomlr .line:nth-child(3) .led:nth-child(6),
+.logomlr .line:nth-child(3) .led:nth-child(7),
+.logomlr .line:nth-child(3) .led:nth-child(8),
+.logomlr .line:nth-child(3) .led:nth-child(10),
+.logomlr .line:nth-child(3) .led:nth-child(11),
+.logomlr .line:nth-child(3) .led:nth-child(16),
+.logomlr .line:nth-child(3) .led:nth-child(17),
+.logomlr .line:nth-child(3) .led:nth-child(20),
+.logomlr .line:nth-child(3) .led:nth-child(21),
+.logomlr .line:nth-child(4) .led:nth-child(1),
+.logomlr .line:nth-child(4) .led:nth-child(2),
+.logomlr .line:nth-child(4) .led:nth-child(3),
+.logomlr .line:nth-child(4) .led:nth-child(4),
+.logomlr .line:nth-child(4) .led:nth-child(5),
+.logomlr .line:nth-child(4) .led:nth-child(6),
+.logomlr .line:nth-child(4) .led:nth-child(7),
+.logomlr .line:nth-child(4) .led:nth-child(8),
+.logomlr .line:nth-child(4) .led:nth-child(10),
+.logomlr .line:nth-child(4) .led:nth-child(11),
+.logomlr .line:nth-child(4) .led:nth-child(16),
+.logomlr .line:nth-child(4) .led:nth-child(17),
+.logomlr .line:nth-child(4) .led:nth-child(18),
+.logomlr .line:nth-child(4) .led:nth-child(19),
+.logomlr .line:nth-child(4) .led:nth-child(20),
+.logomlr .line:nth-child(4) .led:nth-child(21),
+.logomlr .line:nth-child(5) .led:nth-child(1),
+.logomlr .line:nth-child(5) .led:nth-child(2),
+.logomlr .line:nth-child(5) .led:nth-child(4),
+.logomlr .line:nth-child(5) .led:nth-child(5),
+.logomlr .line:nth-child(5) .led:nth-child(7),
+.logomlr .line:nth-child(5) .led:nth-child(8),
+.logomlr .line:nth-child(5) .led:nth-child(10),
+.logomlr .line:nth-child(5) .led:nth-child(11),
+.logomlr .line:nth-child(5) .led:nth-child(16),
+.logomlr .line:nth-child(5) .led:nth-child(17),
+.logomlr .line:nth-child(5) .led:nth-child(18),
+.logomlr .line:nth-child(5) .led:nth-child(19),
+.logomlr .line:nth-child(5) .led:nth-child(20),
+.logomlr .line:nth-child(6) .led:nth-child(1),
+.logomlr .line:nth-child(6) .led:nth-child(2),
+.logomlr .line:nth-child(6) .led:nth-child(4),
+.logomlr .line:nth-child(6) .led:nth-child(5),
+.logomlr .line:nth-child(6) .led:nth-child(7),
+.logomlr .line:nth-child(6) .led:nth-child(8),
+.logomlr .line:nth-child(6) .led:nth-child(10),
+.logomlr .line:nth-child(6) .led:nth-child(11),
+.logomlr .line:nth-child(6) .led:nth-child(16),
+.logomlr .line:nth-child(6) .led:nth-child(17),
+.logomlr .line:nth-child(6) .led:nth-child(19),
+.logomlr .line:nth-child(6) .led:nth-child(20),
+.logomlr .line:nth-child(7) .led:nth-child(1),
+.logomlr .line:nth-child(7) .led:nth-child(2),
+.logomlr .line:nth-child(7) .led:nth-child(7),
+.logomlr .line:nth-child(7) .led:nth-child(8),
+.logomlr .line:nth-child(7) .led:nth-child(10),
+.logomlr .line:nth-child(7) .led:nth-child(11),
+.logomlr .line:nth-child(7) .led:nth-child(12),
+.logomlr .line:nth-child(7) .led:nth-child(13),
+.logomlr .line:nth-child(7) .led:nth-child(14),
+.logomlr .line:nth-child(7) .led:nth-child(16),
+.logomlr .line:nth-child(7) .led:nth-child(17),
+.logomlr .line:nth-child(7) .led:nth-child(19),
+.logomlr .line:nth-child(7) .led:nth-child(20),
+.logomlr .line:nth-child(7) .led:nth-child(21),
+.logomlr .line:nth-child(8) .led:nth-child(1),
+.logomlr .line:nth-child(8) .led:nth-child(2),
+.logomlr .line:nth-child(8) .led:nth-child(7),
+.logomlr .line:nth-child(8) .led:nth-child(8),
+.logomlr .line:nth-child(8) .led:nth-child(10),
+.logomlr .line:nth-child(8) .led:nth-child(11),
+.logomlr .line:nth-child(8) .led:nth-child(12),
+.logomlr .line:nth-child(8) .led:nth-child(13),
+.logomlr .line:nth-child(8) .led:nth-child(14),
+.logomlr .line:nth-child(8) .led:nth-child(16),
+.logomlr .line:nth-child(8) .led:nth-child(17),
+.logomlr .line:nth-child(8) .led:nth-child(20),
+.logomlr .line:nth-child(8) .led:nth-child(21) {
+  -webkit-animation-name: leds;
+          animation-name: leds;
+  -webkit-animation-duration: var(--light-speed);
+          animation-duration: var(--light-speed);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: calc(0s - var(--light-speed) * var(--nb));
+          animation-delay: calc(0s - var(--light-speed) * var(--nb));
+}
+
+@-webkit-keyframes leds {
+  from {
+    background-color: var(--beige);
+  }
+  to {
+    background-color: var(--orange);
+  }
+}
+
+@keyframes leds {
+  from {
+    background-color: var(--beige);
+  }
+  to {
+    background-color: var(--orange);
+  }
+}
 :root:has(body.dark) {
   color-scheme: dark;
 }
