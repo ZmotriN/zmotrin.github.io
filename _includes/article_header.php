@@ -1,9 +1,8 @@
 
             <div id="subhead">
                 <div id="breadcrumb"><?php print_breadcrumb(); ?></div>
-                <div id="title"><?php echo $PAGE->title; ?></div>
+                <h1 id="title"><img src="<?php echo $PAGE->icon?>">&nbsp;<?php echo $PAGE->title; ?></h1>
             </div>
             <article>
-                <tabledesmatieres></tabledesmatieres>
                 <div id="contents">
                     <!-- ARTICLE HEADER EOF -->

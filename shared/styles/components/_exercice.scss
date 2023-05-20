@@ -1,0 +1,84 @@
+a.exercice {
+    display: block;
+    background-image: linear-gradient(0deg, #87ceeb, 20%, #f0f8fc);
+    background-image: linear-gradient(0deg, #577590, 1%, #e5ecf1
+    );
+    background-color: #e5ecf1;
+    margin-bottom: 25px;
+    color: #555555;
+    margin-left: -25px;
+    margin-right: -25px;
+
+    @media (min-width: 480px)  {
+        height: 140px;
+    }
+
+    &:hover {
+        color: #000000;
+    }
+
+    div.exercice-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 480px)  {
+            flex-direction: row;
+        }
+
+        div.exercice-thumb {
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            aspect-ratio: 4/3;
+        }
+
+        div.exercice-abstract {
+            flex-grow: 2;
+            margin: 25px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+
+            em {
+                background-color: skyblue;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                padding-left: 6px;
+                padding-right: 6px;
+                border-radius: 4px;
+                font-style: normal;
+                color: black !important;
+                margin:  0 0 5px 0;
+
+                font-size: 8px;
+                @media (min-width: 480px)  {
+                    font-size: 12px;
+                }
+            }
+
+            .exercice-title {
+                line-height: 1;
+                
+                font-weight: bold;
+                margin: 5px 0 3px 0;
+
+                font-size: 6vw;
+                @media (min-width: 480px)  {
+                    font-size: 24px;
+                }
+            }
+
+            .exercice-description {
+                margin: 3px 0 0 0;
+
+                font-size: 4vw;
+                @media (min-width: 480px)  {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

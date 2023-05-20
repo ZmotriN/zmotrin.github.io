@@ -1,43 +1,83 @@
 <!DOCTYPE html>
 <html lang="fr-ca">
     <head>
-        <script>
-            const project = 'interactivite-web.bacon';
-            const steps = `
-                Bacon ipsum dolor amet sirloin shoulder ground round, meatball pig biltong picanha pancetta swine ribeye turkey doner buffalo boudin.
-                Rump chuck cupim, jerky cow flank swine shankle capicola ground round turkey burgdoggen buffalo tongue.
-                Boudin fatback shank tail bacon drumstick sausage, tongue short loin. Boudin shoulder ball tip t-bone kevin landjaeger.
-                Tenderloin pork chop beef venison chuck pork kevin shankle meatball.
-                Tail boudin short loin shoulder hamburger chislic prosciutto turkey beef tongue t-bone pastrami swine spare ribs.
-                Prosciutto pastrami shankle tri-tip, pork loin tail venison short ribs chislic cupim tongue beef sirloin ham hock.
-                Venison tongue pig rump pork chop frankfurter ham hock. Shank ham hock pastrami filet mignon.
-                Tenderloin tongue buffalo, pork chop pig chuck pork ball tip pork loin pancetta turducken beef jowl sirloin ham.
-                Rump kielbasa andouille salami, pastrami doner flank pork belly sausage biltong brisket frankfurter jerky.
-                Short loin shoulder sausage pork belly pastrami pork jowl, salami chislic strip steak cupim bresaola buffalo pork loin.
-                Chicken turducken pork loin shankle pastrami chislic jowl drumstick.
-            `;
-        </script>
-        <title>Instructions</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/x-icon" href="https://www.cmontmorency.qc.ca/wp-content/themes/axial/images/favicon.ico">
-        <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-        <style>@import url(https://fonts.googleapis.com/css?family=Roboto);*{margin:0;padding:0;box-sizing:border-box}body{height:100%;background:linear-gradient(to bottom,#dadada,#fff);background-repeat:repeat-x;font-family:Roboto;font-size:20px;line-height:20px;color:#555;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#logo{margin-left:auto;margin-right:auto;width:1060px;height:250px;background-image:url(https://www.cmontmorency.qc.ca/wp-content/uploads/2018/03/Logomo_1400.png);background-size:contain;background-repeat:no-repeat;background-position:center}#copyright{width:600px;margin-left:auto;margin-right:auto;margin-top:60px;font-size:18px;text-align:center;height:80px}#instructions{margin-left:auto;margin-right:auto;margin-top:20px;width:1060px;display:flex;flex-direction:column;line-height:24px}#instructions .instruction{padding:12px 12px 12px 12px;cursor:pointer}#instructions .instruction:nth-child(odd){background-color:#fff}#instructions .instruction:hover{background-color:#b3c000;transition-duration:250ms;color:#000}#instructions .instruction.check{color:#fff;background-color:#b3c000}#instructions .instruction.check .text{text-decoration:line-through}#instructions .instruction.check .fish::after{content:" ✓"}</style>
+        <link rel="icon" type="image/x-icon" href="shared/images/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="shared/styles/styles.css">
+        <link rel="stylesheet" href="shared/styles/highlight.min.css">
+        <!-- <link rel="stylesheet" href="shared/styles/video-js.min.css"> -->
+        <!-- <link rel="stylesheet" href="shared/styles/swiper-bundle.min.css"> -->
+        <script src="shared/jscripts/commons.js"></script>
+        <script src="shared/jscripts/highlight.min.js"></script>
+        <!-- <script src="shared/jscripts/howler.min.js"></script> -->
+        <!-- <script src="shared/jscripts/swiper-bundle.min.js"></script> -->
+        <script src="shared/jscripts/vue.global.prod.js"></script>
+        <script>const shared = 'shared/';</script>
+        <title>Maxime Larrivée-Roy</title>
     </head>
     <body>
-        <div id="logo"></div>
-        <div id="instructions">
-            <instruction
-                v-for="instruction in instructions"
-                ref="instructions"
-                :num="instruction.num"
-                :checked="instruction.check"
-                :text="instruction.text"
-                @changed="changed()"
-            >
-        </div>
-        <div id="copyright">Copyright (c) 2022 Collège Montmorency<br>Techniques d'intégration multimédia</div>
-        <script>app=Vue.createApp({data(){var instructions=[],cookieValue=localStorage.getItem(project+".instructions.checked"),checks="string"==typeof cookieValue?cookieValue.split(","):[];return steps.trim().split("\n").forEach((str,idx)=>{instructions.push({num:idx+1,check:checks.includes(String(idx+1)),text:str.trim()})}),{instructions:instructions}},methods:{changed(){var checked=[];this.$refs.instructions.forEach(elm=>{elm.check&&checked.push(elm.num)}),localStorage.setItem(project+".instructions.checked",checked.join(","))}}});app.component("instruction",{props:["num","text","checked"],data:()=>({check:!1,div:null}),created(){this.checked&&(this.check=!0),this.$nextTick(()=>{this.div=document.getElementById("instruction_"+this.num),this.check&&this.checkDiv()})},methods:{uncheckDiv(){this.div.classList.remove("check"),this.check=!1},checkDiv(){this.div.classList.add("check"),this.check=!0},checkClick(event){this.check?this.uncheckDiv():this.checkDiv(),this.$emit("changed")}},template:'\n    <div :id="\'instruction_\'+num" class="instruction" @click="checkClick($event)">\n        <span class="text"><strong>{{ num }}.</strong> {{ text }}</span><span class="fish"></span>\n    </div>'}),app.mount("#instructions");</script>
+        <script>document.body.className = localStorage.getItem('darkmode') === 'true' ? 'dark' : 'light';</script>
+        <a id="top"></a>
+        <header>
+            <div id="logo" @click="goToTop()">
+                <svg class="logo-tim" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1202.33 303.71">
+                    <path d="M785.69 166.81l16.26 16.26 16.26-16.26L930.56 54.46v226.25h-257V54.67l112.13 112.14zM650.56.71v303h303V.71h-1.77L801.95 150.54 652.12.71h-1.56zM324.48.46v303h303V.46h-303zm129.93 129.93c-13.08 13.08-13.08 34.29 0 47.38 9.41 9.41 23.02 12.05 34.79 7.92l94.77 94.77H347.48v-257h257v236.49l-94.77-94.77c4.13-11.77 1.48-25.39-7.92-34.79-13.09-13.08-34.3-13.08-47.38 0zM206.47 0L0 206.48V303h303V0h-96.53zM23 280v-64l85.62-85.62 119.87 119.87L249 229.74 129.13 109.87 216 23h64v257H23z"></path>
+                </svg>
+            </div>
+            <div title="Dark mode" id="lightswitch" class="lightswitch--on" ref="lightswitch" @click="lightswitch()"></div>
+        </header>
+        <main>
+            <!-- MAIN HEADER EOF -->
+            <div id="subhead">
+                <div id="breadcrumb"></div>
+                <h1 id="title"><img src="shared/images/max.jpg">&nbsp;Maxime Larrivée-Roy</h1>
+            </div>
+            <article>
+                <div id="contents">
+                    <!-- ARTICLE HEADER EOF -->
+
+ 
+<p class="spacer">Durant mon parcours professionnel, j’ai pu acquérir des connaissances dans divers domaines du multimédia. De la programmation de microcontrôleurs aux sites webs, de la conception théorique à l’installation terrain en passant par la gestion de projets.  Ce vaste bagage fait de moi quelqu’un de très polyvalent et créatif.</p>
+<p>Fort de plus de 20 ans d’expérience en développement web, j’ai pu voir évoluer les technologies clients et serveurs, les méthodologies, les standards, les techniques de déploiement et de versionning. J’ai également participé au développement du langage PHP en créant de nouvelles extensions, afin d’étendre les limites fonctionnelles des serveurs webs.</p>
+
+<dots></dots>
+
+<grostitre>Exercices CSS</grostitre>
+
+            <div class="intlink__item">
+                <div class="intlink__item__icon" style="background-image: url('./exercices-css/images/icon.png');"></div>
+                <div class="intlink__item__description">
+                    <span class="intlink__item__title"><a href="./exercices-css/">Exercices CSS</a></span>
+                    <span class="intlink__item__abstract">Collection d'exercices CSS3</span>
+                </div>
+            </div>
+        
+<dots></dots>
+
+
+<grostitre>Extensions PHP</grostitre>
+
+<dots></dots>
+
+
+<grostitre>Compilateur PHP</grostitre>
+
+<dots></dots>
+                    <!-- ARTICLE FOOTER SOF -->
+                </div>
+                <tabledesmatieres></tabledesmatieres>
+            </article>
+            <script src="shared/jscripts/components.js"></script>
+        <!-- MAIN FOOTER SOF -->
+        </main>
+        <footer>
+            <div id="copyright">Copyright (c) 2023<br>Maxime Larrivée-Roy</div>
+        </footer>
+        <!-- <script src="shared/jscripts/video.min.js"></script> -->
     </body>
 </html>
