@@ -1,0 +1,116 @@
+:root {
+    --speed:  5s;
+    --bleu:   #01a1ff;
+    --orange: #ff7304;
+    --jaune:  #d8dc09;
+    --rouge:  #da5767;
+    --mauve:  #5d0166;
+    --gris:   #555555;
+    --blanc:  #ffffff;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--gris);
+    background-image: linear-gradient(var(--rouge), var(--jaune), var(--orange), var(--bleu));
+    background-blend-mode: screen;
+}
+
+.album {
+    position: absolute;
+    width: 80vmin;
+    height: 80vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10vmin rgba(0, 0, 0, 0.5);
+    background-color: var(--blanc);
+    overflow: hidden;
+}
+
+.bg {
+    position: absolute;
+    top: -0.25%;
+    left: -0.25%;
+    width: 100.5%;
+    height: 100.5%;
+}
+
+.contour {
+    fill: var(--mauve);
+}
+
+.part:nth-child(1) {
+    fill: var(--orange);
+}
+
+.part:nth-child(2) {
+    fill: var(--rouge);
+}
+
+.part:nth-child(3) {
+    fill: var(--jaune);
+}
+
+.part:nth-child(4) {
+    fill: var(--bleu);
+}
+
+.part {
+    animation-name: parts;
+    animation-duration: var(--speed);
+    animation-iteration-count: infinite;
+    animation-delay: calc(0s - (var(--speed) / 4 * var(--nb)));
+    /* animation-play-state: paused; */
+}
+
+@keyframes parts {
+    0%, 100% { fill: var(--bleu); }
+    25% { fill: var(--jaune); }
+    50% { fill: var(--rouge); }
+    75% { fill: var(--orange); }
+}
+
+
+.letter {
+    position: absolute;
+    font-size: 30vmin;
+    font-family: Arial;
+    font-weight: 800;
+    transform: rotate(-15deg);
+    color: var(--mauve);
+    cursor: default;
+}
+
+.letter:nth-child(1) {
+    left: 28%;
+    top: 2%;
+}
+
+.letter:nth-child(2) {
+    left: 15%;
+    top: 46%;
+}
+
+.letter:nth-child(3) {
+    left: 56%;
+    top: 35%;
+}
+
+.letter:hover {
+    animation-name: letter;
+    animation-duration: 5ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    filter: blur(0.2vmin);
+}
+
+@keyframes letter {
+    from { transform: rotate(-20deg); }
+    to { transform: rotate(-10deg); }
+}
