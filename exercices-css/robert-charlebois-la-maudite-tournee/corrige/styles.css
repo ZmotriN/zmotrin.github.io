@@ -1,0 +1,133 @@
+@font-face {
+    font-family: Gill;
+    src: url(./fonts/GillSansMTPro-BoldExtCond.otf) format(opentype);
+}
+
+:root {
+    --speed:  1.5s;
+    --noir:   #0a0e11;
+    --gris:   #333333;
+    --blanc:  #ffffff;
+    --jaune:  #fce339;
+    --orange: #ae3c30;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--gris);
+    background-image: linear-gradient(var(--orange), var(--jaune));
+    background-blend-mode: screen;
+}
+
+.album {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vmin;
+    aspect-ratio: 1/1;
+    background-color: var(--noir);
+    box-shadow: 0 0 10vmin rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.album::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: url(#grain) grayscale(100%);
+    mix-blend-mode: soft-light;
+}
+
+h1, h2 {
+    position: absolute;
+    width: 100%;
+    color: var(--blanc);
+    font-family: Gill;
+    font-size: 7vmin;
+    text-align: center;
+    transform: scaleY(1.5);
+    line-height: 6vmin;
+}
+
+h1 {
+    top: 7vmin;
+}
+
+h2 {
+    bottom: 6vmin;
+}
+
+
+.devil {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 100%;
+    height: 37%;
+    animation-name: devil;
+    animation-duration: var(--speed);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.robert {
+    position: absolute;
+    height: 95%;
+    width: 35%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: url(./images/robert.webp);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+}
+
+.wing {
+    position: absolute;
+    height: 69%;
+    width: 100%;
+    background-image: url(./images/wing.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform-origin: center bottom;
+    animation-duration: var(--speed);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.wing.left {
+    left: 5%;
+    animation-name: wing-left;
+}
+
+.wing.right {
+    right: 5%;
+    transform: scaleX(-1);
+    animation-name: wing-right;
+}
+
+
+@keyframes wing-left {
+    from { transform: rotate(-7deg); }
+    to { transform: rotate(5deg); }
+}
+
+@keyframes wing-right {
+    from { transform: scaleX(-1) rotate(-7deg); }
+    to { transform: scaleX(-1) rotate(5deg); }
+}
+
+@keyframes devil {
+    from { transform: translateY(-2%); }
+    to { transform: translateY(2%); }
+}

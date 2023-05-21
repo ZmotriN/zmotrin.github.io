@@ -1,0 +1,83 @@
+@font-face {
+    font-family: AlternateGothic;
+    src: url(./fonts/alternate-gothic-atf-demi.otf) format(opentype);
+}
+
+:root {
+    --jaune: #f9f83c;
+    --vert:  #019e49;
+    --gris:  #666666;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--gris);
+    background-image: linear-gradient(var(--jaune), var(--vert));
+    background-blend-mode: screen;
+}
+
+.album {
+    position: absolute;
+    width: 80vmin;
+    height: 80vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--vert);
+    box-shadow: 0 0 10vmin rgba(0, 0, 0, 0.5);
+}
+
+.content-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 24vmin;
+    margin: auto;
+}
+
+h1, h2 {
+    font-family: AlternateGothic;
+    color: var(--jaune);
+}
+
+h1 {
+    text-align: center;
+    font-size: 10.5vmin;
+}
+
+h2 {
+    font-size: 4vmin;
+    margin-left: 3vmin;
+    margin-top: 3.5vmin;
+}
+
+.car-wrapper {
+    position: absolute;
+    bottom: 1vmin;
+    right: 3vmin;
+    letter-spacing: 2vmin;
+}
+
+.car {
+    height: 7.5vmin;
+    fill: var(--jaune);
+}
+
+.car:nth-child(2) {
+    animation-name: car;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.91, .46, 1, 1.63);
+}
+
+@keyframes car {
+    0%, 100% { transform: translateX(13%); }
+    25% { transform: translateX(-13%); }
+    50% { transform: translateX(-13%); }
+    75% { transform: translateX(13%); }
+}

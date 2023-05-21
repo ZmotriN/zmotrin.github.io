@@ -1,0 +1,102 @@
+@font-face {
+    font-family: Revival;
+    src: url(./fonts/Revival565Italic.otf) format(opentype);
+}
+
+:root {
+    --gris:     #333333;
+    --charcoal: #0a0e11;
+    --rouge:    #a53324;
+    --beige:    #d1b997;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--gris);
+    background-image: linear-gradient(to bottom right, var(--charcoal), var(--rouge));
+    background-blend-mode: screen;
+}
+
+.album {
+    position: absolute;
+    width: 80vmin;
+    height: 80vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--charcoal);
+    box-shadow: 0 0 10vmin rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+h1, h2 {
+    position: absolute;
+    width: 100%;
+    color: var(--beige);
+    font-family: Revival;
+    text-align: center;
+    font-size: 3.5vmin;
+}
+
+h1 {
+    top: 15%;
+}
+
+h2 {
+    top: 91%;
+}
+
+.canva {
+    position: absolute;
+    width: 75%;
+    height: 54%;
+    top: 33.5%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-sizing: border-box;
+    border: 1.5vmin solid var(--beige);
+    overflow: hidden;
+}
+
+.cloud-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70vmin;
+    height: 60vmin;
+    transform: translate(-50%, -50%) rotate(25deg);
+}
+
+.cloud {
+    position: absolute;
+    width: 100%;
+    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(320deg) brightness(80%) contrast(120%) blur(0.2vmin);
+    animation-name: cloud;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.cloud.top {
+    top: -10%;
+    animation-duration: 24s;
+}
+
+.cloud.middle {
+    top: 25%;
+    animation-duration: 16s;
+}
+
+.cloud.bottom {
+    top: 60%;
+    animation-duration: 10s;
+}
+
+@keyframes cloud {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(70vmin); }
+}
