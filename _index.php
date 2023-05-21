@@ -1,7 +1,7 @@
 <?php 
 /**
  * @type     article
- * @title    Maxime Larrivée-Roy
+ * @title    Maxime L. Roy
  * @icon     shared/images/max.jpg
  * @abstract Maxime Larrivée-Roy / Fullstack Developper
  */
