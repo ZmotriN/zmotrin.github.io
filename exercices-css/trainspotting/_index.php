@@ -123,3 +123,9 @@
 <dots></dots>
 
 
+<grostitre>Corrigé</grostitre>
+
+<doclink href="./corrige/trainspotting.zip">Zip / Trainspotting</doclink><br>
+<doclink href="./corrige/">Démo / Trainspotting</doclink>
+
+<dots></dots>

@@ -36,22 +36,18 @@ function get_shared($file){
  */
 function print_breadcrumb() {
     global $PAGE;
-    $root = realpath($PAGE->root);
-    $parent = pathinfo(pathinfo($PAGE->file, PATHINFO_DIRNAME), PATHINFO_DIRNAME);
+    $root = str_replace('\\','/',realpath($PAGE->root));
+    $parent = str_replace('\\','/',pathinfo(pathinfo($PAGE->file, PATHINFO_DIRNAME), PATHINFO_DIRNAME));
     $page = str_replace([$root, '\\'], ['', '/'], pathinfo($PAGE->file, PATHINFO_DIRNAME));
-    // while($parent != $root) {
     while(true) {
-        if(!is_file(($file = $parent.S.'_index.php'))) break;
+        if(!is_file(($file = $parent.'/_index.php'))) break;
         if(!$data = php_file_info($file)) break;
         // if($data->type != 'list') break;
         if($data->type != 'list' && $data->type != 'article') break;
-        $link = str_replace([$root, '\\'], ['', '/'], $parent)."/";
-        
-        $backwards = count(explode('/',str_replace($link, '', $page)));
-        // if($link == '/') $backwards++;
+        $backwards = count(array_filter(explode('/',str_replace($parent, '', $page))));
         $href = join('/', array_fill(0, $backwards, '..')).'/';
-        $nodes[] = '<a href="'.$href.'">'.$data->title.' '.$link.'</a>';
-        $parent = pathinfo($parent, PATHINFO_DIRNAME);
+        $nodes[] = '<a href="'.$href.'">'.$data->title.'</a>';
+        $parent = str_replace('\\','/',pathinfo($parent, PATHINFO_DIRNAME));
     }
     if(!empty($nodes)) echo join(' > ', array_reverse($nodes)).' >';
 }
