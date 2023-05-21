@@ -1,0 +1,128 @@
+@font-face {
+    font-family: LostHighway;
+    src: url(./fonts/LostHighway.ttf) format(truetype);
+}
+
+:root {
+    --speed:  2s;
+    --noir:   #050808;
+    --gris:   #333333;
+    --jaune:  #fbcf0e;
+    --orange: #fba80e;
+    --peche:  #fda892;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--gris);
+    background-image: linear-gradient(var(--noir), var(--jaune));
+    background-blend-mode: screen;
+}
+
+.album {
+    position: absolute;
+    width: 80vmin;
+    height: 80vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--noir);
+    overflow: hidden;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+    perspective: 10vmin;
+}
+
+.highway {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateX(45deg) scale(60%, 50%);
+    overflow: hidden;
+}
+
+.highway::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30vmin;
+    background-image: linear-gradient(var(--noir), transparent);
+}
+
+.stripe {
+    position: absolute;
+    left: 50%;
+    width: 5%;
+    height: 10%;
+    background-image: linear-gradient(var(--orange), var(--jaune));
+    transform: translate(-50%, 100%);
+    filter: blur(0.25vmin); 
+    animation-name: stripe;
+    animation-duration: var(--speed);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: calc(0s - (var(--speed) / 4 * var(--nb)));
+}
+
+.stripe::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    background-image: linear-gradient(transparent, var(--orange));
+}
+
+@keyframes stripe {
+    from { transform: translate(-50%, -100%); }
+    to { transform: translate(-50%, 100vmin); }
+}
+
+.light {
+    position: absolute;
+    width: 35%;
+    height: 25%;
+    top: 50%;
+    background-image: linear-gradient(to right, transparent, var(--peche), transparent);
+    border-radius: 50%;
+    filter: blur(4vmin);
+    opacity: 70%;
+}
+
+.light.left {
+    left: 10%;
+}
+
+.light.right {
+    right: 10%;
+}
+
+.grain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: url(#grain) brightness(50%) contrast(200%);
+    mix-blend-mode: multiply;
+}
+
+h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    color: var(--jaune);
+    font-family: LostHighway;
+    font-size: 4vmin;
+    letter-spacing: 1.2vmin;
+    transform: translateX(-50%) scaleY(200%) skewY(-8deg);
+    transition-duration: 1s;
+    transition-property: text-shadow;
+}
+
+h1:hover {
+    text-shadow: 0 0 1vmin var(--orange);
+    transition-duration: 0.1s;
+}

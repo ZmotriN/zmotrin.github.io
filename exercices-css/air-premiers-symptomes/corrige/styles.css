@@ -1,0 +1,118 @@
+@font-face {
+    font-family: DisplayDots;
+    src: url(./fonts/DisplayDots-4nB4.woff) format(woff);
+}
+
+:root {
+    --light-speed: 2s;
+    --gris:   #666666;
+    --brun:   #0a0402;
+    --beige:  #c5c2a1;
+    --orange: #d43408;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--gris);
+    background-image: linear-gradient(var(--orange), var(--beige));
+    background-blend-mode: screen;
+}
+
+.album {
+    position: absolute;
+    width: 80vmin;
+    height: 80vmin;
+    background-color: var(--brun);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-shadow: 0 0 10vmin rgba(0, 0, 0, 0.5);
+}
+
+.album:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: url(#grain) grayscale(100%);
+    mix-blend-mode: color-dodge;
+    z-index: -1;
+}
+
+.line {
+    height: 5.5%;
+    text-align: center;
+    margin: 1.2vmin;
+    font-size: 0;
+}
+
+.point {
+    display: inline-block;
+    width: 5.5%;
+    height: 100%;
+    margin: 0.63vmin;
+    border-radius: 50%;
+}
+
+.line:nth-child(1) .point:nth-child(-n+5),
+.line:nth-child(1) .point:nth-child(n+10),
+.line:nth-child(1) .point:nth-child(7),
+.line:nth-child(1) .point:nth-child(8),
+.line:nth-child(2) .point:nth-child(3n+1),
+.line:nth-child(2) .point:nth-child(3n+2),
+.line:nth-child(3) .point:nth-child(3n+1),
+.line:nth-child(3) .point:nth-child(3n+2),
+.line:nth-child(4) .point:nth-child(3n+1),
+.line:nth-child(4) .point:nth-child(3n+2),
+.line:nth-child(5) .point:nth-child(-n+5),
+.line:nth-child(5) .point:nth-child(n+10),
+.line:nth-child(5) .point:nth-child(7),
+.line:nth-child(5) .point:nth-child(8),
+.line:nth-child(6) .point:nth-child(-n+5),
+.line:nth-child(6) .point:nth-child(7),
+.line:nth-child(6) .point:nth-child(8),
+.line:nth-child(6) .point:nth-child(10),
+.line:nth-child(6) .point:nth-child(11),
+.line:nth-child(6) .point:nth-child(12),
+.line:nth-child(6) .point:nth-child(13),
+.line:nth-child(7) .point:nth-child(-n+5),
+.line:nth-child(7) .point:nth-child(n+10),
+.line:nth-child(7) .point:nth-child(7),
+.line:nth-child(7) .point:nth-child(8),
+.line:nth-child(8) .point:nth-child(3n+1),
+.line:nth-child(8) .point:nth-child(3n+2),
+.line:nth-child(9) .point:nth-child(3n+1),
+.line:nth-child(9) .point:nth-child(3n+2),
+.line:nth-child(10) .point:nth-child(3n+1),
+.line:nth-child(10) .point:nth-child(3n+2),
+.line:nth-child(11) .point:nth-child(3n+1),
+.line:nth-child(11) .point:nth-child(3n+2),
+.line:nth-child(12) .point:nth-child(3n+1),
+.line:nth-child(12) .point:nth-child(3n+2)
+{
+    animation-name: points;
+    animation-duration: var(--light-speed);
+    animation-iteration-count: infinite;
+    animation-delay: calc(0s - (var(--light-speed) * var(--nb)));
+}
+
+@keyframes points {
+    from { background-color: var(--beige); }
+    to { background-color: var(--orange); }
+}
+
+h1 {
+    position: absolute;
+    font-family: DisplayDots;
+    bottom: 2vmin;
+    left: 2vmin;
+    color: var(--beige);
+    font-size: 4.5vmin;
+    transform: scaleY(1.2);
+    letter-spacing: 0.2vmin;
+}

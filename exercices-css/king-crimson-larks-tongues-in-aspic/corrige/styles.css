@@ -1,0 +1,104 @@
+:root {
+    --speed:   6s;
+    --noir:    #000000;
+    --gris:    #555555;
+    --bleu:    #93cff4;
+    --blanc:   #fffdee;
+    --jaune:   #edbc31;
+    --pourpre: #872639;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--gris);
+    background-image: linear-gradient(var(--jaune), var(--bleu));
+    background-blend-mode: screen;
+}
+
+.album {
+    position: absolute;
+    width: 80vmin;
+    aspect-ratio: 1/1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--blanc);
+    box-shadow:
+        0 0 10vmin rgba(0, 0, 0, 0.5),
+        inset 0 0 0 4vmin var(--pourpre),
+        inset 0 0 0 5vmin var(--blanc),
+        inset 0 0 0 6vmin var(--pourpre),
+        inset 0 0 0 7vmin var(--blanc),
+        inset 0 0 0 7.2vmin var(--pourpre);
+}
+
+.rays-wrapper {
+    position: absolute;
+    width: 53%;
+    aspect-ratio: 1/1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -49%);
+}
+
+.rays {
+    fill: var(--jaune);
+    stroke: var(--pourpre);
+    stroke-width: 0.15vmin;
+}
+
+.center-wrapper {
+    position: absolute;
+    width: 26%;
+    aspect-ratio: 1/1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.moon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--bleu);
+    border: 0.05vmin solid var(--noir);
+    background-image: url(./images/moon-face.webp);
+    background-repeat: no-repeat;
+    background-position: center 90%;
+    background-size: 35%;
+    animation: rotation var(--speed) linear infinite;
+}
+
+.sun-wrapper {
+    width: 100%;
+    height: 100%;
+    animation: rotation var(--speed) linear infinite;
+}
+
+.sun {
+    position: absolute;
+    width: 65%;
+    aspect-ratio: 1/1;
+    top: 1%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    border: 0.05vmin solid var(--noir);
+    background-color: var(--jaune);
+    background-image: url(./images/sun-face.webp);
+    background-repeat: no-repeat;
+    background-position: center 90%;
+    background-size: 60%;
+    animation: rotation var(--speed) linear infinite reverse;
+}
+
+@keyframes rotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}

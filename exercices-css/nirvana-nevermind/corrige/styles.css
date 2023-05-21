@@ -1,0 +1,179 @@
+@font-face {
+    font-family: Bodoni;
+    src: url(./fonts/BodoniPosterCompressed.otf) format(opentype);
+}
+
+@font-face {
+    font-family: Franklin;
+    src: url(./fonts/FranklinGothicHeavy.otf) format(opentype);
+}
+
+:root {
+    --bleu-fonce: #0083e4;
+    --bleu-pale:  #00c5ff;
+    --charcoal:   #1a1a1d;
+    --gris:       #555555;
+    --blanc:      #ffffff;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--gris);
+    background-image: linear-gradient(var(--bleu-fonce), var(--bleu-pale));
+    background-blend-mode: screen;
+}
+
+.album {
+    position: absolute;
+    width: 80vmin;
+    height: 80vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image:
+        url(./images/pool.webp),
+        linear-gradient(var(--bleu-pale), var(--bleu-fonce));
+    background-blend-mode: luminosity;
+    background-size: cover;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.baby {
+    position: absolute;
+    background-image: url(./images/baby.webp);
+    background-size: contain;
+    width: 91.5%;
+    height: 60%;
+    left: 3%;
+    top: 12%;
+    animation-name: float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes float {
+    from { transform: translateY(-3%); }
+    to { transform: translateY(3%); }
+}
+
+.dollar {
+    position: absolute;
+    background-image: url(./images/dollar.webp);
+    background-size: contain;
+    background-position: top-right;
+    width: 24.5%;
+    height: 45.5%;
+    top: 0;
+    right: 10%;
+    filter: url(#water) drop-shadow(-0.7vmin 0.7vmin 0.7vmin rgba(0, 0, 0, 0.5));
+    margin-top: -5px;
+    transition-duration: 0.2s;
+}
+
+.dollar:hover {
+    transition-property: transform;
+    transform: scale(1.1);
+}
+
+.album:has(.dollar:hover) .baby {
+    animation-play-state: paused;
+}
+
+.logo {
+    position: absolute;
+    bottom: 4%;
+    left: 4%;
+}
+
+.stripe {
+    background-color: var(--charcoal);
+    height: 0.4vmin;
+}
+
+
+h1, h2 {
+    text-align: center;
+    color: var(--charcoal);
+}
+
+h1 {
+    font-family: Bodoni;
+    font-size: 10vmin;
+    line-height: 8.5vmin;
+}
+
+h2 {
+    font-family: Franklin;
+    font-size: 4.5vmin;
+    line-height: 4.5vmin;
+    letter-spacing: -0.05em;
+    filter: url(#water);
+    margin-left: -8px;
+    margin-top: -8px;
+}
+
+.bubble-wrapper {
+    position: absolute;
+    left: 51%;
+    top: 27%;
+    width: 2vmin;
+    height: 2vmin;
+    transform: scale(0);
+}
+
+.bubble {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 50%;
+    box-shadow: 0px 0px 1vmin 0.5vmin inset var(--blanc);
+    
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    background-color: var(--blanc);
+    width: 50%;
+    height: 50%;
+    top: 10%;
+    right: 20%;
+    border-radius: 50%;
+    transform: rotate(30deg) scaleY(0.7);
+    filter: blur(0.1vmin);
+}
+
+.album:has(.dollar:hover) .bubble {
+    animation-name: bubble;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.album:has(.dollar:hover) .bubble-wrapper {
+    animation-name: bubble-rise;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bubble-rise {
+    0% { transform: scale(0) translateY(0); }
+    20% { transform: scale(1) translateY(-1vmin); }
+    100% { transform: scale(1) translateY(-30vmin); }
+}
+
+@keyframes bubble {
+    0% { transform: translateX(-40%); }
+    100% { transform: translateX(40%); }
+}

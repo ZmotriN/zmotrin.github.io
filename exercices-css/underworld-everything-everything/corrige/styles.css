@@ -1,0 +1,89 @@
+@font-face {
+    font-family: Univers93;
+    src: url(./fonts/Univers93ExtraBlackExtendedOblique.otf) format(opentype);
+}
+
+@font-face {
+    font-family: Zurich;
+    src: url(./fonts/ZurichBlackExtendedRegular.otf) format(opentype);
+}
+
+:root {
+    --bleu:  #bfe6e3;
+    --vert:  #6aa815;
+    --brun:  #5f380d;
+    --gris:  #777777;
+    --blanc: #ffffff;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--gris);
+    background-image: linear-gradient(var(--vert), var(--bleu));
+    background-blend-mode: screen;
+}
+
+.album {
+    position: absolute;
+    width: 80vmin;
+    height: 80vmin;
+    background-color: var(--bleu);
+    top: 50%;
+    left: 50%;
+    font-size: 0;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+.square {
+    position: relative;
+    display: inline-block;
+    width: 25%;
+    height: 25%;
+    background-color: var(--vert);
+    animation-name: everything;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: calc(var(--nb) * -4s);
+}
+
+@keyframes everything {
+    0%, 100% { opacity: 60%; }
+    10% { opacity: 10%; }
+    20% { opacity: 30%; }
+    30% { opacity: 100%; }
+    40% { opacity: 20%; }
+    50% { opacity: 90%; }
+    60% { opacity: 50%; }
+    70% { opacity: 80%; }
+    80% { opacity: 40%; }
+    90% { opacity: 70%; }
+}
+
+h1, h2 {
+    position: absolute;
+    font-size: 3vmin;
+    transform: rotate(90deg);
+}
+
+h1 {
+    top: 28%;
+    left: 3%;
+    font-family: Zurich;
+    font-style: italic;
+    color: var(--brun);
+}
+
+h2 {
+    top: 64%;
+    left: 4%;
+    font-family: Univers93;
+    color: var(--blanc);
+    line-height: 2.8vmin;
+}

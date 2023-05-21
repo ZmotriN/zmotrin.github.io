@@ -1,0 +1,225 @@
+@font-face {
+    font-family: HelveticaCompressed;
+    src: url(./fonts/HelveticaCompressedRegular.otf) format(opentype);
+}
+
+@font-face {
+    font-family: STSharpiePrint;
+    src: url(./fonts/STSharpiePrint.ttf) format(truetype);
+}
+
+:root {
+    --bleu:  #091b29;
+    --blanc: #f2f1eb;
+    --gris:  #444444;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--gris);
+    background-image: linear-gradient(var(--bleu), var(--blanc));
+    background-blend-mode: screen;
+}
+
+.album {
+    position: absolute;
+    width: 80vmin;
+    aspect-ratio: 1/1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bleu);
+    background-image: url(./images/bg.webp);
+    background-size: cover;
+    background-blend-mode: luminosity;
+    box-shadow: 0 0 10vmin rgba(0, 0, 0, 0.5);
+}
+
+.plug {
+    position: absolute;
+    background-image: url(./images/plug.webp);
+    background-size: cover;
+    mix-blend-mode: luminosity;
+    width: 19%;
+    height: 32%;
+    left: 0;
+    top: 12%;
+}
+
+.sticker {
+    position: absolute;
+    background-image: url(./images/sticker.webp);
+    background-size: cover;
+    mix-blend-mode: luminosity;
+    width: 17%;
+    height: 24%;
+    right: 2%;
+    top: 12%;
+}
+
+.sticker::after {
+    content: '96';
+    position: absolute;
+    left: -22%;
+    top: 40%;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-size: 6vmin;
+    font-family: STSharpiePrint;
+    color: var(--bleu);
+    transform: rotate(-90deg);
+}
+
+h1 {
+    position: absolute;
+    font-family: HelveticaCompressed;
+    font-size: 3vmin;
+    letter-spacing: 0.2vmin;
+    color: var(--blanc);
+    top: 54.5%;
+    left: 12%;
+}
+
+.members {
+    position: absolute;
+    top: 68%;
+    width: 100%;
+    height: 23%;
+    text-align: center;
+    padding-left: 1.5%;
+}
+
+.member {
+    display: inline-block;
+    height: 100%;
+    width: 17.5%;
+    margin: auto 0.3%;
+    box-sizing: border-box;
+    border: 0.5vmin solid var(--blanc);
+    background-size: cover;
+    mix-blend-mode: luminosity;
+}
+
+.member.deeder {
+    background-image: url(./images/member-deeder.webp);
+}
+
+.member.chandra {
+    background-image: url(./images/member-chandra.webp);
+}
+
+.member.drdas {
+    background-image: url(./images/member-drdas.webp);
+}
+
+.member.pandit {
+    background-image: url(./images/member-pandit.webp);
+}
+
+.member.sunj {
+    background-image: url(./images/member-sunj.webp);
+}
+
+.member:hover {
+    filter: invert(100%);
+    transition-duration: 0.1s;
+}
+
+.album:has(.member.deeder:hover) .sticker::after {
+    content: 'Deeder';
+}
+
+.album:has(.member.chandra:hover) .sticker::after {
+    content: 'Chandra';
+}
+
+.album:has(.member.drdas:hover) .sticker::after {
+    content: 'Dr Das';
+}
+
+.album:has(.member.pandit:hover) .sticker::after {
+    content: 'Pandit';
+}
+
+.album:has(.member.sunj:hover) .sticker::after {
+    content: 'Sun-J';
+}
+
+.speaker-wrapper {
+    position: absolute;
+    top: 2%;
+    left: 26%;
+    width: 42%;
+    aspect-ratio: 1/1;
+    clip-path: circle(50%);
+    mix-blend-mode: luminosity;
+    filter: contrast(95%) brightness(90%);
+}
+
+.speaker {
+    position: absolute;
+    aspect-ratio: 1/1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+}
+
+.speaker.inside {
+    width: 38%;
+    background-image: url(./images/speaker-inside.webp);
+}
+
+.speaker.center {
+    width: 76%;
+    background-image: url(./images/speaker-center.webp);
+}
+
+.speaker.border {
+    width: 100%;
+    background-image: url(./images/speaker-border.webp);
+}
+
+.album:has(.member:hover) .inside {
+    filter: blur(0.05%);
+    animation-name: inside;
+    animation-duration: 100ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.album:has(.member:hover) .center {
+    filter: blur(0.2%);
+    animation-name: center;
+    animation-duration: 50ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.album:has(.member:hover) .border {
+    filter: blur(0.1%);
+    animation-name: border;
+    animation-duration: 50ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes inside {
+    from { transform: translate(-50%, -50%) scale(1); }
+    to { transform: translate(-50%, -50%) scale(1.1); }
+}
+
+@keyframes center {
+    0% { transform: translate(-51%, -49%); }
+    100% { transform: translate(-49%, -51%); }
+}
+
+@keyframes border {
+    0% { transform: translate(-50.2%, -49.8%); }
+    100% { transform: translate(-49.8%, -50.2%); }
+}
