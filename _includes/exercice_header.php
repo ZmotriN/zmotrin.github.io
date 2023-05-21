@@ -1,6 +1,8 @@
 <?php
 $target = pathinfo($PAGE->file, PATHINFO_DIRNAME).S.'exercice.json';
-file_put_contents($target, json_encode(php_file_info($PAGE->file), JSON_PRETTY_PRINT));
+$info = php_file_info($PAGE->file);
+$info->title = strip_tags($info->title);
+file_put_contents($target, json_encode($info, JSON_PRETTY_PRINT));
 ?>
 
             <div id="subhead">

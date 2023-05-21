@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(#111111, #666666);
+}
+
+.album {
+    position: absolute;
+    background-color: #cc9672;
+    width: 80vmin;
+    height: 80vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.album::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/noise.svg);
+    filter: blur(0.5px);
+}
+
+.slice {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 13%;
+    height: 50%;
+    background-image: url(./images/slice.webp);
+    background-size: contain;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    transform: translateX(-100%) rotate(calc(var(--nb) * 15deg));
+    transform-origin: 100% 0;
+    transition: filter 1s linear;
+}
+
+.slice:hover {
+    transition: filter 0.2s linear;
+    filter: saturate(500%); 
+}
+
+.hand {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.2s linear;
+}
+
+.hand:hover {
+    transition: transform 0.5s cubic-bezier(0.14, 1.41, 0.78, 1.17);
+    transform: scale(120%);
+}
+
+.hand.left {
+    width: 28%;
+    height: 32%;
+    top: 40%;
+    left: 16%;
+    background-image: url(./images/hand-left.webp);
+}
+
+.hand.right {
+    width: 27%;
+    height: 45%;
+    top: 40%;
+    right: 16%;
+    background-image: url(./images/hand-right.webp);
+}

@@ -19,12 +19,3 @@
 
 <dots></dots>
 
-
-<grostitre>Extensions PHP</grostitre>
-
-<dots></dots>
-
-
-<grostitre>Compilateur PHP</grostitre>
-
-<dots></dots>
