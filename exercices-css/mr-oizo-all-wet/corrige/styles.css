@@ -1,0 +1,147 @@
+:root {
+    --smile-duration: 0.2s;
+    --tongue-duration: 2s;
+    --rouge: #d20002;
+    --jaune: #ffd539;
+    --beige: #fdf2d8;
+    --noir:  #000000;
+    --gris:  #555555;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--gris);
+    background-image: linear-gradient(var(--rouge), var(--jaune));
+    background-blend-mode: screen;
+}
+
+.album {
+    background-color: var(--jaune);
+    position: absolute;
+    width: 80vmin;
+    height: 80vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5)
+}
+
+.eye {
+    position: absolute;
+    width: 12.5%;
+    height: 12.5%;
+    top: 12.5%;
+    background-color: var(--noir);
+    transition-duration: var(--smile-duration);
+    transition-property: transform;
+}
+
+.eye.left {
+    left: 25%;
+}
+
+.eye.right {
+    right: 25%;
+}
+
+.muzzle div {
+    position: absolute;
+    background-color: var(--beige);
+}
+
+.muzzle div:nth-child(1) {
+    height: 12.5%;
+    width: 50%;
+    left: 25%;
+    top: 37.5%;
+}
+
+.muzzle div:nth-child(2) {
+    height: 12.5%;
+    width: 75%;
+    left: 12.5%;
+    top: 50%;
+}
+
+.muzzle div:nth-child(3) {
+    height: 37.5%;
+    width: 100%;
+    left: 0;
+    top: 62.5%;
+}
+
+.nose {
+    position: absolute;
+    background-color: var(--noir);
+    width: 25%;
+    height: 12.5%;
+    top: 50%;
+    left: 37.5%;
+    transition-duration: var(--smile-duration);
+    transition-property: transform;
+}
+
+.mouth {
+    position: absolute;
+    background-color: var(--noir);
+    width: 75%;
+    height: 12.5%;
+    top: 75%;
+    left: 12.5%;
+    transition-duration: var(--smile-duration);
+    transition-property: transform;
+}
+
+.tongue-wrapper {
+    position: absolute;
+    width: 25%;
+    height: 12.5%;
+    top: 87.5%;
+    left: 12.5%;
+    animation-name: tongue;
+    animation-duration: var(--tongue-duration);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.tongue {
+    width: 100%;
+    height: 100%;
+    background-color: var(--rouge);
+    transition-duration: var(--smile-duration);
+    transition-property: transform;
+}
+
+@keyframes tongue {
+    from { transform: translateX(0%); }
+    to { transform: translateX(200%); }
+}
+
+.album:has(.tongue:hover) .tongue-wrapper {
+    animation-play-state: paused;
+}
+
+.album:has(.tongue:hover) .eye.left {
+    transform: rotate(-45deg) scale(150%, 50%);
+}
+
+.album:has(.tongue:hover) .eye.right {
+    transform: rotate(45deg) scale(150%, 50%);
+}
+
+.album:has(.tongue:hover) .nose {
+    transform: translateY(-50%) scaleY(75%);
+}
+
+.album:has(.tongue:hover) .mouth {
+    transform: translateY(-100%);
+}
+
+.tongue:hover {
+    transform: translateY(-50%) scaleY(200%);
+}
