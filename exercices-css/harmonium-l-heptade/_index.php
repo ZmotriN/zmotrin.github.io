@@ -94,6 +94,7 @@
 <grostitre>Corrigé</grostitre>
 
 <doclink href="./corrige/harmonium-l-heptade.zip">Zip / Harmonium - L'Heptade</doclink><br>
+<doclink href="https://codepen.io/ZmotriN/pen/PoXPgxL">Pen / Harmonium - L'Heptade</doclink><br>
 <doclink href="./corrige/">Démo / Harmonium - L'Heptade</doclink>
 
 <dots></dots>

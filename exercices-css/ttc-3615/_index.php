@@ -96,6 +96,7 @@
 <grostitre>Corrigé</grostitre>
 
 <doclink href="./corrige/ttc-3615.zip">Zip / TTC - 3615</doclink><br>
+<doclink href="https://codepen.io/ZmotriN/pen/VwqeaRo">Pen / TTC - 3615</doclink><br>
 <doclink href="./corrige/">Démo / TTC - 3615</doclink>
 
 <dots></dots>

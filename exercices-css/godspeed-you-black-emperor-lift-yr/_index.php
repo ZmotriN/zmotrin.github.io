@@ -88,6 +88,7 @@
 <grostitre>Corrigé</grostitre>
 
 <doclink href="./corrige/godspeed-you-black-emperor-lift-yr.zip">Zip / Godspeed You! Black Emperor - Lift Yr. Skinny Fists</doclink><br>
+<doclink href="https://codepen.io/ZmotriN/pen/yLGYrxe">Pen / Godspeed You! Black Emperor - Lift Yr. Skinny Fists</doclink><br>
 <doclink href="./corrige/">Démo / Godspeed You! Black Emperor - Lift Yr. Skinny Fists</doclink>
 
 

@@ -97,6 +97,7 @@
 <grostitre>Corrigé</grostitre>
 
 <doclink href="./corrige/lisa-leblanc-lisa-leblanc.zip">Zip / Lisa LeBlanc - Lisa LeBlanc</doclink><br>
+<doclink href="https://codepen.io/ZmotriN/pen/GRPpaPp">Pen / Lisa LeBlanc - Lisa LeBlanc</doclink><br>
 <doclink href="./corrige/">Démo / Lisa LeBlanc - Lisa LeBlanc</doclink>
 
 <dots></dots>

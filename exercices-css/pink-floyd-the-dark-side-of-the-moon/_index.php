@@ -119,6 +119,7 @@
 <grostitre>Corrigé</grostitre>
 
 <doclink href="./corrige/pink-floyd-the-dark-side-of-the-moon.zip">Zip / Pink Floyd - The Dark Side of the Moon</doclink><br>
+<doclink href="https://codepen.io/ZmotriN/pen/rNoxeMz">Pen / Pink Floyd - The Dark Side of the Moon</doclink><br>
 <doclink href="./corrige/">Démo / Pink Floyd - The Dark Side of the Moon</doclink>
 
 <dots></dots>

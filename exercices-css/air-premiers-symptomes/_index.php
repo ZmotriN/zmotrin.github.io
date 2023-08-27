@@ -88,6 +88,7 @@
 <grostitre>Corrigé</grostitre>
 
 <doclink href="./corrige/air-premiers-symptomes.zip">Zip / AIR - Premiers Symptômes</doclink><br>
+<doclink href="https://codepen.io/ZmotriN/pen/eYbpogp">Pen / AIR - Premiers Symptômes</doclink><br>
 <doclink href="./corrige/">Démo / AIR - Premiers Symptômes</doclink>
 
 <dots></dots>

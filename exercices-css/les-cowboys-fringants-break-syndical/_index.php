@@ -87,6 +87,7 @@
 <grostitre>Corrigé</grostitre>
 
 <doclink href="./corrige/les-cowboys-fringants-break-syndical.zip">Zip / Les Cowboys Fringants - Break Syndical</doclink><br>
+<doclink href="https://codepen.io/ZmotriN/pen/gOZaJBa">Pen / Les Cowboys Fringants - Break Syndical</doclink><br>
 <doclink href="./corrige/">Démo / Les Cowboys Fringants - Break Syndical</doclink>
 
 <dots></dots>
