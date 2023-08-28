@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr" manifest="/carte/cache.manifest">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./styles/styles.min.css">
+    <link rel="manifest" href="./manifest.json">
+    <title>Maxime Larrivée-Roy / Développeur Full-Stack</title>
+</head>
+<body>
+    <div class="credits">
+
+        <div class="credits__legend">
+            <div class="credits__legend__name">Maxime Larrivée-Roy</div>
+            <div class="credits__legend__title">Développeur Full-Stack</div>
+            <div class="credits__legend__github"><a target="_blank" href="https://zmotrin.github.io/exercices-css/">zmotrin.github.io</a></div>
+            <div class="credits__legend__codepen"><a target="_blank" href="https://codepen.io/ZmotriN/pens/public">codepen.io/ZmotriN</a></div>
+            <div class="credits__legend__email"><a target="_blank" href="mailto:zmotrin@gmail.com">zmotrin@gmail.com</a></div>
+        </div>
+        
+        <div class="credits__anim">
+            <div class="credits__anim__line">
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+            </div>
+            <div class="credits__anim__line">
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+            </div>
+            <div class="credits__anim__line">
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+            </div>
+            <div class="credits__anim__line">
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+            </div>
+            <div class="credits__anim__line">
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+            </div>
+            <div class="credits__anim__line">
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+                <div class="credits__anim__block"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./worker.min.js', { scope: './' });
+        }
+        document.querySelectorAll(".credits__anim__block").forEach((item) => {
+            item.style.setProperty('--nb1', Math.round(Math.random() * 1000) / 1000);
+            item.style.setProperty('--nb2', Math.round(Math.random() * 1000) / 1000);
+            item.style.setProperty('--nb3', Math.round(Math.random() * 1000) / 1000);
+            item.style.setProperty('--nb4', Math.round(Math.random() * 1000) / 1000);
+        });
+    </script>
+</body>
+
+</html>

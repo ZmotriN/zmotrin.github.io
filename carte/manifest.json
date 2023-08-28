@@ -1,0 +1,18 @@
+{
+    "lang": "fr-ca",
+    "name": "Maxime Larrivée-Roy / Développeur Full-Stack",
+    "short_name": "Maxime L. Roy",
+    "description": "Maxime Larrivée-Roy / Développeur Full-Stack",
+    "start_url": "./",
+    "scope": "./",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "orientation": "portrait",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "./icon512.png",
+            "sizes": "512x512"
+        }
+    ]
+}

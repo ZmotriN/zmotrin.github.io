@@ -1,0 +1,16 @@
+CACHE MANIFEST
+
+# Version 0.0.2
+
+NETWORK: *
+
+CACHE:
+carte/
+carte/index.html
+carte/styles/styles.min.css
+carte/fonts/Rubik.woff2
+carte/manifest.json
+carte/favicon.ico
+carte/icon512.png
+
+FALLBACK:
