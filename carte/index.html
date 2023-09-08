@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" manifest="/carte/cache.manifest">
+<html lang="fr" manifest="./cache.manifest">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="mobile-web-app-capable">
     <link rel="shortcut icon" href="./favicon.ico">
     <link rel="stylesheet" href="./styles/styles.min.css">
     <link rel="manifest" href="./manifest.json">
@@ -108,7 +110,6 @@
         </div>
     </div>
     <script>
-        
         if('serviceWorker' in navigator) {
             navigator.serviceWorker.register('./worker.min.js', { scope: './' });
         }
