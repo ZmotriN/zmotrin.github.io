@@ -47,5 +47,13 @@
             "keep_fnames": false,
             "keep_classnames": false
         }
-    }
+    },
+    "filewatcher.commands": [
+        {
+            "match": "braille\\\\jscripts\\\\.*\\.js",
+            "isAsync": true,
+            "cmd": "type ${workspaceRoot}\\braille\\jscripts\\*.min.js > ${workspaceRoot}\\braille\\jscripts\\bundle.js 2> null",
+            "event": "onFileChange"
+        }
+    ]
 }
