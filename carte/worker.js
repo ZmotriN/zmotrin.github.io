@@ -1,11 +1,11 @@
-const CACHE_NAME = `maximelroy-carte-v2`;
+const CACHE_NAME = `maximelroy-carte-v3`;
 
 // Use the install event to pre-cache all initial resources.
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE_NAME);
     cache.addAll([
-      './',
+      // './',
       // './index.html',
       './styles/styles.min.css',
       './fonts/Rubik.woff2',
