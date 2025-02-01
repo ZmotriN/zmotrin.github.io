@@ -1,4 +1,4 @@
-const CACHE_NAME = `maximelroy-carte-v1`;
+const CACHE_NAME = `maximelroy-carte-v2`;
 
 // Use the install event to pre-cache all initial resources.
 self.addEventListener('install', event => {
