@@ -28,13 +28,13 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#bfe6e3</color>
-<color>#6aa815</color>
-<color>#5f380d</color>
+<color name="Bleu">#bfe6e3</color>
+<color name="Vert">#6aa815</color>
+<color name="Brun">#5f380d</color>
 <br>
-<color>#777777</color>
-<color>#000000</color>
-<color>#ffffff</color>
+<color name="Gris">#777777</color>
+<color name="Noir">#000000</color>
+<color name="Blanc">#ffffff</color>
 
 <thumbsup>Prenez le temps d'analyser le fichier HTML, vous y trouverez des variables CSS.</thumbsup>
 
@@ -79,7 +79,7 @@
 
 <grostitre>Ambiance</grostitre>
 
-<youtube src="./videos/underworld-king-of-snakes.json"></youtube>
+<youtube src="z_j3fTedFA0"></youtube>
 
 <dots></dots>
 

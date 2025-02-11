@@ -22,9 +22,9 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#111111</color>
-<color>#666666</color>
-<color>#cc9672</color>
+<color name="Gris foncé">#111111</color>
+<color name="Gris pâle">#666666</color>
+<color name="Brun">#cc9672</color>
 
 <h3>Médias</h3>
 
@@ -80,7 +80,7 @@
 
 <grostitre>Ambiance</grostitre>
 
-<youtube src="./videos/godspeed-you-black-emperor-moya.json"></youtube>
+<youtube src="G_ze-pbdkVk"></youtube>
 
 <dots></dots>
 

@@ -26,13 +26,13 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#6cc06d</color>
-<color>#f0552e</color>
-<color>#ffd917</color>
+<color name="Vert">#6cc06d</color>
+<color name="Orange">#f0552e</color>
+<color name="Jaune">#ffd917</color>
 <br>
-<color>#74ccd2</color>
-<color>#482a2d</color>
-<color>#555555</color>
+<color name="Bleu">#74ccd2</color>
+<color name="Brun">#482a2d</color>
+<color name="Gris">#555555</color>
 
 <h3>Médias 📷</h3>
 
@@ -89,7 +89,7 @@
 
 <grostitre>Ambiance</grostitre>
 
-<youtube src="./videos/lisa-leblanc-cerveau-ramolli.json"></youtube>
+<youtube src="tccPG-2tm0c"></youtube>
 
 <dots></dots>
 

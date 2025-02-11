@@ -1,13 +1,14 @@
 <?php
 $target = pathinfo($PAGE->file, PATHINFO_DIRNAME).S.'exercice.json';
-$info = php_file_info($PAGE->file);
-$info->title = strip_tags($info->title);
-file_put_contents($target, json_encode($info, JSON_PRETTY_PRINT));
+file_put_contents($target, json_encode(php_file_info($PAGE->file), JSON_PRETTY_PRINT));
 ?>
 
             <div id="subhead">
-                <div id="breadcrumb"><?php print_breadcrumb(); ?></div>
-                <h1 id="title"><?php echo $PAGE->title; ?></h1>
+                <div id="breadcrumb">
+                    <div id="breadcrumb_normal"><?php print_breadcrumb(); ?></div>
+                    <div id="breadcrumb_index"><?php print_breadcrumb_index(); ?></div>
+                </div>
+                <h1 id="title"><?php echo strip_tags($PAGE->title); ?></h1>
             </div>
             <article>
                 <div id="contents">

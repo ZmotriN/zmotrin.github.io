@@ -36,21 +36,58 @@ function get_shared($file){
  */
 function print_breadcrumb() {
     global $PAGE;
-    $root = str_replace('\\','/',realpath($PAGE->root));
-    $parent = str_replace('\\','/',pathinfo(pathinfo($PAGE->file, PATHINFO_DIRNAME), PATHINFO_DIRNAME));
-    $page = str_replace([$root, '\\'], ['', '/'], pathinfo($PAGE->file, PATHINFO_DIRNAME));
-    while(true) {
-        if(!is_file(($file = $parent.'/_index.php'))) break;
+    $root = realpath($PAGE->root);
+    $parent = pathinfo(pathinfo($PAGE->file, PATHINFO_DIRNAME), PATHINFO_DIRNAME);
+    while($parent != $root) {
+        if(!is_file(($file = $parent.S.'_index.php'))) break;
         if(!$data = php_file_info($file)) break;
-        // if($data->type != 'list') break;
-        if($data->type != 'list' && $data->type != 'article') break;
-        $backwards = count(array_filter(explode('/',str_replace($parent, '', $page))));
+        $link = str_replace([$root, '\\'], ['', '/'], $parent)."/";
+        $page = str_replace([$root, '\\'], ['', '/'], pathinfo($PAGE->file, PATHINFO_DIRNAME));
+        $backwards = count(explode('/',str_replace($link, '', $page)));
         $href = join('/', array_fill(0, $backwards, '..')).'/';
         $nodes[] = '<a href="'.$href.'">'.$data->title.'</a>';
-        $parent = str_replace('\\','/',pathinfo($parent, PATHINFO_DIRNAME));
+        $parent = pathinfo($parent, PATHINFO_DIRNAME);
     }
     if(!empty($nodes)) echo join(' > ', array_reverse($nodes)).' >';
 }
+
+
+/**
+ * print_breadcrumb_index
+ *
+ * @return void
+ */
+function print_breadcrumb_index() {
+    global $PAGE;
+    if(!$info = php_file_info($PAGE->file)) return;
+    if(empty($info->ref)) return;
+    $ref = 'index/'.strtolower(trim(str_replace('\\', '/', $info->ref), '/'));
+    $index = $PAGE->root;
+    foreach(explode('/', $ref) as $part) {
+        $index .= $part.'/';
+        if(!$data = php_file_info($index.'_index.php')) continue;
+        $url = getRelativePath($PAGE->file, $index);
+        echo '<a href="' . $url . '">' . $data->title . '</a>&nbsp;>&nbsp;';
+    }
+}
+
+
+
+function getRootCours() {
+    global $PAGE;
+    $path = getRelativePath($PAGE->file, $PAGE->root);
+    // $path = join('/', array_slice(explode('/', $path), 1));
+    if(!$path) $path = './';
+    return $path;
+}
+
+function getIndexPath() {
+    global $PAGE;
+    if(!$PAGE->ref) return;
+    $index = $PAGE->root.'index/';
+    return getRelativePath($PAGE->file, $index);
+}
+
 
 
 /**
@@ -85,19 +122,23 @@ function get_children($parent = null) {
  *
  * @return void
  */
-function print_children() {
-    $parent = current(debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS,1))['file'];
+function print_children($parent=null, $return=false) {
+    $str = '';
+    if(!$parent) $parent = current(debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS,1))['file'];
     foreach(get_children($parent) as $child) {
-?>
+        $icon = $child->href . $child->icon;
+        $str .= <<<EOD
                         <div class="list-grid__item">
-                            <div class="list-grid__item__icon" style="background-image: url('<?php echo $child->href . $child->icon; ?>');"></div>
+                            <div class="list-grid__item__icon" style="background-image: url({$icon});"></div>
                             <div class="list-grid__item__description">
-                                <span class="list-grid__item__title"><a href="<?php echo $child->href; ?>"><?php echo $child->title; ?></a></span>
-                                <span class="list-grid__item__abstract"><?php echo $child->abstract; ?></span>
+                                <span class="list-grid__item__title"><a href="{$child->href}">{$child->title}</a></span>
+                                <span class="list-grid__item__abstract">{$child->abstract}</span>
                             </div>
                         </div>
-<?php
+EOD;
     }
+    if($return) return $str;
+    else echo $str;
 }
 
 
@@ -107,7 +148,7 @@ function print_children() {
  * @param  mixed $path Internal relative path
  * @return void
  */
-function intlink($path=null, $blank=false){
+function intlink($path=null){
     if(!$path) return;
     if(strpos($path, '#') !== false) list($path, $anchor) = explode('#', $path);
     $path = rtrim($path,'/\\');
@@ -118,12 +159,81 @@ function intlink($path=null, $blank=false){
             <div class="intlink__item">
                 <div class="intlink__item__icon" style="background-image: url('<?php echo $path . '/' . $info->icon; ?>');"></div>
                 <div class="intlink__item__description">
-                    <span class="intlink__item__title"><a<?php echo $blank ? ' target="_blank"' : ''; ?> href="<?php echo  !empty($info->url) ? $info->url : $path; ?>/<?php echo (!empty($anchor) ? '#'.$anchor : ''); ?>"><?php echo $info->title; ?></a></span>
+                    <span class="intlink__item__title"><a href="<?php echo  !empty($info->url) ? $info->url : $path; ?>/<?php echo (!empty($anchor) ? '#'.$anchor : ''); ?>"><?php echo $info->title; ?></a></span>
                     <span class="intlink__item__abstract"><?php echo $info->abstract; ?></span>
                 </div>
             </div>
         <?php
     return true;
+}
+
+
+/**
+ * getIndexReferences
+ *
+ * @return void
+ */
+function getIndexReferences($name=null) {
+    static $references = null;
+    global $PAGE;
+    if($references === null) {
+        $references = [];
+        foreach(dig($PAGE->root.'_index.php') as $file) {
+            if(!$info = php_file_info($file)) continue;
+            if(!empty($info->ref)) {
+                $ref = strtolower(trim(str_replace('\\', '/', $info->ref), '/\\'));
+                $info->file = $file;
+                $references[$ref][] = $info;
+            }
+        }
+        foreach($references as $k => $v) {
+            usort($v, function($a, $b) { return strnatcmp($a->title, $b->title); });
+            $references[$k] = $v;
+        }
+    }
+    if(!$name) return $references;
+    elseif(empty($references[$name])) return [];
+    else return $references[$name];
+}
+
+
+/**
+ * getRelativePath
+ *
+ * @param  mixed $from
+ * @param  mixed $to
+ * @return void
+ */
+function getRelativePath($from, $to) {
+    // some compatibility fixes for Windows paths
+    $from = is_dir($from) ? rtrim($from, '\/') . '/' : $from;
+    $to   = is_dir($to)   ? rtrim($to, '\/') . '/'   : $to;
+    $from = str_replace('\\', '/', $from);
+    $to   = str_replace('\\', '/', $to);
+
+    $from     = explode('/', $from);
+    $to       = explode('/', $to);
+    $relPath  = $to;
+
+    foreach($from as $depth => $dir) {
+        // find first non-matching dir
+        if($dir === $to[$depth]) {
+            // ignore this directory
+            array_shift($relPath);
+        } else {
+            // get number of remaining dirs to $from
+            $remaining = count($from) - $depth;
+            if($remaining > 1) {
+                // add traversals up to first matching dir
+                $padLength = (count($relPath) + $remaining - 1) * -1;
+                $relPath = array_pad($relPath, $padLength, '..');
+                break;
+            } else {
+                $relPath[0] = './' . $relPath[0];
+            }
+        }
+    }
+    return implode('/', $relPath);
 }
 
 

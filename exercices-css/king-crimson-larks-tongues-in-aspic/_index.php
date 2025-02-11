@@ -22,13 +22,13 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#000000</color>
-<color>#555555</color>
-<color>#fffdee</color>
+<color name="Noir">#000000</color>
+<color name="Gris">#555555</color>
+<color name="Blanc cassé">#fffdee</color>
 <br>
-<color>#872639</color>
-<color>#edbc31</color>
-<color>#93cff4</color>
+<color name="Pourpre">#872639</color>
+<color name="Jaune">#edbc31</color>
+<color name="Bleu">#93cff4</color>
 
 <h3>Médias 📷</h3>
 
@@ -88,7 +88,7 @@
 
 <grostitre>Ambiance</grostitre>
 
-<youtube src="./videos/king-cCrimson-larks-tongues-in-aspic-part-2.json"></youtube>
+<youtube src="JrwXnhAUtnk"></youtube>
 
 <dots></dots>
 

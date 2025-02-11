@@ -8,10 +8,19 @@ body.dark {
 
     a { color: white; }
     em { color: #e6af2e; }
+    hr { border: 1px dashed #030174; }
     span.inline-code { background-color: #1c1d21; color: white; }
-    footer { /*background: linear-gradient(to top, #3a2d2d, 50%, #000000);*/ border-top: 1px solid rgb(19, 2, 4); }
+    footer { /*background: linear-gradient(to top, #3a2d2d, 50%, #000000);*/ border-top: 1px solid rgb(4, 18, 36); }
     #subhead { background-color: rgba(255, 255, 255, 0.1); }
-    main::before { background: linear-gradient(to bottom, #3a2d2d, 20%, #000000); }
+    #logo {
+        // filter: contrast(75%) brightness(75%) invert(100%);
+        filter: hue-rotate(3.142rad) brightness(100%) drop-shadow(0 0 10px #ffffffa0);
+    
+    }
+    main::before { background: linear-gradient(to bottom, #2d2f3a, 20%, #000000); }
+
+    #wiki__list { background-image: linear-gradient(to right, #111111, #000000); }
+    
 
     .hljs {
         color: #c0c5ce;
@@ -28,20 +37,21 @@ body.dark {
         &-strong { font-weight: 700; }
     }
 
-    .dots { color: #74011b; }
+    .dots { color: var(--main-color); }
+    
 
     .grostitre {
         &__chain {
-            background-color: #ff003a;
-            &:hover { background-color: #004ca3; }
+            background-color: var(--main-color);
+            &:hover { background-color: var(--main-color); }
             &.copied { background-color: #34ad24; }
         }
     }
 
-    .info {
+    .infobubble.info {
         background-color: #131338;
         border-left: 4px solid #3c38ba;
-        &__bubble {
+        .infobubble__bubble {
             &::before {
                 background-color: #131338;
                 border: 4px solid #3c38ba;
@@ -50,10 +60,10 @@ body.dark {
         }
     }
 
-    .warning {
+    .infobubble.warning {
         background-color: #44440a;
         border-left: 4px solid #f1f255;
-        &__bubble {
+        .infobubble__bubble {
             &::before {
                 background-color: #44440a;
                 border: 4px solid #f1f255;
@@ -62,10 +72,10 @@ body.dark {
         }
     }
 
-    .alert {
+    .infobubble.alert {
         background-color: #3a2c2c;
         border-left: 4px solid #f25555;
-        &__bubble {
+        .infobubble__bubble {
             &::before {
                 background-color: #3a2c2c;
                 border: 4px solid #f25555;
@@ -74,10 +84,10 @@ body.dark {
         }
     }
 
-    .bravo {
+    .infobubble.bravo {
         background-color: #2e3a2c;
         border-left: 4px solid #74f255;
-        &__bubble {
+        .infobubble__bubble {
             &::before {
                 background-color: #2e3a2c;
                 border: 4px solid #74f255;
@@ -86,10 +96,10 @@ body.dark {
         }
     }
 
-    .thumbsup {
+    .infobubble.thumbsup {
         background-color: #532f4b;
         border-left: 4px solid #ab55f2;
-        &__bubble {
+        .infobubble__bubble {
             &::before {
                 background-color: #532f4b;
                 border: 4px solid #ab55f2;
@@ -102,6 +112,11 @@ body.dark {
         background-color: #1c1d21;
         background-image: linear-gradient(0deg, #508d5d, 20%, #1c1d21);
         &:hover { color: #ffffff; }
+        
+        div.tool-container div.tool-thumb {
+            // border: 1px solid #508d5d;
+            border: 0px;
+        }
         div.tool-container div.tool-abstract em.tool-label {
             background-color: #508d5d;
             color: white !important;
@@ -112,6 +127,10 @@ body.dark {
         background-color: #1c1d21;
         background-image: linear-gradient(0deg, #50728d, 20%, #1c1d21);
         &:hover { color: #ffffff; }
+        div.exercice-container div.exercice-thumb {
+            // border: 1px solid #50728d;
+            border: 0px;
+        }
         div.exercice-container div.exercice-abstract em {
             background-color: #50728d;
             color: white !important;
@@ -120,12 +139,7 @@ body.dark {
 
     div.checklist {
         ol li:hover { background-color: #1c1d21; }
-        div.progressbar { background-color: #1c1d21; }
-
-        code {
-            background-color: #1c1d21;
-        }
-        
+        &__progressbar { background-color: #1c1d21; }
     }
 
     .audioplayer {
@@ -189,12 +203,13 @@ body.dark {
         background-color: #5b5e6b;
     }
 
-    #contents {
-        p code,
-        ul code {
-            background-color: #1c1d21;
-        }
-    }
+    // #contents {
+    //     p code,
+    //     // ul code,
+    //     // code {
+    //     //     background-color: #282a2f;
+    //     // }
+    // }
 
 
     table{

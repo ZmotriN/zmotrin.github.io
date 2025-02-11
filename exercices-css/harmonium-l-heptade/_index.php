@@ -26,10 +26,10 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#333333</color>
-<color>#0a0e11</color>
-<color>#a53324</color>
-<color>#d1b997</color>
+<color name="Gris">#333333</color>
+<color name="Charcoal">#0a0e11</color>
+<color name="Rouge">#a53324</color>
+<color name="Beige">#d1b997</color>
 
 <h3>Médias 📷</h3>
 
@@ -86,7 +86,7 @@
 
 <grostitre>Ambiance</grostitre>
 
-<youtube src="./videos/harmonium-comme-un-fou.json"></youtube>
+<youtube src="8lT14QPL8Bw"></youtube>
 
 <dots></dots>
 

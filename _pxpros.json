@@ -1,9 +1,12 @@
 {
     "data": {
-        "project": "TIM Montmorency - Documentation"
+        "project": "Maxime Larrivée-Roy",
+        "domain": "zmotrin.github.io",
+        "gtag": ""
     },
     "includes": [
-        "_includes/functions.php"
+        "_includes/functions.php",
+        "_includes/hooks.php"
     ],
     "before": "_includes/header.php",
     "after": "_includes/footer.php"

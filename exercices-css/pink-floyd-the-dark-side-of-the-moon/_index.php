@@ -26,17 +26,17 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#111015</color>
-<color>#7b7b7b</color>
-<color>#dcdcdc</color>
+<color name="Charcoal">#111015</color>
+<color name="Gris">#7b7b7b</color>
+<color name="Blanc gris">#dcdcdc</color>
 <br>
-<color>#bc142d</color>
-<color>#df7a0e</color>
-<color>#fafc01</color>
+<color name="Rouge">#bc142d</color>
+<color name="Orange">#df7a0e</color>
+<color name="Jaune">#fafc01</color>
 <br>
-<color>#68b602</color>
-<color>#54b3df</color>
-<color>#564080</color>
+<color name="Vert">#68b602</color>
+<color name="Bleu">#54b3df</color>
+<color name="Mauve">#564080</color>
 
 <warning>Pour une meilleure exécution de l'exercice, certains des éléments HTML ont été cachés par défaut dans le fichier CSS. Rendez-les visible au fur et à mesure que vous avancez dans l'exercice.</warning>
 <thumbsup>Prenez le temps d'analyser le fichier HTML.</thumbsup>
@@ -111,7 +111,7 @@
 
 <grostitre>Ambiance</grostitre>
 
-<youtube src="./videos/pink-floyd-time.json"></youtube>
+<youtube src="GG2tZNOQWAA"></youtube>
 
 <dots></dots>
 

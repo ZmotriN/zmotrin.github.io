@@ -26,14 +26,14 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#0175b0</color>
-<color>#007dbd</color>
+<color name="Bleu foncé">#0175b0</color>
+<color name="Bleu pâle">#007dbd</color>
 <br>
-<color>#cc0f71</color>
-<color>#e10b7a</color>
+<color name="Rose foncé">#cc0f71</color>
+<color name="Rose pâle">#e10b7a</color>
 <br>
-<color>#616161</color>
-<color>#747474</color>
+<color name="Gris foncé">#616161</color>
+<color name="Gris pâle">#747474</color>
 
 <br><br>
 
@@ -102,7 +102,7 @@
 
 <grostitre>Ambiance</grostitre>
 
-<youtube src="./videos/the-black-keys-fever.json"></youtube>
+<youtube src="trk7P-9QDyc"></youtube>
 
 <dots></dots>
 

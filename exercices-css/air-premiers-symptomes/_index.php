@@ -2,7 +2,7 @@
 /**
  * @type     exercice
  * @title    AIR - Premiers Symptômes
- * @icon     images/thumb.jpg
+ * @icon     images/thumb.webp
  * @abstract Pour cet exercice, vous devez écrire du CSS afin de recréer la pochette de l’album "Premiers Symptômes" du groupe de musique électronique français Air.
  */
 ?>
@@ -26,11 +26,11 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#666666</color>
-<color>#0a0402</color>
+<color name="Gris">#666666</color>
+<color name="Brun">#0a0402</color>
 <br>
-<color>#d43408</color>
-<color>#c5c2a1</color>
+<color name="Orange">#d43408</color>
+<color name="Beige">#c5c2a1</color>
 
 <br><br>
 
@@ -80,7 +80,7 @@
 
 <grostitre>Ambiance</grostitre>
 
-<youtube src="./videos/air-sexy-boy.json"></youtube>
+<youtube src="wouKI_myXxk"></youtube>
 
 <dots></dots>
 

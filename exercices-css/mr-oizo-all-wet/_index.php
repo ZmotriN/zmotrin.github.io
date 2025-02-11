@@ -22,12 +22,12 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#d20002</color>
-<color>#ffd539</color>
-<color>#fdf2d8</color>
+<color name="Rouge">#d20002</color>
+<color name="Jaune">#ffd539</color>
+<color name="Beige">#fdf2d8</color>
 <br>
-<color>#555555</color>
-<color>#000000</color>
+<color name="Gris">#555555</color>
+<color name="Noir">#000000</color>
 
 <thumbsup>Prenez le temps d'analyser le fichier HTML.</thumbsup>
 <alert>Il est <strong>INTERDIT</strong> de modifier le HTML.</alert>
@@ -77,7 +77,7 @@
 
 <grostitre>Ambiance</grostitre>
 
-<youtube src="./videos/mr-oizo-all-wet.json"></youtube>
+<youtube src="QCqAYTMF61I"></youtube>
 
 <dots></dots>
 

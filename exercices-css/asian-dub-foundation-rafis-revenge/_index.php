@@ -28,9 +28,9 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#091b29</color>
-<color>#f2f1eb</color>
-<color>#444444</color>
+<color name="Bleu">#091b29</color>
+<color name="Blanc cassé">#f2f1eb</color>
+<color name="Gris">#444444</color>
 
 <h3>Médias 📷</h3>
 
@@ -126,7 +126,7 @@
 
 <grostitre>Ambiance</grostitre>
 
-<youtube src="./videos/asian-dub-foundation-buzzin.json"></youtube>
+<youtube src="GAZAKdBHaCk"></youtube>
 
 <dots></dots>
 

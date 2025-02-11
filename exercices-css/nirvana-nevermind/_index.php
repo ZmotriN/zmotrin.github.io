@@ -28,12 +28,12 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#0083e4</color>
-<color>#00c5ff</color>
+<color name="Bleu foncé">#0083e4</color>
+<color name="Bleu pâle">#00c5ff</color>
 <br>
-<color>#1a1a1d</color>
-<color>#555555</color>
-<color>#ffffff</color>
+<color name="Charcoal">#1a1a1d</color>
+<color name="Gris">#555555</color>
+<color name="Blanc">#ffffff</color>
 
 <h3>Médias</h3>
 
@@ -55,7 +55,7 @@
   Téléchargez les images et placez-les dans un dossier <span class="inline-code">images</span>.
   Téléchargez les fonts et placez-les dans un dossier <span class="inline-code">fonts</span>.
   Créez une variable pour chacune des couleurs pour utilisation ultérieure.
-  La couleur de fond de la page doit être de couleur <em>grise pâle</em> et avoir un dégradé vertical allant du <em>bleu foncé</em> au <em>bleu pâle</em>.
+  La couleur de fond de la page doit être de couleur <em>grise</em> et avoir un dégradé vertical allant du <em>bleu foncé</em> au <em>bleu pâle</em>.
   Fusionnez les deux fonds en mode <span class="inline-code">screen</span> afin de donner au gradient un effet délavé.
   L'album doit avoir une dimension verticale et horizontale de <em>80%</em> du plus petit côté de la fenêtre, avoir un dégradé allant du <em>bleu pâle</em> au <em>bleu foncé</em> et avoir un ombrage de <em>100px</em> égal de tous les côtés de couleur <em>noire</em> semi-transparente.
   Utilisez <span class="inline-code">transform</span> afin de positionner l'album au centre de la fenêtre.
@@ -121,7 +121,7 @@
 
 <grostitre>Ambiance</grostitre>
 
-<youtube src="./videos/nirvana-lithium.json"></youtube>
+<youtube src="pkcJEvMcnEg"></youtube>
 
 <dots></dots>
 

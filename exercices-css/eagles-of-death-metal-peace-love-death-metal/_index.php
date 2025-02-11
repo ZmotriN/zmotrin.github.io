@@ -26,11 +26,11 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#75d0ed</color>
-<color>#f8a8cd</color>
+<color name="Bleu">#75d0ed</color>
+<color name="Rose">#f8a8cd</color>
 <br>
-<color>#444444</color>
-<color>#ffffff</color>
+<color name="Gris">#444444</color>
+<color name="Blanc">#ffffff</color>
 
 <thumbsup>Prenez le temps d'analyser le fichier HTML.</thumbsup>
 
@@ -82,7 +82,7 @@
 
 <grostitre>Ambiance</grostitre>
 
-<youtube src="./videos/eagles-of-death-metal-i-only-want-you.json"></youtube>
+<youtube src="BYQ4E0SwPP4"></youtube>
 
 <dots></dots>
 

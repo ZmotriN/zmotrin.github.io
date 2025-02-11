@@ -27,9 +27,9 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#f9f83c</color>
-<color>#019e49</color>
-<color>#666666</color>
+<color name="Jaune">#f9f83c</color>
+<color name="Vert">#019e49</color>
+<color name="Gris">#666666</color>
 
 <br>
 
@@ -79,7 +79,7 @@
 
 <grostitre>Ambiance</grostitre>
 
-<youtube src="./videos/les-cowboys-fringants-en-berne.json"></youtube>
+<youtube src="WO3bCASGXhg"></youtube>
 
 <dots></dots>
 

@@ -26,11 +26,11 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#011e30</color>
-<color>#fe4f00</color>
+<color name="Bleu">#011e30</color>
+<color name="Orange">#fe4f00</color>
 <br>
-<color>#888888</color>
-<color>#ffffff</color>
+<color name="Gris">#888888</color>
+<color name="Blanc">#ffffff</color>
 
 <h3>Médias 📷</h3>
 
@@ -114,11 +114,11 @@
 
 <grostitre>Ambiances</grostitre>
 
-<youtube src="./videos/iggy-pop-lust-for-life.json"></youtube>
+<youtube src="jQvUBf5l7Vw"></youtube>
 
 <grostitre>Bande-annonce</grostitre>
 
-<youtube src="./videos/trainspotting-trailer.json"></youtube>
+<youtube src="pehVTRDTe7Q"></youtube>
 
 <dots></dots>
 

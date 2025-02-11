@@ -26,12 +26,12 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#0a0e11</color>
-<color>#333333</color>
-<color>#ffffff</color>
+<color name="Charcoal">#0a0e11</color>
+<color name="Gris">#333333</color>
+<color name="Blanc">#ffffff</color>
 <br>
-<color>#fce339</color>
-<color>#ae3c30</color>
+<color name="Jaune">#fce339</color>
+<color name="Rouge">#ae3c30</color>
 
 <h3>Médias 📷</h3>
 
@@ -54,7 +54,7 @@
     Téléchargez police d'écriture et placez-la dans un dossier <span class="inline-code">fonts</span>.
     Créez une variable pour chacune des couleurs pour utilisation ultérieure.
     Créez une variable nommée <span class="inline-code">--speed</span> et attribuez-lui la valeur de <em>1.5 seconde</em>. Celle-ci servira à déterminer le temps de l'animation.
-    Le fond de la page doit être de couleur <em>grise</em> et avoir un dégradé vertical allant du <em>jaune</em> au <em>bleu</em>.
+    Le fond de la page doit être de couleur <em>grise</em> et avoir un dégradé vertical allant du <em>rouge</em> au <em>jaune</em>.
     Fusionnez les deux fonds en mode <span class="inline-code">screen</span> afin de donner au gradient un effet délavé.
     L'album doit avoir une largeur de <em>80%</em> du plus petit côté de la fenêtre, être de forme carré, être centré tant horizontalement que verticalement, être de couleur <em>charcoal</em> et avoir un ombrage de <em>10vmin</em> égal de tous les côtés de couleur <em>noire</em> semi-transparente.
     Assurez-vous que rien ne dépasse de l'album.
@@ -94,7 +94,7 @@
 
 <grostitre>Ambiance</grostitre>
 
-<youtube src="./videos/robert-charlebois-fu-man-chuu.json"></youtube>
+<youtube src="8zX_ZjuVOkY"></youtube>
 
 <dots></dots>
 

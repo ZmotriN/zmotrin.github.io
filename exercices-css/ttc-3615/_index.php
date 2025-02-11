@@ -22,14 +22,14 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#01a1ff</color>
-<color>#ff7304</color>
-<color>#d8dc09</color>
-<color>#da5767</color>
+<color name="Bleu">#01a1ff</color>
+<color name="Orange">#ff7304</color>
+<color name="Jaune">#d8dc09</color>
+<color name="Rouge">#da5767</color>
 <br>
-<color>#5d0166</color>
-<color>#555555</color>
-<color>#ffffff</color>
+<color name="Mauve">#5d0166</color>
+<color name="Gris">#555555</color>
+<color name="Blanc">#ffffff</color>
 
 <br>
 
@@ -88,7 +88,7 @@
 
 <grostitre>Ambiance</grostitre>
 
-<youtube src="./videos/ttc-telephone.json"></youtube>
+<youtube src="JVUQ06LG5e0"></youtube>
 
 <dots></dots>
 

@@ -26,12 +26,12 @@
 
 <h3>Couleurs 🎨</h3>
 
-<color>#fbcf0e</color>
-<color>#fba80e</color>
-<color>#fda892</color>
+<color name="Jaune">#fbcf0e</color>
+<color name="Orange">#fba80e</color>
+<color name="Pêche">#fda892</color>
 <br>
-<color>#050808</color>
-<color>#333333</color>
+<color name="Gris noir">#050808</color>
+<color name="Gris">#333333</color>
 
 <thumbsup>Prenez le temps d'analyser le fichier HTML.</thumbsup>
 <alert>Il est <strong>INTERDIT</strong> de modifier le HTML.</alert>
@@ -85,11 +85,11 @@
 
 <grostitre>Ambiance</grostitre>
 
-<youtube src="./videos/angelo-badalamenti-red-bats-with-teeth.json"></youtube>
+<youtube src="o0dko5NTw3M"></youtube>
 
 <grostitre>Bande-annonce</grostitre>
 
-<youtube src="./videos/lost-highway-trailer.json"></youtube>
+<youtube src="BBPulP082vs"></youtube>
 
 <dots></dots>
 
