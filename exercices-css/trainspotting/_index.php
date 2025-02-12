@@ -2,7 +2,8 @@
 /**
  * @type     exercice
  * @title    Trainspotting
- * @icon     images/thumb.jpg
+ * @icon     images/thumb.webp
+ * @image    images/image.webp
  * @abstract Pour cet exercice, vous devez écrire du CSS afin de recréer la pochette de la bande sonore du film Trainspotting de Danny Boyle.
  */
 ?>

@@ -2,7 +2,8 @@
 /**
  * @type     exercice
  * @title    Asian Dub Foundation - Rafi's Revenge
- * @icon     images/thumb.jpg
+ * @icon     images/thumb.webp
+ * @image    images/image.webp
  * @abstract Pour cet exercice, vous devez écrire du CSS afin de recréer la pochette de l’album "Rafi's Revenge" du groupe de rap jungle Asian Dub Foundation.
  */
 ?>

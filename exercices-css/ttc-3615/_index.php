@@ -2,7 +2,8 @@
 /**
  * @type     exercice
  * @title    TTC - 3615
- * @icon     images/thumb.jpg
+ * @icon     images/thumb.webp
+ * @image    images/image.webp
  * @abstract Pour cet exercice, vous devez écrire du CSS afin de recréer la pochette de l’album "3615" du groupe rap français TTC.
  */
 ?>

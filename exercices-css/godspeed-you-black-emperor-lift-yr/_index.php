@@ -2,7 +2,8 @@
 /**
  * @type     exercice
  * @title    <span style="font-size: 0.8em;">Godspeed You! Black Emperor - Lift Yr. Skinny Fists Like Antennas to Heaven!</span>
- * @icon     images/thumb.jpg
+ * @icon     images/thumb.webp
+ * @image    images/image.webp
  * @abstract Pour cet exercice, vous devez écrire du CSS afin de recréer l’album "Lift Yr. Skinny Fists Like Antennas to Heaven!" du groupe Godspeed You! Black Emperor.
  */
 ?>

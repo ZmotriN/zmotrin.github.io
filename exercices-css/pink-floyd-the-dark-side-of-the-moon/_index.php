@@ -2,7 +2,8 @@
 /**
  * @type     exercice
  * @title    <span style="font-size: 0.9em;">Pink Floyd - The Dark Side of the Moon</span>
- * @icon     images/thumb.jpg
+ * @icon     images/thumb.webp
+ * @image    images/image.webp
  * @abstract Pour cet exercice, vous devez écrire du CSS afin de recréer la pochette du mytique album "The Dark Side of the Moon" du groupe Pink Floyd.
  */
 ?>

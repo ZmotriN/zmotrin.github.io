@@ -259,7 +259,7 @@ function print_header() {
     $ogtags = new stdClass;
     $ogtags->image = $image;
     $ogtags->title = strip_tags($PAGE->title) . ' | ' . $PAGE->project;
-    $ogtags->description  = htmlentities(html_entity_decode(trim($PAGE->abstract), ENT_QUOTES, 'UTF-8'), ENT_QUOTES, 'UTF-8');
+    $ogtags->description  = htmlentities(html_entity_decode(strip_tags(trim($PAGE->abstract)), ENT_QUOTES, 'UTF-8'), ENT_QUOTES, 'UTF-8');
     $ogtags->url = str_replace($root, $PAGE->domain, str_replace('\\', '/', pathinfo($PAGE->file, PATHINFO_DIRNAME) . '/'));
     $PAGE->ogtags = $ogtags;
 

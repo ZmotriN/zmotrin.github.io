@@ -2,8 +2,9 @@
 /**
  * @type     article
  * @title    Exercices CSS
- * @icon     images/icon.png
- * @abstract Collection d'exercices CSS3
+ * @icon     images/icon.webp
+ * @image    images/image.webp
+ * @abstract Collection d'exercices CSS sous forme de pochettes d'albums connus.
  */
 ?>
 

@@ -2,7 +2,8 @@
 /**
  * @type     exercice
  * @title    Les Cowboys Fringants - Break Syndical
- * @icon     images/thumb.jpg
+ * @icon     images/thumb.webp
+ * @image    images/image.webp
  * @abstract Pour cet exercice, vous devez écrire du CSS afin de recréer la pochette de l’album "Break Syndical" du groupe Les Cowboys Fringants.
  */
 ?>

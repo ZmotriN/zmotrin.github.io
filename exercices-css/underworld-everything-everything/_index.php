@@ -2,7 +2,8 @@
 /**
  * @type     exercice
  * @title    Underworld - Everything Everything
- * @icon     images/thumb.jpg
+ * @icon     images/thumb.webp
+ * @image    images/image.webp
  * @abstract Pour cet exercice, vous devez écrire du CSS afin de recréer l’album "Everything Everything" du groupe de musique électronique Underworld.
  */
 ?>
