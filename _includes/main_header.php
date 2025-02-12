@@ -14,7 +14,6 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="noindex, nofollow" />
         <meta itemprop="digest" content="<?php echo ($PAGE->password ? md5($PAGE->password) : ''); ?>">
         <meta property="og:locale" content="fr_CA">
         <meta property="og:type" content="article">
