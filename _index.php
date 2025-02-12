@@ -11,6 +11,6 @@
  
 <grostitre>Exercices CSS</grostitre>
 
-<?php intlink("./exercices-css"); ?>
+<intlink href="./exercices-css/"></intlink>
 
 <dots></dots>

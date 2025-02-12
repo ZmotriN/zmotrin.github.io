@@ -16,6 +16,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="noindex, nofollow" />
         <meta itemprop="digest" content="<?php echo ($PAGE->password ? md5($PAGE->password) : ''); ?>">
+        <meta property="og:locale" content="fr_CA">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="<?php echo $PAGE->ogtags->title; ?>">
+        <meta property="og:description" content="<?php echo $PAGE->ogtags->description; ?>">
+        <meta property="og:url" content="<?php echo $PAGE->ogtags->url; ?>">
+        <meta property="og:image" content="<?php echo $PAGE->ogtags->image; ?>">
         <link rel="icon" type="image/x-icon" href="<?php echo $PAGE->shared; ?>images/favicon.ico">
         <link rel="stylesheet" href="<?php echo $PAGE->shared; ?>styles/styles.min.css">
         <script src="<?php echo $PAGE->shared; ?>jscripts/highlight.min.js"></script>
