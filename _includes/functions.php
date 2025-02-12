@@ -247,6 +247,28 @@ function getRelativePath($from, $to) {
 function print_header() {
     global $PAGE;
     $PAGE->shared = get_shared($PAGE->file);
+    // __print_r($PAGE);
+    // echo $PAGE->root.BR;
+
+
+    $root = str_replace('\\', '/', realpath($PAGE->root)) . '/';
+    $image = $PAGE->domain . 'shared/images/default.webp';
+
+    if($PAGE->image) {
+        if($img = realpath(pathinfo($PAGE->file, PATHINFO_DIRNAME) . '/' . $PAGE->image)) {
+            $image = str_replace($root, $PAGE->domain, str_replace('\\', '/', $img));
+        }
+    }
+
+
+
+    $ogtags = new stdClass;
+    $ogtags->image = $image;
+
+
+
+    $PAGE->ogtags = $ogtags;
+
     switch($PAGE->type) {
         case 'article':  print_article_header(); break;
         case 'exercice': print_exercice_header(); break;
