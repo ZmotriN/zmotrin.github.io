@@ -916,18 +916,20 @@ app.component('doclink', {
     },
     data() {
         let site = '';
+        let target = '_blank';
         try {
             let url = new URL(this.href);
             if(this.domains[url.hostname] !== undefined) site = this.domains[url.hostname];
         } catch (e) {
             if (this.href.split('.').pop().toLocaleLowerCase() == 'zip') site = 'zipfile';
             else if (this.href.split('.').pop().toLocaleLowerCase() == 'pdf') site = 'pdffile';
+            target = '_self';
         }
         if (this.spacer == 'true') site += ' spacer';
-        return { class: site }
+        return { class: site, target: target }
     },
     template:
-        `<a :class="'doclink ' + this.class" target="_blank" rel="noopener noreferrer" :href="this.href">` +
+        `<a :class="'doclink ' + this.class" :target="this.target" rel="noopener noreferrer" :href="this.href">` +
             `<div class="doclink-container">` +
                 `<div class="doclink-icon"></div>` +
                 `<span class="doclink-title"><slot /></span>` +
