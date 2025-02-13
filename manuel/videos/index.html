@@ -1,0 +1,140 @@
+<!-- 
+
+██████╗ ██╗ █████╗ ███╗   ███╗███████╗████████╗██████╗ ██╗ ██████╗██╗  ██╗
+██╔══██╗██║██╔══██╗████╗ ████║██╔════╝╚══██╔══╝██╔══██╗██║██╔════╝██║ ██╔╝
+██║  ██║██║███████║██╔████╔██║█████╗     ██║   ██████╔╝██║██║     █████╔╝ 
+██║  ██║██║██╔══██║██║╚██╔╝██║██╔══╝     ██║   ██╔══██╗██║██║     ██╔═██╗ 
+██████╔╝██║██║  ██║██║ ╚═╝ ██║███████╗   ██║   ██║  ██║██║╚██████╗██║  ██╗
+╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝
+
+-->
+<!DOCTYPE html>
+<html lang="fr-ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta itemprop="digest" content="">
+        <meta property="og:locale" content="fr_CA">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Vidéos | Maxime Larrivée-Roy">
+        <meta property="og:description" content="Utiliser Github, Youtube et Vimeo">
+        <meta property="og:url" content="https://zmotrin.github.io/manuel/videos/">
+        <meta property="og:image" content="https://zmotrin.github.io/shared/images/default.webp">
+        <link rel="icon" type="image/x-icon" href="../../shared/images/favicon.ico">
+        <link rel="stylesheet" href="../../shared/styles/styles.min.css">
+        <script src="../../shared/jscripts/highlight.min.js"></script>
+        <script src="../../shared/jscripts/swiper-bundle.min.js"></script>
+        <script src="../../shared/jscripts/vue.global.prod.js"></script>
+        <script src="../../shared/jscripts/timdoc.min.js"></script>
+        <script>const shared = '../../shared/';</script>
+        <title>Vidéos</title>
+    </head>
+    <body>
+        <script>document.body.classList.add(localStorage.getItem('darkmode') === 'true' ? 'dark' : 'light');</script>
+        <a id="top"></a>
+        <header>
+            <div id="logo" @click="goToTop('../../', '')" title="Retour à l'accueil"></div>
+            <div title="Interrupteur" id="lightswitch" ref="lightswitch" @click="lightswitch()"></div>
+        </header>
+        <main>
+            <!-- MAIN HEADER EOF -->
+            <div id="subhead">
+                <div id="breadcrumb">
+                    <div id="breadcrumb_normal"><a href="../">Manuel</a> ></div>
+                    <div id="breadcrumb_index"></div>
+                </div>
+                <h1 id="title"><img src="images/icon.webp">&nbsp;Vidéos</h1>
+            </div>
+            <article>
+                <div id="contents">
+                    <!-- ARTICLE HEADER EOF -->
+
+<p class="spacer">Il est possible d'inclure des vidéos dans vos articles assez facilement. Il est fortement encouragé d'utiliser le lecteur maison afin de ne pas avoir de publicités. Pour ce faire, il suffit de placer dans un sous-dossier <em>videos/</em> de votre article et d'utiliser la composante <span class="inline-code">&lt;clip&gt;</span>.</p>
+
+<dots></dots>
+
+<grostitre>Youtube</grostitre>
+
+<p>Afin d'accélérer le chargement des pages contenant des vidéos, il est fortement conseillé d'utiliser la composante <span class="inline-code">&lt;youtube src=&quot;id&quot;&gt;&lt;/youtube&gt;</span>.</p>
+
+<highlight lang="html">&lt;youtube src=&quot;KVJBHSOx9jI&quot;&gt;&lt;/youtube&gt;</highlight>
+
+<youtube src="KVJBHSOx9jI"></youtube>
+
+<dots></dots>
+
+
+<grostitre>Vimeo</grostitre>
+
+<highlight lang="html">&lt;vimeo src=&quot;874986396&quot;&gt;&lt;/vimeo&gt;</highlight>
+
+<vimeo src="874986396"></vimeo>
+
+<dots></dots>
+
+
+<grostitre>Clipinfo</grostitre>
+
+<p>Pour que fonctionne la composante <span class="inline-code">&lt;clip&gt;</span>, en plus du fichier <em>.mp4</em>, vous aurez besoin d'un fichier <em>.jpg</em> pour la couverture et d'un fichier <em>.json</em> contenant les informations relative au fichier vidéo. Pour ce faire, dans le dossier <em>_bin/</em> se trouve un batchfile nommé <em>clipinfo.bat</em>. Il suffit de l'appeller suivi du chemin de votre fichier <em>.mp4</em> ou encore glisser votre fichier <em>.mp4</em> sur le fichier <em>clipinfo.bat</em>.</p>
+
+<highlight lang="dos">clipinfo.bat videos/le-boson-de-higgs.mp4</highlight>
+
+<img class="full" src="images/drag-and-drop.webp">
+
+<dots></dots>
+
+
+<grostitre>Exemple</grostitre>
+
+<highlight lang="html">&lt;clip src=&quot;../components/videos/le-boson-de-higgs.mp4&quot; title=&quot;Qu&#039;est-ce que le boson de Higs?&quot;&gt;&lt;/clip&gt;</highlight>
+<clip src="../components/videos/le-boson-de-higgs.mp4" title="Qu'est-ce que le boson de Higs?"></clip>
+
+<dots></dots>
+
+
+<grostitre>Outils</grostitre>
+
+<!--         <a class="tool" target="_blank" href="https://youtube-dl.org/">
+            <div class="tool-container">
+                <div class="tool-abstract">
+                    <em class="tool-label">OUTIL</em>
+                    <span class="tool-title">Youtube-DL</span>
+                    <span class="tool-description">Outil en ligne de commande pour télécharger les vidéos d'une grande variété de sources différentes.</span>
+                </div>
+                <div class="tool-thumb" style="background-image: url(tools/youtube-dl/images/thumb.jpg)"></div>
+            </div>
+        </a>
+        <a class="tool" target="_blank" href="https://jdownloader.org/jdownloader2">
+            <div class="tool-container">
+                <div class="tool-abstract">
+                    <em class="tool-label">OUTIL</em>
+                    <span class="tool-title">jDownloader2</span>
+                    <span class="tool-description">Un gestionnaire de téléchargement libre, disponible sur Windows, Mac OS X et sur GNU/Linux1, écrit en Java. Le logiciel est pour le moment sous GNU GPL.</span>
+                </div>
+                <div class="tool-thumb" style="background-image: url(tools/jdownloader2/images/thumb.jpg)"></div>
+            </div>
+        </a> -->
+        <a class="tool" target="_blank" href="https://github.com/mifi/lossless-cut">
+            <div class="tool-container">
+                <div class="tool-abstract">
+                    <em class="tool-label">OUTIL</em>
+                    <span class="tool-title">LosslessCut</span>
+                    <span class="tool-description">LosslessCut aims to be the ultimate cross platform FFmpeg GUI for extremely fast and lossless operations on video, audio, subtitle and other related media files.</span>
+                </div>
+                <div class="tool-thumb" style="background-image: url(tools/losslesscut/images/thumb.jpg)"></div>
+            </div>
+        </a>
+
+<dots></dots>
+                    <!-- ARTICLE FOOTER SOF -->
+                </div>
+                <tabledesmatieres></tabledesmatieres>
+            </article>        <!-- MAIN FOOTER SOF -->
+        </main>
+        <footer>
+            <div id="copyright">Copyright (c) 2025<br>Maxime Larrivée-Roy</div>
+        </footer>
+        <script>app.mount('body');</script>
+    </body>
+</html>
