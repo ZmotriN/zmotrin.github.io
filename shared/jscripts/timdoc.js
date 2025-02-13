@@ -461,7 +461,7 @@ const app = Vue.createApp({
         const title = document.getElementById('title');
         const referer = new URL(document.referrer, document.baseURI);
         const breadcrumb = document.getElementById('breadcrumb');
-        if (title) title.style.fontSize = 'min(' + getScaledTextFontSize(title.innerText, 700) + 'px' + ', 10vw)';
+        if (title) title.style.fontSize = 'min(' + getScaledTextFontSize(title.innerText, 700) + 'px, 10vw)';
         if (breadcrumb && /\/index\//g.test(referer.pathname))
             breadcrumb.classList.add('index');
         if (this.$refs.lightswitch != undefined)
