@@ -465,7 +465,7 @@ const app = Vue.createApp({
         if (breadcrumb && /\/index\//g.test(referer.pathname))
             breadcrumb.classList.add('index');
         if (this.$refs.lightswitch != undefined)
-            this.$refs.lightswitch.className = this.theme == 'dark' ? 'lightswitch--off' : 'lightswitch--on';
+            this.$refs.lightswitch.className = this.theme == 'dark' ? 'lightswitch--off' : 'lightswitch--on'; // TO OPTIMIZE
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
             if (event.matches) this.setDarkMode();
             else this.setLightMode();
