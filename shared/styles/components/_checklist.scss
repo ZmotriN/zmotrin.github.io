@@ -26,7 +26,7 @@ div.checklist {
             transition-duration: 200ms;
             
             &:hover {
-                background-color: #e8e8fd;
+                background-color: var(--main-color-light);
             }
 
             &.checked {
@@ -56,7 +56,7 @@ div.checklist {
         height: 4px;
         margin-top: 3px;
         background-image: linear-gradient(0deg, var(--main-color), var(--main-color));
-        background-color: #d1ddf5;
+        background-color: var(--main-color-light);
         background-position: left;
         background-repeat: no-repeat;
         background-size: 0% 4px;

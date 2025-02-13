@@ -46,7 +46,7 @@ body.dark {
 
     .grostitre {
         &__chain {
-            background-color: var(--main-color);
+            background-color: var(--main-color-dark);
             &:hover { background-color: var(--main-color); }
             &.copied { background-color: #34ad24; }
         }
@@ -142,8 +142,8 @@ body.dark {
     }
 
     div.checklist {
-        ol li:hover { background-color: #1c1d21; }
-        &__progressbar { background-color: #1c1d21; }
+        ol li:hover { background-color: var(--main-color-dark); }
+        &__progressbar { background-color: var(--main-color-dark); }
     }
 
     .audioplayer {
@@ -173,20 +173,6 @@ body.dark {
         }
     }
 
-    .video-js {
-        color: #ff003a;
-        button.vjs-big-play-button {
-            color: #ff003a;
-            border-color: #ff003a;
-        }
-        .vjs-slider-bar {
-            background-color: #ff003a;
-        }
-        .vjs-control-bar {
-            background-color: rgb(28, 29, 33);
-            opacity: 80%;
-        }
-    }
 
     .knowmore {
         display: block;
@@ -206,15 +192,6 @@ body.dark {
     .doclink.codepen::before {
         background-color: #5b5e6b;
     }
-
-    // #contents {
-    //     p code,
-    //     // ul code,
-    //     // code {
-    //     //     background-color: #282a2f;
-    //     // }
-    // }
-
 
     table{
         tr:nth-child(even) td{
