@@ -1,8 +1,7 @@
 a.exercice {
     display: block;
-    background-image: linear-gradient(0deg, #87ceeb, 20%, #f0f8fc);
-    background-image: linear-gradient(0deg, #577590, 1%, #e5ecf1
-    );
+    // background-image: linear-gradient(0deg, #87ceeb, 20%, #f0f8fc);
+    background-image: linear-gradient(0deg, #577590, 1%, #e5ecf1);
     background-color: #e5ecf1;
     margin-bottom: 25px;
     color: #555555;
@@ -10,7 +9,7 @@ a.exercice {
     margin-right: -25px;
 
     @media (min-width: 480px)  {
-        height: 140px;
+        height: 180px;
     }
 
     &:hover {
@@ -22,9 +21,11 @@ a.exercice {
         height: 100%;
         display: flex;
         flex-direction: column;
-
+        
+        
         @media (min-width: 480px)  {
             flex-direction: row;
+            
         }
 
         div.exercice-thumb {
@@ -38,11 +39,17 @@ a.exercice {
 
         div.exercice-abstract {
             flex-grow: 2;
-            margin: 25px;
+            margin: 25px 25px 15px 25px;
             display: flex;
             align-items: flex-start;
             flex-direction: column;
-            justify-content: center;
+            justify-content: top;
+            overflow: hidden;
+            // background-color: red;
+
+            @media (min-width: 480px)  {
+                margin: 25px 25px 5px 25px;
+            }
 
             em {
                 background-color: skyblue;
@@ -55,7 +62,7 @@ a.exercice {
                 color: black !important;
                 margin:  0 0 5px 0;
 
-                font-size: 8px;
+                font-size: 2.5vw;
                 @media (min-width: 480px)  {
                     font-size: 12px;
                 }
@@ -75,7 +82,7 @@ a.exercice {
 
             .exercice-description {
                 margin: 3px 0 0 0;
-
+// background-color: red;
                 font-size: 4vw;
                 @media (min-width: 480px)  {
                     font-size: 14px;
