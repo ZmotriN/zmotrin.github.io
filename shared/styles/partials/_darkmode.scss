@@ -17,7 +17,7 @@ body.dark {
         filter: hue-rotate(3.142rad) brightness(100%) drop-shadow(0 0 10px #ffffffa0);
 
         @media only screen and (max-width: 1320px) {
-            filter: hue-rotate(3.142rad) brightness(100%) drop-shadow(0 0 4px #ffffffa0);
+            filter: hue-rotate(3.142rad) brightness(100%) drop-shadow(0 0 0.76vw #ffffffa0);
         }
     
     }
@@ -157,18 +157,18 @@ body.dark {
     .mediafile {
         &__link-text {
             background-color: #1c1d21;
-            color: #ff003a;
+            color: var(--main-color);
         }
         
         &__download {
-            background-color: #ff003a;
-            &:hover { background-color: #004ca3; }
+            background-color: var(--main-color-dark);
+            &:hover { background-color: var(--main-color); }
             &.copied { background-color: #34ad24; }
         }
         
         &__chain {
-            background-color: #ff003a;
-            &:hover { background-color: #004ca3; }
+            background-color: var(--main-color-dark);
+            &:hover { background-color: var(--main-color); }
             &.copied { background-color: #34ad24; }
         }
     }

@@ -37,6 +37,8 @@
 
      /* SVP conservez les 2 variables CSS suivantes (et non scss) car je les utilise en démo dans un des mes cours (Marie-Michelle) */
     --main-color: #4976bf;
+    --main-color-light: #c8cfee;
+    --main-color-dark: #2f4d7e;
     --main-color-encoded: %234976bf;
     --secondary-color: #e5a00d;
     --grostitre-size-desktop: 36px;
@@ -254,7 +256,7 @@ header {
 
         @media (min-width: 576px)  {
             // background-color: blue;
-            font-size: 680px;
+            font-size: 60px;
         }
 
         img {
