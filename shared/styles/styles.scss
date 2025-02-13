@@ -194,8 +194,8 @@ header {
             transition-duration: 0.4s;
         }
 
-        &.lightswitch--on::before { top: 0px; }
-        &.lightswitch--off::before { top: 34px; }
+        // &.lightswitch--on::before { top: 0px; }
+        // &.lightswitch--off::before { top: 34px; }
 
         &:hover {
             transform: scale(1.2);
@@ -203,6 +203,10 @@ header {
         }
 
     }
+}
+
+body.dark {
+    #lightswitch::before { top: 34px; }
 }
 
 #subhead {
