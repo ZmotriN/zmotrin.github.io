@@ -22,10 +22,11 @@
     &:hover {
         transform: scale(1.08);
     }
-    &.clicked {
-        filter: hue-rotate(360deg);
-        transition-duration: 1s;
-    }
+    // &.clicked {
+    //     // filter: hue-rotate(360deg);
+    //     // transition-duration: 200ms;
+    //     // color: #83ff73; !important;
+    // }
 }
 
 body.dark .color {
