@@ -8,7 +8,8 @@ register_tag('exercice', function($html, $attrs, $data) {
     if(!is_file(($file = realpath(pathinfo($this->file, PATHINFO_DIRNAME).S.$attrs['href']).S.'_index.php'))) return;
     if(!$info = php_file_info($file)) return;
     $url = !empty($info->url) ? $info->url : $attrs['href'];
-    $thumb = rtrim($attrs['href'], '/').'/'.$info->icon;
+    
+    $thumb = rtrim($attrs['href'], '/') . '/' . (!empty($info->image) ? $info->image : $info->icon);
     return <<<EOD
         <a class="exercice" href="{$url}">
             <div class="exercice-container">
