@@ -233,14 +233,16 @@ header {
 
     }
 
-    #title {
+    h1#title {
         font-size: 10vw;
         font-weight: 400;
-        max-width: 1000px;
+        // max-width: 1000px;
         margin: 5px auto 0 auto;
+        // background-color: red;
 
         @media (min-width: 576px)  {
-            font-size: 60px;
+            // background-color: blue;
+            font-size: 680px;
         }
 
         img {
