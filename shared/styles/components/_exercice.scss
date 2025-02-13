@@ -32,9 +32,12 @@ a.exercice {
             background-position: 50% 50%;
             background-repeat: no-repeat;
             background-size: cover;
-            aspect-ratio: 4/3;
+            aspect-ratio: 16/9;
             // box-sizing: content-box;
             // border: 1px solid skyblue;
+            @media (min-width: 480px)  {
+                aspect-ratio: 4/3;
+            }
         }
 
         div.exercice-abstract {
