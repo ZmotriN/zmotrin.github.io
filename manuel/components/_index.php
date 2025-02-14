@@ -452,8 +452,8 @@ Utilisez la proprité <incode>transform</incode>.<br>
 <highlight lang="html"><clipasset src="./videos/king-crimson.mp4"></clipasset></highlight>
 <clipasset src="./videos/king-crimson.mp4"></clipasset>
 <p>Il est possible d'afficher le <incode><clipasset></incode> en format téléphone mobile. Pour ce faire utilisez <span class='inline-code'>mobile="true"</span></p>
-<highlight lang="html"><clipasset src="anim-figma-appli-mobile.mov" mobile="true"></clipasset></highlight>
-<clipasset src="../../582-201MO/wiki/images/exercice-cours13-appli-mobile.mov" mobile="true"></clipasset>
+<!-- <highlight lang="html"><clipasset src="anim-figma-appli-mobile.mov" mobile="true"></clipasset></highlight>
+<clipasset src="../../582-201MO/wiki/images/exercice-cours13-appli-mobile.mov" mobile="true"></clipasset> -->
 
 <dots></dots>
 
