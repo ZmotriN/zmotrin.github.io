@@ -3,6 +3,7 @@
  * @type     article
  * @title    Vidéos
  * @icon     images/icon.webp
+ * @image    ../images/image.webp
  * @index    0
  * @abstract Utiliser Github, Youtube et Vimeo
  */

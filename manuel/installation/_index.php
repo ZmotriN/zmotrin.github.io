@@ -4,6 +4,7 @@
  * @type     article
  * @title    Installation
  * @icon     images/icon.webp
+ * @image    ../images/image.webp
  * @abstract Installation GIT, VS Code, PXPros
  */
 ?>

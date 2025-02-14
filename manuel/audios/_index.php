@@ -4,6 +4,7 @@
  * @type     article
  * @title    Audios
  * @icon     images/icon.webp
+ * @image    ../images/image.webp
  * @abstract Utiliser Github et la composante &lt;tune&gt;
  */
 ?>

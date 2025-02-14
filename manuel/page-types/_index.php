@@ -3,6 +3,7 @@
  * @type     article
  * @title    Types de pages
  * @icon     images/icon.webp
+ * @image    ../images/image.webp
  * @abstract Liste, article, exercice, outil
  */
 ?>

@@ -4,6 +4,7 @@
  * @type     article
  * @title    PXPros
  * @icon     images/icon.webp
+ * @image    ../images/image.webp
  * @abstract PHP Preprocessor
  */
 ?>
