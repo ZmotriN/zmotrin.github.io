@@ -25,13 +25,13 @@
 -->
 <grostitre>Titre de section</grostitre>
 
-<h3>grostitre</h3>
+<h3>&lt;grostitre&gt;</h3>
 
 <p>La composante <incode><grostitre></incode> remplace les <incode>h1</incode>, créent une ancre et l'ajoute à la table des matières automatiquement.<br><br>Exemple de cette section:</p>
 
 <highlight lang="html"><grostitre>Titre de section</grostitre></highlight>
 
-<h3>dots</h3>
+<h3>&lt;dots&gt;</h3>
 
 <p>La composante <incode>&lt;dots&gt;</incode> est utilisée pour séparer les différentes sections d'une page.</p>
 
@@ -52,7 +52,7 @@
 
 <grostitre>Navigation</grostitre>
 
-<h3>children</h3>
+<h3>&lt;children&gt;</h3>
 
 <p>La balise <incode><children></children></incode> permet de lister les sous-dossier d'une page. Cette composante ne doit être utilisée qu'a l'intérieur d'une page de type <incode>list</incode>.</p>
 
@@ -86,7 +86,7 @@
 
 <grostitre>Bulles d'informations</grostitre>
 
-<h3>info</h3>
+<h3>&lt;info&gt;</h3>
 <highlight lang="html">
 <info>Ceci est une bulle d'information</info>
 <warning>Ceci est une bulle d'avertissement</warning>
@@ -154,7 +154,7 @@
 
 <grostitre>Liens médias</grostitre>
 
-<h3>mediafile</h3>
+<h3>&lt;mediafile&gt;</h3>
 <p>Lier un fichier média afin de le copier ou de le télécharger.</p>
 <highlight lang="html">
 <mediafile src="images/icon.webp">Icône</mediafile>
@@ -172,7 +172,7 @@
 <mediafile src="images/gandalf.svg" addr="false">Gandalf</mediafile>
 <br>
 
-<h3>doclink</h3>
+<h3>&lt;doclink&gt;</h3>
 <highlight lang="html" scroll="true">
 <doclink href="https://css-tricks.com/almanac/properties/f/flex-direction/">flex-direction</doclink>
 <doclink href="https://www.w3schools.com/cssref/css3_pr_flex-direction.php">flex-direction</doclink>
@@ -183,27 +183,27 @@
 <doclink href="https://developer.mozilla.org/fr/docs/Web/CSS/flex-direction">flex-direction</doclink>
 <br><br>
 
-<h3>intlink</h3>
-<highlight lang="html">&lt;intlink href=&quot;../../582-215MO/css/exercices/lost-highway/&quot;&gt;&lt;/intlink&gt;</highlight>
-<intlink href="../../582-215MO/css/exercices/lost-highway/"></intlink>
+<h3>&lt;intlink&gt;</h3>
+<highlight lang="html">&lt;intlink href=&quot;../../exercices-css/lost-highway/&quot;&gt;&lt;/intlink&gt;</highlight>
+<intlink href="../../exercices-css/lost-highway/"></intlink>
 <info>Il existe aussi la composante <incode>&lt;listlink href=&quot;...&quot;&gt;&lt;/listlink&gt;</incode> qui est l'équivalent de <incode>&lt;intlink&gt;&lt;/intlink&gt;</incode> mais pour les pages de type <incode>list</incode>.</info>
 
 <warning>Le rendu de cette composante est effectué par le pré-processeur.</warning>
 <br><br>
 
-<h3>exercice</h3>
-<highlight lang="html">&lt;exercice href="exercices/flexbox-defense"&gt;&lt;/exercice&gt;</highlight>
-<exercice href="exercices/flexbox-defense"></exercice>
+<h3>&lt;exercice&gt;</h3>
+<highlight lang="html">&lt;exercice href="../../exercices-css/lost-highway/"&gt;&lt;/exercice&gt;</highlight>
+<exercice href="../../exercices-css/lost-highway/"></exercice>
 <warning>Le rendu de cette composante est effectué par le pré-processeur.</warning>
 <br><br>
 
-<h3>tool</h3>
+<h3>&lt;tool&gt;</h3>
 <highlight lang="html">&lt;tool href="tools/css-gradient"&gt;&lt;/tool&gt;</highlight>
 <tool href="tools/css-gradient"></tool>
 <warning>Le rendu de cette composante est effectué par le pré-processeur.</warning>
 <br><br>
 
-<h3>knowmore</h3>
+<h3>&lt;knowmore&gt;</h3>
 <highlight lang="html">
 <knowmore href="https://fr.wikipedia.org/wiki/Monotremata">
     Les monotrèmes (Monotremata) constituent un ordre animal défini par
@@ -236,13 +236,13 @@
 
 <grostitre>Surbrillance</grostitre>
 
-<h3>incode</h3>
+<h3>&lt;incode&gt;</h3>
 <highlight lang="html">Utilisez la proprité <incode>transform</incode>.</highlight>
 Utilisez la proprité <incode>transform</incode>.<br>
 <warning>Le rendu de cette composante est effectué par le pré-processeur.</warning>
 <br><br>
 
-<h3>highlight</h3>
+<h3>&lt;highlight&gt;</h3>
 <highlight lang="html">
 &lt;highlight lang="javascript"&gt;
     console.log("Ceci est du javascript en surbrillante grâce à la librairie javascript Highlight.js qui supporte une tonne de langages différents.");
@@ -278,7 +278,7 @@ Utilisez la proprité <incode>transform</incode>.<br>
 
 <grostitre>Liste à cocher</grostitre>
 
-<h3>checklist</h3>
+<h3>&lt;checklist&gt;</h3>
 <highlight lang="html" scroll="true">
 <checklist>
     Bacon ipsum dolor amet pork loin shankle leberkas beef capicola porchetta ground round kevin meatball bresaola andouille.
@@ -315,7 +315,7 @@ Utilisez la proprité <incode>transform</incode>.<br>
 
 <grostitre>Citation</grostitre>
 
-<h3>quote</h3>
+<h3>&lt;quote&gt;</h3>
 
 <highlight lang="html">
 <quote author="Gandalf" title="Magicien" photo="./images/gandalf.webp">
@@ -345,7 +345,7 @@ Utilisez la proprité <incode>transform</incode>.<br>
 
 <grostitre>Couleurs</grostitre>
 
-<h3>color</h3>
+<h3>&lt;color&gt;</h3>
 <highlight lang="html">
 <color>#51af3f</color>
 <color>#1e98e1</color>
@@ -375,7 +375,7 @@ Utilisez la proprité <incode>transform</incode>.<br>
 
 <grostitre>Images</grostitre>
 
-<h3>timg</h3>
+<h3>&lt;timg&gt;</h3>
 
 <p>La composante <incode><timg src=""></timg></incode> agît de la même manière que la balise <incode><img src=""></incode> à l'exception que l'expression <incode>$t</incode> sera remplacé par le nom du thème (<incode>light</incode> ou <incode>dark</incode>).</p>
 
@@ -387,7 +387,7 @@ Utilisez la proprité <incode>transform</incode>.<br>
 <br><br>
 
 
-<h3>gallery</h3>
+<h3>&lt;gallery&gt;</h3>
 <highlight lang="html">&lt;gallery&gt;
     photos/01.webp
     photos/02.webp
@@ -429,24 +429,24 @@ Utilisez la proprité <incode>transform</incode>.<br>
 
 <grostitre>Vidéos</grostitre>
 
-<h3>youtube</h3>
+<h3>&lt;youtube&gt;</h3>
 <p>Afin d'accélérer le chargement des pages contenant des vidéos, il est fortement conseillé d'utiliser la composante <incode>&lt;youtube src="id"&gt;&lt;/youtube&gt;</incode>.</p>
 <highlight lang="html"><youtube src="KVJBHSOx9jI"></youtube></highlight>
 <youtube src="KVJBHSOx9jI"></youtube>
 <br><br>
 
-<h3>Vimeo</h3>
+<h3>&lt;vimeo&gt;</h3>
 <highlight lang="html"><vimeo src="874986396"></vimeo></highlight>
 <vimeo src="874986396"></vimeo>
 <br><br>
 
-<h3>clip</h3>
-<highlight lang="html"><clip src="videos/le-boson-de-higgs.mp4"></clip></highlight>
+<h3>&lt;clip&gt;</h3>
+<highlight lang="html" scroll="true"><clip title="Qu'est-ce que le boson de Higgs?" src="videos/le-boson-de-higgs.mp4"></clip></highlight>
 <clip src="videos/le-boson-de-higgs.mp4" title="Qu'est-ce que le boson de Higgs?"></clip>
 <doclink href="../videos">Manuel / Vidéos</doclink>
 <br><br>
 
-<h3>clipasset</h3>
+<h3>&lt;clipasset&gt;</h3>
 <p><incode><clipasset></incode> permet d'inclure un video inline en boucle. Il est conseillé d'avoir un vidéo d'une largeur maximale de <em>770px</em>. Il est aussi recommandé de bien compresser son vidéo avec la commande <incode>FFMPEG</incode> suivante:</p>
 <highlight lang="console">> ffmpeg -y -i "input.mp4" -an -c:v libx264 -profile:v main -level:v 3.0 -pix_fmt yuv420p -preset veryslow -movflags faststart -crf 22 -vf "scale=770:-1" "output.mp4"</highlight>
 <highlight lang="html"><clipasset src="./videos/king-crimson.mp4"></clipasset></highlight>
@@ -470,7 +470,7 @@ Utilisez la proprité <incode>transform</incode>.<br>
 
 <grostitre>Audios</grostitre>
 
-<h3>audioplayer</h3>
+<h3>&lt;tune&gt;</h3>
 <highlight lang="html"><tune src="audios/careless-whisper.mp3"></tune></highlight>
 <tune src="audios/careless-whisper.mp3"></tune>
 <doclink href="../audios">Manuel / Audios</doclink>

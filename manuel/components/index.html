@@ -65,13 +65,13 @@
 -->
 <grostitre>Titre de section</grostitre>
 
-<h3>grostitre</h3>
+<h3>&lt;grostitre&gt;</h3>
 
 <p>La composante <span class="inline-code">&lt;grostitre&gt;</span> remplace les <span class="inline-code">h1</span>, créent une ancre et l'ajoute à la table des matières automatiquement.<br><br>Exemple de cette section:</p>
 
 <highlight lang="html">&lt;grostitre&gt;Titre de section&lt;/grostitre&gt;</highlight>
 
-<h3>dots</h3>
+<h3>&lt;dots&gt;</h3>
 
 <p>La composante <span class="inline-code">&lt;dots&gt;</span> est utilisée pour séparer les différentes sections d'une page.</p>
 
@@ -92,7 +92,7 @@
 
 <grostitre>Navigation</grostitre>
 
-<h3>children</h3>
+<h3>&lt;children&gt;</h3>
 
 <p>La balise <span class="inline-code">&lt;children&gt;&lt;/children&gt;</span> permet de lister les sous-dossier d'une page. Cette composante ne doit être utilisée qu'a l'intérieur d'une page de type <span class="inline-code">list</span>.</p>
 
@@ -124,7 +124,7 @@
 
 <grostitre>Bulles d'informations</grostitre>
 
-<h3>info</h3>
+<h3>&lt;info&gt;</h3>
 <highlight lang="html">&lt;info&gt;Ceci est une bulle d&#039;information&lt;/info&gt;
 &lt;warning&gt;Ceci est une bulle d&#039;avertissement&lt;/warning&gt;
 &lt;alert&gt;Ceci est une bulle d&#039;alerte&lt;/alert&gt;
@@ -188,7 +188,7 @@
 
 <grostitre>Liens médias</grostitre>
 
-<h3>mediafile</h3>
+<h3>&lt;mediafile&gt;</h3>
 <p>Lier un fichier média afin de le copier ou de le télécharger.</p>
 <highlight lang="html">&lt;mediafile src=&quot;images/icon.webp&quot;&gt;Ic&ocirc;ne&lt;/mediafile&gt;
 &lt;mediafile src=&quot;images/gandalf.svg&quot;&gt;Gandalf&lt;/mediafile&gt;</highlight>
@@ -202,7 +202,7 @@
 <mediafile src="images/gandalf.svg" addr="false">Gandalf</mediafile>
 <br>
 
-<h3>doclink</h3>
+<h3>&lt;doclink&gt;</h3>
 <highlight lang="html" scroll="true">&lt;doclink href=&quot;https://css-tricks.com/almanac/properties/f/flex-direction/&quot;&gt;flex-direction&lt;/doclink&gt;
 &lt;doclink href=&quot;https://www.w3schools.com/cssref/css3_pr_flex-direction.php&quot;&gt;flex-direction&lt;/doclink&gt;
 &lt;doclink href=&quot;https://developer.mozilla.org/fr/docs/Web/CSS/flex-direction&quot;&gt;flex-direction&lt;/doclink&gt;</highlight>
@@ -211,30 +211,36 @@
 <doclink href="https://developer.mozilla.org/fr/docs/Web/CSS/flex-direction">flex-direction</doclink>
 <br><br>
 
-<h3>intlink</h3>
-<highlight lang="html">&lt;intlink href=&quot;../../582-215MO/css/exercices/lost-highway/&quot;&gt;&lt;/intlink&gt;</highlight>
-
+<h3>&lt;intlink&gt;</h3>
+<highlight lang="html">&lt;intlink href=&quot;../../exercices-css/lost-highway/&quot;&gt;&lt;/intlink&gt;</highlight>
+        <div class="intlink__item">
+            <div class="intlink__item__icon" style="background-image: url(../../exercices-css/lost-highway/images/thumb.webp);"></div>
+            <div class="intlink__item__description">
+                <span class="intlink__item__title"><a href="../../exercices-css/lost-highway/">Lost Highway</a></span>
+                <span class="intlink__item__abstract">Pour cet exercice, vous devez écrire du CSS afin de recréer la pochette de la bande sonore du film Lost Highway de David Lynch.</span>
+            </div>
+        </div>
 <info>Il existe aussi la composante <span class="inline-code">&lt;listlink href=&quot;...&quot;&gt;&lt;/listlink&gt;</span> qui est l'équivalent de <span class="inline-code">&lt;intlink&gt;&lt;/intlink&gt;</span> mais pour les pages de type <span class="inline-code">list</span>.</info>
 
 <warning>Le rendu de cette composante est effectué par le pré-processeur.</warning>
 <br><br>
 
-<h3>exercice</h3>
-<highlight lang="html">&lt;exercice href=&quot;exercices/flexbox-defense&quot;&gt;&lt;/exercice&gt;</highlight>
-        <a class="exercice" href="http://www.flexboxdefense.com/">
+<h3>&lt;exercice&gt;</h3>
+<highlight lang="html">&lt;exercice href=&quot;../../exercices-css/lost-highway/&quot;&gt;&lt;/exercice&gt;</highlight>
+        <a class="exercice" href="../../exercices-css/lost-highway/">
             <div class="exercice-container">
-                <div class="exercice-thumb" style="background-image: url(exercices/flexbox-defense/images/thumb.webp)"></div>
+                <div class="exercice-thumb" style="background-image: url(../../exercices-css/lost-highway/images/image.webp)"></div>
                 <div class="exercice-abstract">
                     <em class="exercice-label">EXERCICE</em>
-                    <span class="exercice-title">Flexbox Defense - Niveaux 1 à 9</span>
-                    <span class="exercice-description">Complète les 9 premiers niveaux de Flexbox Defense.</span>
+                    <span class="exercice-title">Lost Highway</span>
+                    <span class="exercice-description">Pour cet exercice, vous devez écrire du CSS afin de recréer la pochette de la bande sonore du film Lost Highway de David Lynch.</span>
                 </div>
             </div>
         </a>
 <warning>Le rendu de cette composante est effectué par le pré-processeur.</warning>
 <br><br>
 
-<h3>tool</h3>
+<h3>&lt;tool&gt;</h3>
 <highlight lang="html">&lt;tool href=&quot;tools/css-gradient&quot;&gt;&lt;/tool&gt;</highlight>
         <a class="tool" target="_blank" href="https://cssgradient.io/">
             <div class="tool-container">
@@ -249,7 +255,7 @@
 <warning>Le rendu de cette composante est effectué par le pré-processeur.</warning>
 <br><br>
 
-<h3>knowmore</h3>
+<h3>&lt;knowmore&gt;</h3>
 <highlight lang="html">&lt;knowmore href=&quot;https://fr.wikipedia.org/wiki/Monotremata&quot;&gt;
     Les monotr&egrave;mes (Monotremata) constituent un ordre animal d&eacute;fini par
     Charles-Lucien Bonaparte en 1838, regroupant des esp&egrave;ces caract&eacute;ris&eacute;es
@@ -280,13 +286,13 @@
 
 <grostitre>Surbrillance</grostitre>
 
-<h3>incode</h3>
+<h3>&lt;incode&gt;</h3>
 <highlight lang="html">Utilisez la proprit&eacute; &lt;incode&gt;transform&lt;/incode&gt;.</highlight>
 Utilisez la proprité <span class="inline-code">transform</span>.<br>
 <warning>Le rendu de cette composante est effectué par le pré-processeur.</warning>
 <br><br>
 
-<h3>highlight</h3>
+<h3>&lt;highlight&gt;</h3>
 <highlight lang="html">&lt;highlight lang=&quot;javascript&quot;&gt;
     console.log(&quot;Ceci est du javascript en surbrillante gr&acirc;ce &agrave; la librairie javascript Highlight.js qui supporte une tonne de langages diff&eacute;rents.&quot;);
 &lt;/highlight&gt;</highlight>
@@ -318,7 +324,7 @@ Utilisez la proprité <span class="inline-code">transform</span>.<br>
 
 <grostitre>Liste à cocher</grostitre>
 
-<h3>checklist</h3>
+<h3>&lt;checklist&gt;</h3>
 <highlight lang="html" scroll="true">&lt;checklist&gt;
     Bacon ipsum dolor amet pork loin shankle leberkas beef capicola porchetta ground round kevin meatball bresaola andouille.
     Andouille ham bresaola landjaeger meatloaf shoulder t-bone kielbasa salami corned beef porchetta ball tip.
@@ -353,7 +359,7 @@ Utilisez la proprité <span class="inline-code">transform</span>.<br>
 
 <grostitre>Citation</grostitre>
 
-<h3>quote</h3>
+<h3>&lt;quote&gt;</h3>
 
 <highlight lang="html">&lt;quote author=&quot;Gandalf&quot; title=&quot;Magicien&quot; photo=&quot;./images/gandalf.webp&quot;&gt;
     Un magicien n&#039;est jamais en retard, ni en avance d&#039;ailleurs Frodon Sacquet.
@@ -381,7 +387,7 @@ Utilisez la proprité <span class="inline-code">transform</span>.<br>
 
 <grostitre>Couleurs</grostitre>
 
-<h3>color</h3>
+<h3>&lt;color&gt;</h3>
 <highlight lang="html">&lt;color&gt;#51af3f&lt;/color&gt;
 &lt;color&gt;#1e98e1&lt;/color&gt;
 &lt;color&gt;#ee4bbe&lt;/color&gt;
@@ -409,7 +415,7 @@ Utilisez la proprité <span class="inline-code">transform</span>.<br>
 
 <grostitre>Images</grostitre>
 
-<h3>timg</h3>
+<h3>&lt;timg&gt;</h3>
 
 <p>La composante <span class="inline-code">&lt;timg src=&quot;&quot;&gt;&lt;/timg&gt;</span> agît de la même manière que la balise <span class="inline-code">&lt;img src=&quot;&quot;&gt;</span> à l'exception que l'expression <span class="inline-code">$t</span> sera remplacé par le nom du thème (<span class="inline-code">light</span> ou <span class="inline-code">dark</span>).</p>
 
@@ -421,7 +427,7 @@ Utilisez la proprité <span class="inline-code">transform</span>.<br>
 <br><br>
 
 
-<h3>gallery</h3>
+<h3>&lt;gallery&gt;</h3>
 <highlight lang="html">&lt;gallery&gt;
     photos/01.webp
     photos/02.webp
@@ -463,24 +469,24 @@ Utilisez la proprité <span class="inline-code">transform</span>.<br>
 
 <grostitre>Vidéos</grostitre>
 
-<h3>youtube</h3>
+<h3>&lt;youtube&gt;</h3>
 <p>Afin d'accélérer le chargement des pages contenant des vidéos, il est fortement conseillé d'utiliser la composante <span class="inline-code">&lt;youtube src=&quot;id&quot;&gt;&lt;/youtube&gt;</span>.</p>
 <highlight lang="html">&lt;youtube src=&quot;KVJBHSOx9jI&quot;&gt;&lt;/youtube&gt;</highlight>
 <youtube src="KVJBHSOx9jI"></youtube>
 <br><br>
 
-<h3>Vimeo</h3>
+<h3>&lt;vimeo&gt;</h3>
 <highlight lang="html">&lt;vimeo src=&quot;874986396&quot;&gt;&lt;/vimeo&gt;</highlight>
 <vimeo src="874986396"></vimeo>
 <br><br>
 
-<h3>clip</h3>
-<highlight lang="html">&lt;clip src=&quot;videos/le-boson-de-higgs.mp4&quot;&gt;&lt;/clip&gt;</highlight>
+<h3>&lt;clip&gt;</h3>
+<highlight lang="html" scroll="true">&lt;clip title=&quot;Qu&#039;est-ce que le boson de Higgs?&quot; src=&quot;videos/le-boson-de-higgs.mp4&quot;&gt;&lt;/clip&gt;</highlight>
 <clip src="videos/le-boson-de-higgs.mp4" title="Qu'est-ce que le boson de Higgs?"></clip>
 <doclink href="../videos">Manuel / Vidéos</doclink>
 <br><br>
 
-<h3>clipasset</h3>
+<h3>&lt;clipasset&gt;</h3>
 <p><span class="inline-code">&lt;clipasset&gt;</span> permet d'inclure un video inline en boucle. Il est conseillé d'avoir un vidéo d'une largeur maximale de <em>770px</em>. Il est aussi recommandé de bien compresser son vidéo avec la commande <span class="inline-code">FFMPEG</span> suivante:</p>
 <highlight lang="console">&gt; ffmpeg -y -i &quot;input.mp4&quot; -an -c:v libx264 -profile:v main -level:v 3.0 -pix_fmt yuv420p -preset veryslow -movflags faststart -crf 22 -vf &quot;scale=770:-1&quot; &quot;output.mp4&quot;</highlight>
 <highlight lang="html">&lt;clipasset src=&quot;./videos/king-crimson.mp4&quot;&gt;&lt;/clipasset&gt;</highlight>
@@ -504,7 +510,7 @@ Utilisez la proprité <span class="inline-code">transform</span>.<br>
 
 <grostitre>Audios</grostitre>
 
-<h3>audioplayer</h3>
+<h3>&lt;tune&gt;</h3>
 <highlight lang="html">&lt;tune src=&quot;audios/careless-whisper.mp3&quot;&gt;&lt;/tune&gt;</highlight>
 <tune src="audios/careless-whisper.mp3"></tune>
 <doclink href="../audios">Manuel / Audios</doclink>

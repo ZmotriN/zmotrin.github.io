@@ -782,68 +782,6 @@ app.component('codepen', {
 
 
 /******************************************************
- *                Composante Exercice                 *
- ******************************************************/
-app.component('exercice', {
-    props: ['href'],
-    data() {
-        let exroot = this.href.replace(/\/+$/, '') + '/';
-        let exdetails = syncjson(exroot + 'exercice.json');
-        let thumb = exroot + exdetails.icon;
-        let url = typeof exdetails.url == 'undefined' ? exroot : exdetails.url;
-        return {
-            name: exdetails.title,
-            description: exdetails.abstract,
-            thumb: thumb,
-            url: url
-        }
-    },
-    template:
-        `<a class="exercice" target="_blank" :href="this.url">` +
-            `<div class="exercice-container">` +
-                `<div class="exercice-thumb" :style="'background-image: url(\\'' + this.thumb + '\\')'"></div>` +
-                `<div class="exercice-abstract">` +
-                    `<em class="exercice-label">EXERCICE</em>` +
-                    `<span class="exercice-title">{{ name }}</span>` +
-                    `<span class="exercice-description">{{ description }}</span>` +
-                `</div>` +
-            `</div>` +
-        `</a>`
-});
-
-
-/******************************************************
- *                  Composante Tool                   *
- ******************************************************/
-app.component('tool', {
-    props: ['href'],
-    data() {
-        let exroot = this.href.replace(/\/+$/, '') + '/';
-        let exdetails = syncjson(exroot + 'tool.json');
-        let thumb = exroot + exdetails.icon;
-        let url = typeof exdetails.url == 'undefined' ? exroot : exdetails.url;
-        return {
-            name: exdetails.title,
-            description: exdetails.abstract,
-            thumb: thumb,
-            url: url
-        }
-    },
-    template:
-        `<a class="tool" target="_blank" :href="this.url" rel="noopener noreferrer">` +
-            `<div class="tool-container">` +
-                `<div class="tool-abstract">` +
-                    `<em class="tool-label">OUTIL</em>` +
-                    `<span class="tool-title">{{ name }}</span>` +
-                    `<span class="tool-description">{{ description }}</span>` +
-                `</div>` +
-                `<div class="tool-thumb" :style="'background-image: url(\\'' + this.thumb + '\\')'"></div>` +
-            `</div>` +
-        `</a>`
-});
-
-
-/******************************************************
  *                Composante Knowmore                 *
  ******************************************************/
 app.component('knowmore', {

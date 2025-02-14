@@ -34,8 +34,9 @@ register_tag('tool', function($html, $attrs, $data) {
     if(!$info = php_file_info($file)) return;
     $url = !empty($info->url) ? $info->url : $attrs['href'];
     $thumb = rtrim($attrs['href'], '/').'/'.$info->icon;
+    $target = !empty($info->url) ? '_blank' : '_self';
     return <<<EOD
-        <a class="tool" target="_blank" href="{$url}">
+        <a class="tool" target="{$target}" href="{$url}">
             <div class="tool-container">
                 <div class="tool-abstract">
                     <em class="tool-label">OUTIL</em>

@@ -58,7 +58,7 @@
         left: 0;
         height: 100%;
         width: 0%;
-        background-color: #920123;
+        background-color: var(--main-color);
         mix-blend-mode: multiply;
         opacity: 20%;
         transition-property: width;
