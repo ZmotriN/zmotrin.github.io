@@ -1,15 +1,21 @@
+@use '../partials/variables';
+@use 'sass:color';
+
 .correction {
     
     margin-left: -25px;
     margin-right: -25px;
 
+
     & th {
+        background-color: color.adjust(variables.$main_color, $alpha: -0.3);
         text-align: center;
         font-size: 1.1em;
     }
 
     & tfoot {
-        background-color: #ff003c10;
+        // background-color: #ff003c10;
+        background-color: color.adjust(variables.$main_color, $alpha: -0.9);
         
         td:nth-child(1) {
             font-size: 1.4em;
@@ -36,7 +42,7 @@
             vertical-align: middle;
             -webkit-appearance: none;
             border: 0;
-            background-color: #ff003a44;
+            background-color: color.adjust(variables.$main_color, $alpha: -0.6);
             border-radius: 4px;
             cursor: pointer;
 
@@ -89,7 +95,7 @@
 
         &__scale {
             display: inline-block;
-            background-color: #ff003a44;
+            background-color: color.adjust(variables.$main_color, $alpha: -0.6);
             width: 100%;
             margin: auto 0.5%;
             height: 40px;
