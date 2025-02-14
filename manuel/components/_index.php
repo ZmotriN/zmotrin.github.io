@@ -5,7 +5,7 @@
  * @title    Composantes
  * @icon     images/icon.webp
  * @image    ../images/image.webp
- * @abstract Tout est préfait pour toi
+ * @abstract Manuel d'utilisation des composantes
  * @font     https://patorjk.com/software/taag/#p=display&f=Standard&t=TIMdoc
  */
 ?>
