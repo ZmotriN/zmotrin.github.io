@@ -501,14 +501,14 @@ Utilisez la proprité <incode>transform</incode>.<br>
 <p>Par défaut, si l'attribut <incode>tab</incode> n'est pas spécifié, les tabs HTML et Result sont affichés.</p>
 
 <h3>Exemples:</h3>
-<highlight lang="html"><codepen id="gOEwrvG" tab="result"></codepen></highlight>
-<codepen id="gOEwrvG" tab="result"></codepen>
+<highlight lang="html"><codepen id="JjwYaRW" tab="result"></codepen></highlight>
+<codepen id="JjwYaRW" tab="result"></codepen>
 
-<highlight lang="html"><codepen id="gOEwrvG" tab="css,result" height="500"></codepen></highlight>
-<codepen id="gOEwrvG" tab="css,result" height="500"></codepen>
+<highlight lang="html"><codepen id="JjwYaRW" tab="css,result" height="500"></codepen></highlight>
+<codepen id="JjwYaRW" tab="css,result" height="500"></codepen>
 
-<highlight lang="html"><codepen id="gOEwrvG" notab="true" height="400"></codepen></highlight>
-<codepen id="gOEwrvG" notab="true" height="400"></codepen>
+<highlight lang="html"><codepen id="JjwYaRW" notab="true" height="400"></codepen></highlight>
+<codepen id="JjwYaRW" notab="true" height="400"></codepen>
 
 <dots></dots>
 

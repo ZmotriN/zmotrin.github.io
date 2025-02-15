@@ -64,7 +64,7 @@
         }
 
         &.copied {
-            background-color: var(--color_green);
+            background-color: var(--color-green);
             transform: rotate(-360deg);
 
             &+div {
@@ -81,7 +81,7 @@ body.dark {
         &__chain {
             background-color: var(--main-color-dark);
             &:hover { background-color: var(--main-color); }
-            &.copied { background-color: var(--color_green); }
+            &.copied { background-color: var(--color-green); }
         }
     }
 }

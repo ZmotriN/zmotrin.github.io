@@ -62,19 +62,7 @@ body.dark {
         }
     }
 
-    a.exercice {
-        background-color: #1c1d21;
-        background-image: linear-gradient(0deg, #50728d, 20%, #1c1d21);
-        &:hover { color: #ffffff; }
-        div.exercice-container div.exercice-thumb {
-            // border: 1px solid #50728d;
-            border: 0px;
-        }
-        div.exercice-container div.exercice-abstract em {
-            background-color: #50728d;
-            color: white !important;
-        }
-    }
+
 
     div.checklist {
         ol li:hover { background-color: var(--main-color-dark); }

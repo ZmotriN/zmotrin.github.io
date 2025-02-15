@@ -1,10 +1,27 @@
+@use 'sass:color';
+@use '../partials/variables';
+
+$back_light: lighten(variables.$color_blue, 48%);
+$gradient_light: lighten(variables.$color_blue, 20%);
+// $label_light: color.adjust(variables.$color_blue, $saturation: 50%);
+$label_light: lighten(variables.$color_blue, 30%);
+$grey_light: color.adjust(variables.$color_black, $alpha: -0.3);
+
+$back_dark: color.adjust(variables.$color_blue, $blackness: 60%);
+$gradient_dark: color.adjust(variables.$color_blue, $blackness: 40%);
+$label_dark: color.adjust(variables.$color_blue, $whiteness: 30%);
+// $label_dark: color.adjust($label_dark, $saturation: 50%);
+$grey_dark: color.adjust(variables.$color_white, $alpha: -0.3);
+
+  
 a.exercice {
     display: block;
-    // background-image: linear-gradient(0deg, #87ceeb, 20%, #f0f8fc);
-    background-image: linear-gradient(0deg, #577590, 1%, #e5ecf1);
-    background-color: #e5ecf1;
+    background-image: linear-gradient(0deg, #{$gradient_light}, 1%, #{$back_light});
+    // background-color: #e5ecf1;
+    background-color: #{$back_light};
     margin-bottom: 25px;
-    color: #555555;
+    color: #{$grey_light};
+    // color:red;
     margin-left: -25px;
     margin-right: -25px;
 
@@ -13,7 +30,7 @@ a.exercice {
     }
 
     &:hover {
-        color: #000000;
+        color: #{variables.$color_black};
     }
 
     div.exercice-container {
@@ -35,7 +52,8 @@ a.exercice {
             background-position: 50% 50%;
             background-repeat: no-repeat;
             background-size: cover;
-            aspect-ratio: 16/9;
+            aspect-ratio: 40/21;
+            // aspect-ratio: 16/9;
             // box-sizing: content-box;
             // border: 1px solid skyblue;
             @media (min-width: 480px)  {
@@ -60,14 +78,14 @@ a.exercice {
             }
 
             em {
-                background-color: skyblue;
+                background-color: #{$label_light};
                 padding-top: 4px;
                 padding-bottom: 4px;
                 padding-left: 6px;
                 padding-right: 6px;
                 border-radius: 4px;
                 font-style: normal;
-                color: black !important;
+                color: #{variables.$color_black} !important;
                 margin:  0 0 5px 0;
 
                 font-size: 2.5vw;
@@ -96,6 +114,20 @@ a.exercice {
                     font-size: 14px;
                 }
             }
+        }
+    }
+}
+
+
+body.dark {
+    a.exercice {
+        background-color: #{$back_dark};
+        background-image: linear-gradient(0deg, #{$gradient_dark}, 20%, #{$back_dark});
+        color: #{$grey_dark};
+        &:hover { color: #{variables.$color_white}; }
+        div.exercice-container div.exercice-abstract em {
+            background-color: #{$label_dark};
+            color: #{variables.$color_white} !important;
         }
     }
 }
