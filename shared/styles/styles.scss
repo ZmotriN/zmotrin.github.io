@@ -30,18 +30,13 @@
 /* light color palette: https://coolors.co/577590-f3ca40-ff003a-e1e4f2-f2a541 */
 
 :root{
-   
-    // --lightmode-blue: #577590;
-    // --lightmode-yellow: #f3ca40;
-    // --lightmode-red: #4976bf;
-    // --lightmode-lightgray: #e1e4f2;
-    // --lightmode-orange: #f2a541;
-
-     /* SVP conservez les 2 variables CSS suivantes (et non scss) car je les utilise en démo dans un des mes cours (Marie-Michelle) */
     --main-color: #{variables.$main_color};
     --main-color-light: #{color.adjust(variables.$main_color, $lightness: 25%)};
     --main-color-dark: #{color.adjust(variables.$main_color, $blackness: 35%)};
     --second-color: #{variables.$second_color};
+
+    --color_white: #{variables.$color_white};
+    --color_black: #{variables.$color_black};
 
     --color_blue: #{variables.$color_blue};
     --color_yellow: #{variables.$color_yellow};
@@ -49,10 +44,10 @@
     --color_purple: #{variables.$color_purple};
     --color_green: #{variables.$color_green};
 
+    --highlight: #{color.adjust(variables.$main_color, $lightness: 20%, $alpha: -0.80)};
 
     --grostitre-size-desktop: 36px;
     --h1-size-desktop: 48px;
-    
 }
 
 * {
@@ -67,8 +62,8 @@ html {
 
 
 body {
-    color: black;
-    background-color: white;
+    color: var(--color-black);
+    background-color: var(--color-white);
     height: 100vh;
     background-repeat: repeat-x;
     padding-bottom: variables.$footer_height;
@@ -84,7 +79,7 @@ body {
 span.inline-code {
     // font-family: monospace;
     font-family: 'Consolas';
-    background-color: #fafafa;
+    background-color: var(--highlight);
     padding-left: 6px;
     padding-right: 6px;
     padding-top: 4px;
@@ -99,7 +94,7 @@ span.inline-code {
 
 
 a {
-    color: black;
+    color: var(--color_black);
     text-decoration: none;
      /* SVP conservez la variable CSS (et non scss) ici car je l'utilise en démo dans un des mes cours (Marie-Michelle) */
     background-image: linear-gradient(0deg, var(--main-color), var(--main-color));
@@ -172,7 +167,7 @@ header {
 
     #lightswitch {
         // display: none;
-        background-color: #ffffff;
+        background-color: var(--color_white);
         background-size: 34px 34px;
         background-repeat: no-repeat;
         // position: relative;

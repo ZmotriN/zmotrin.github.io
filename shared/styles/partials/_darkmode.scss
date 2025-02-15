@@ -11,7 +11,7 @@ body.dark {
     a { color: white; }
     // em { color: #e6af2e; }
     hr { border: 1px dashed #030174; }
-    span.inline-code { background-color: #1c1d21; color: white; }
+    span.inline-code { color: white; }
     footer { /*background: linear-gradient(to top, #3a2d2d, 50%, #000000);*/ border-top: 1px solid rgb(4, 18, 36); }
     #subhead { background-color: rgba(255, 255, 255, 0.1); }
     #logo {
@@ -30,7 +30,7 @@ body.dark {
 
     .hljs {
         color: #c0c5ce;
-        background: #1c1d21;
+        background: var(--highlight);
         &-comment, &-quote { color: #b6b18b; }
         &-deletion, &-name, &-regexp, &-selector-class, &-selector-id, &-tag, &-template-variable, &-variable { color: #eb3c54; }
         &-built_in, &-link, &-literal, &-meta, &-number, &-params, &-type { color: #e7ce56; }
@@ -89,32 +89,10 @@ body.dark {
         &__progress { mix-blend-mode: overlay; opacity: 35%; }
     }
 
-    .mediafile {
-        &__link-text {
-            background-color: #1c1d21;
-            color: var(--main-color);
-        }
-        
-        &__download {
-            background-color: var(--main-color-dark);
-            &:hover { background-color: var(--main-color); }
-            &.copied { background-color: #34ad24; }
-        }
-        
-        &__chain {
-            background-color: var(--main-color-dark);
-            &:hover { background-color: var(--main-color); }
-            &.copied { background-color: #34ad24; }
-        }
-    }
 
 
-    .knowmore {
-        display: block;
-        border: 0px;
-        background-color: #1c1d21;
-        background-image: linear-gradient(0deg, #4c4e57, 20%, #1c1d21);
-    }
+
+
 
     span.codepen-remark {
         margin-top: -25px;
