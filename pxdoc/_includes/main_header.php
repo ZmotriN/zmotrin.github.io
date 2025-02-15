@@ -34,7 +34,7 @@
         <script>document.body.classList.add(localStorage.getItem('darkmode') === 'true' ? 'dark' : 'light');</script>
         <a id="top"></a>
         <header>
-            <div id="logo" @click="goToTop('<?php echo getRootCours(); ?>', '<?php echo getIndexPath(); ?>')" title="Retour à l'accueil"></div>
+            <div id="logo" @click="goToTop('<?php echo getProjectRoot(); ?>', '<?php echo getIndexPath(); ?>')" title="Retour à l'accueil"></div>
             <div title="Interrupteur" id="lightswitch" ref="lightswitch" @click="lightswitch()"></div>
         </header>
         <main>

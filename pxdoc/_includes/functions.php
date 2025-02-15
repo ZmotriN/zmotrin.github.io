@@ -73,10 +73,9 @@ function print_breadcrumb_index() {
 
 
 
-function getRootCours() {
+function getProjectRoot() {
     global $PAGE;
     $path = getRelativePath($PAGE->file, $PAGE->root);
-    // $path = join('/', array_slice(explode('/', $path), 1));
     if(!$path) $path = './';
     return $path;
 }
@@ -238,6 +237,19 @@ function getRelativePath($from, $to) {
 
 
 /**
+ * include_arbitrary for user defined include
+ *
+ * @param  mixed $file File to include
+ * @return void
+ */
+function include_arbitrary($file) {
+    global $PAGE;
+    if($user = realpath($PAGE->root . '_includes/' . $file)) include($user);
+    else include($file);
+}
+
+
+/**
  * Specific header printing
  *
  * @return void
@@ -297,7 +309,7 @@ function print_footer() {
  */
 function print_main_header() {
     global $PAGE;
-    include('main_header.php');
+    include_arbitrary('main_header.php');
 }
 
 
@@ -308,7 +320,7 @@ function print_main_header() {
  */
 function print_main_footer() {
     global $PAGE;
-    include('main_footer.php');
+    include_arbitrary('main_footer.php');
 }
 
 
@@ -320,7 +332,7 @@ function print_main_footer() {
 function print_article_header() {
     global $PAGE;
     print_main_header(); 
-    include('article_header.php');
+    include_arbitrary('article_header.php');
 }
 
 
@@ -331,7 +343,7 @@ function print_article_header() {
  */
 function print_article_footer() {
     global $PAGE;
-    include('article_footer.php');
+    include_arbitrary('article_footer.php');
     print_main_footer();
 }
 
@@ -344,7 +356,7 @@ function print_article_footer() {
 function print_exercice_header() {
     global $PAGE;
     print_main_header(); 
-    include('exercice_header.php');
+    include_arbitrary('exercice_header.php');
 }
 
 
@@ -355,7 +367,7 @@ function print_exercice_header() {
  */
 function print_exercice_footer() {
     global $PAGE;
-    include('exercice_footer.php');
+    include_arbitrary('exercice_footer.php');
     print_main_footer();
 }
 
@@ -368,7 +380,7 @@ function print_exercice_footer() {
 function print_list_header() {
     global $PAGE;
     print_main_header(); 
-    include('list_header.php');
+    include_arbitrary('list_header.php');
 }
 
 
@@ -379,7 +391,7 @@ function print_list_header() {
  */
 function print_list_footer() {
     global $PAGE;
-    include('list_footer.php');
+    include_arbitrary('list_footer.php');
     print_main_footer();
 }
 
@@ -392,7 +404,7 @@ function print_list_footer() {
 function print_tool_header() {
     global $PAGE;
     print_main_header(); 
-    include('tool_header.php');
+    include_arbitrary('tool_header.php');
 }
 
 
@@ -403,7 +415,7 @@ function print_tool_header() {
  */
 function print_tool_footer() {
     global $PAGE;
-    include('tool_footer.php');
+    include_arbitrary('tool_footer.php');
     print_main_footer();
 }
 
@@ -415,7 +427,7 @@ function print_tool_footer() {
  */
 function print_wiki_header() {
     global $PAGE;
-    include('wiki_header.php');
+    include_arbitrary('wiki_header.php');
 }
 
 
@@ -426,9 +438,5 @@ function print_wiki_header() {
  */
 function print_wiki_footer() {
     global $PAGE;
-    include('wiki_footer.php');
+    include_arbitrary('wiki_footer.php');
 }
-
-
-
-if(!function_exists('php_file_info')) { function php_file_info($file){} }
