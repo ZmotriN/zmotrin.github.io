@@ -86,7 +86,6 @@
 
 <grostitre>Bulles d'informations</grostitre>
 
-<h3>&lt;info&gt;</h3>
 <highlight lang="html">
 <info>Ceci est une bulle d'information</info>
 <warning>Ceci est une bulle d'avertissement</warning>
@@ -94,10 +93,20 @@
 <thumbsup>Ceci est une bulle d'approbation</thumbsup>
 <bravo>Ceci est une bulle d'applaudissement</bravo>
 </highlight>
+
+<h3>&lt;info&gt;</h3>
 <info>Ceci est une bulle d'information</info>
+
+<h3>&lt;warning&gt;</h3>
 <warning>Ceci est une bulle d'avertissement</warning>
+
+<h3>&lt;alert&gt;</h3>
 <alert>Ceci est une bulle d'alerte</alert>
+
+<h3>&lt;thumbsup&gt;</h3>
 <thumbsup>Ceci est une bulle d'approbation</thumbsup>
+
+<h3>&lt;bravo&gt;</h3>
 <bravo>Ceci est une bulle d'applaudissement</bravo>
 
 <dots></dots>
