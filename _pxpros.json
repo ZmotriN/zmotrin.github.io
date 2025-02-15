@@ -5,9 +5,9 @@
         "gtag": ""
     },
     "includes": [
-        "_includes/functions.php",
-        "_includes/hooks.php"
+        "pxdoc/_includes/functions.php",
+        "pxdoc/_includes/hooks.php"
     ],
-    "before": "_includes/header.php",
-    "after": "_includes/footer.php"
+    "before": "pxdoc/_includes/header.php",
+    "after": "pxdoc/_includes/footer.php"
 }

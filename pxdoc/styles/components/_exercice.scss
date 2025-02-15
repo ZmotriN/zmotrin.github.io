@@ -3,25 +3,21 @@
 
 $back_light: lighten(variables.$color_blue, 48%);
 $gradient_light: lighten(variables.$color_blue, 20%);
-// $label_light: color.adjust(variables.$color_blue, $saturation: 50%);
 $label_light: lighten(variables.$color_blue, 30%);
 $grey_light: color.adjust(variables.$color_black, $alpha: -0.3);
 
 $back_dark: color.adjust(variables.$color_blue, $blackness: 60%);
 $gradient_dark: color.adjust(variables.$color_blue, $blackness: 40%);
 $label_dark: color.adjust(variables.$color_blue, $whiteness: 30%);
-// $label_dark: color.adjust($label_dark, $saturation: 50%);
 $grey_dark: color.adjust(variables.$color_white, $alpha: -0.3);
 
   
 a.exercice {
     display: block;
     background-image: linear-gradient(0deg, #{$gradient_light}, 1%, #{$back_light});
-    // background-color: #e5ecf1;
     background-color: #{$back_light};
     margin-bottom: 25px;
     color: #{$grey_light};
-    // color:red;
     margin-left: -25px;
     margin-right: -25px;
 
@@ -38,12 +34,9 @@ a.exercice {
         height: 100%;
         display: flex;
         flex-direction: column;
-
-        
         
         @media (min-width: 480px)  {
             flex-direction: row;
-            
         }
 
         div.exercice-thumb {
@@ -53,9 +46,7 @@ a.exercice {
             background-repeat: no-repeat;
             background-size: cover;
             aspect-ratio: 40/21;
-            // aspect-ratio: 16/9;
-            // box-sizing: content-box;
-            // border: 1px solid skyblue;
+            
             @media (min-width: 480px)  {
                 aspect-ratio: 4/3;
                 width: auto;
@@ -71,7 +62,6 @@ a.exercice {
             flex-direction: column;
             justify-content: top;
             overflow: hidden;
-            // background-color: red;
 
             @media (min-width: 480px)  {
                 margin: 25px 25px 5px 25px;

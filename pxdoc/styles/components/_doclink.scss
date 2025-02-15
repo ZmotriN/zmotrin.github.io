@@ -5,7 +5,9 @@ a.doclink {
     margin-bottom: 25px;
     margin-right: 10px;
     border-radius: 24px;
-    
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: calc(100vw - 60px);
 
     &::before {
         content: '';
@@ -30,12 +32,12 @@ a.doclink {
     .doclink-title {
         position: relative;
         top: -4px;
-        margin-left: 8px;
+        margin-left: 10px;
         margin-right: 10px;
         line-height: 24px;
         // font-family: monospace;
         font-family: 'Consolas';
-
+        white-space: nowrap;
 
         font-size: 10px;
         @media (min-width: 576px)  {
