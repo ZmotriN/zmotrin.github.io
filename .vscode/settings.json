@@ -1,6 +1,6 @@
 {
     "terminal.integrated.env.windows": {
-        "PATH": "${workspaceFolder}\\_bin;${env:PATH};${workspaceFolder}"
+        "PATH": "${workspaceFolder}\\pxdoc\\pxpros;${env:PATH};${workspaceFolder}"
     },
     "terminal.integrated.env.osx": {
         "PATH": "${workspaceFolder}/_bin:${env:PATH}:${workspaceFolder}"
