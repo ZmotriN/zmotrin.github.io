@@ -237,8 +237,6 @@ function getRelativePath($from, $to) {
 }
 
 
-
-
 /**
  * Specific header printing
  *
@@ -249,7 +247,7 @@ function print_header() {
 
     $PAGE->shared = get_shared($PAGE->file);
     $root = str_replace('\\', '/', realpath($PAGE->root)) . '/';
-    $image = $PAGE->domain . 'shared/images/default.webp';
+    $image = $PAGE->domain . 'pxdoc/images/default.webp';
     if($PAGE->image) {
         if($img = realpath(pathinfo($PAGE->file, PATHINFO_DIRNAME) . '/' . $PAGE->image)) {
             $image = str_replace($root, $PAGE->domain, str_replace('\\', '/', $img));
