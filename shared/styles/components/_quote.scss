@@ -10,13 +10,13 @@ div.quote {
         position: absolute;
         font-size: 64px;
         top: -30px;
-        color: #b98304;
+        color: var(--second-color);
     }
 
     blockquote {
         font-size: 22px;
         font-style: italic;
-        color: #b98304;
+        color: var(--second-color);
     }
 
     &__author {

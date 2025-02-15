@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 @use 'partials/variables';
 @use 'partials/functions';
 @use 'partials/fonts';
@@ -19,7 +21,7 @@
 @use 'components/highlight';
 @use 'components/checklist';
 @use 'components/knowmore';
-@use 'components/color';
+@use 'components/colors';
 @use 'components/swiper';
 @use 'components/quote';
 @use 'components/oembed';
@@ -29,18 +31,25 @@
 
 :root{
    
-    --lightmode-blue: #577590;
-    --lightmode-yellow: #f3ca40;
-    --lightmode-red: #4976bf;
-    --lightmode-lightgray: #e1e4f2;
-    --lightmode-orange: #f2a541;
+    // --lightmode-blue: #577590;
+    // --lightmode-yellow: #f3ca40;
+    // --lightmode-red: #4976bf;
+    // --lightmode-lightgray: #e1e4f2;
+    // --lightmode-orange: #f2a541;
 
      /* SVP conservez les 2 variables CSS suivantes (et non scss) car je les utilise en démo dans un des mes cours (Marie-Michelle) */
     --main-color: #{variables.$main_color};
-    --main-color-light: #c8cfee;
-    --main-color-dark: #16243b;
-    --main-color-encoded: %234976bf;
-    --secondary-color: #e5a00d;
+    --main-color-light: #{color.adjust(variables.$main_color, $lightness: 25%)};
+    --main-color-dark: #{color.adjust(variables.$main_color, $blackness: 35%)};
+    --second-color: #{variables.$second_color};
+
+    --color_blue: #{variables.$color_blue};
+    --color_yellow: #{variables.$color_yellow};
+    --color_red: #{variables.$color_red};
+    --color_purple: #{variables.$color_purple};
+    --color_green: #{variables.$color_green};
+
+
     --grostitre-size-desktop: 36px;
     --h1-size-desktop: 48px;
     
@@ -450,7 +459,10 @@ footer {
     
     em {
         // color: #F3CA40;
-        color: #d18e37;
+        // color: #d18e37;
+        // color: #{color.adjust(variables.$second_color, $blackness: 15%)};
+        color: var(--second-color);
+
     }
 
     // p code,
@@ -483,12 +495,12 @@ footer {
 
     }
 
-    .demo-inspecteur {
-        display: inline-block;
-        border: dotted 1px #00c774;
-        padding: 1em;
-        z-index: 1;
-    }
+    // .demo-inspecteur {
+    //     display: inline-block;
+    //     border: dotted 1px var(--color_green);
+    //     padding: 1em;
+    //     z-index: 1;
+    // }
 
 
 

@@ -9,7 +9,7 @@ body.dark {
     background-color: #000000;
 
     a { color: white; }
-    em { color: #e6af2e; }
+    // em { color: #e6af2e; }
     hr { border: 1px dashed #030174; }
     span.inline-code { background-color: #1c1d21; color: white; }
     footer { /*background: linear-gradient(to top, #3a2d2d, 50%, #000000);*/ border-top: 1px solid rgb(4, 18, 36); }
@@ -43,13 +43,7 @@ body.dark {
         &-strong { font-weight: 700; }
     }
 
-    .grostitre {
-        &__chain {
-            background-color: var(--main-color-dark);
-            &:hover { background-color: var(--main-color); }
-            &.copied { background-color: #34ad24; }
-        }
-    }
+
 
 
 
