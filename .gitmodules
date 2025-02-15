@@ -1,0 +1,3 @@
+[submodule "pxdoc/pxpros"]
+	path = pxdoc/pxpros
+	url = https://github.com/ZmotriN/pxpros.git
