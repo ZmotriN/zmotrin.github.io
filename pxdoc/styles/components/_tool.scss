@@ -1,41 +1,18 @@
-@use 'sass:color';
-@use '../partials/config';
-
-$back_light: lighten(config.$color_green, 48%);
-$gradient_light: lighten(config.$color_green, 10%);
-$label_light: color.adjust(config.$color_green, $saturation: 50%);
-$label_light: lighten($label_light, 30%);
-$grey_light: color.adjust(config.$color_black, $alpha: -0.3);
-
-$back_dark: color.adjust(config.$color_green, $blackness: 70%);
-$gradient_dark: color.adjust(config.$color_green, $blackness: 50%);
-$grey_dark: color.adjust(config.$color_white, $alpha: -0.3);
-$label_dark: color.adjust(config.$color_green, $whiteness: 40%);
-$label_dark: color.adjust($label_dark, $saturation: 50%);
-
-
-
 a.tool {
     display: block;
-    // background-image: linear-gradient(0deg, #87eb9d, 20%, #f0fcf0);
-    // background-image: linear-gradient(0deg, #f3ca40, 10%, lighten(#f3ca40, 35%));
-    // background-color: lighten(#f3ca40, 35%);
-
-    background-image: linear-gradient(0deg, #{$gradient_light}, 1%, #{$back_light});
-    // background-color: #e5ecf1;
-    background-color: #{$back_light};
-
+    background-image: linear-gradient(0deg, var(--color-green-gradient-light), 1%, var(--color-green-back-light));
+    background-color: var(--color-green-back-light);
     margin-bottom: 25px;
-    color: #555555;
+    color: var(--color-green-grey-light);
     margin-left: -25px;
     margin-right: -25px;
 
     @media (min-width: 480px)  {
-        height: 140px;
+        height: 180px;
     }
 
     &:hover {
-        color: #000000;
+        color: var(--color-black);
     }
 
     div.tool-container {
@@ -43,49 +20,59 @@ a.tool {
         height: 100%;
         display: flex;
         flex-direction: column-reverse;
-
+        
         @media (min-width: 480px)  {
             flex-direction: row;
         }
 
         div.tool-thumb {
+            width: 100%;
+            height: auto;
             background-position: 50% 50%;
             background-repeat: no-repeat;
             background-size: cover;
-            aspect-ratio: 4/3;
-            box-sizing: content-box;
-            border: 1px solid #f3ca40;
+            aspect-ratio: 40/21;
+            
+            @media (min-width: 480px)  {
+                aspect-ratio: 4/3;
+                width: auto;
+                height: 100%;
+            }
         }
 
         div.tool-abstract {
             flex-grow: 2;
-            margin: 25px;
+            margin: 25px 25px 15px 25px;
             display: flex;
             align-items: flex-start;
             flex-direction: column;
-            justify-content: center;
+            justify-content: top;
+            overflow: hidden;
+
+            @media (min-width: 480px)  {
+                margin: 25px 25px 5px 25px;
+            }
 
             em {
-                background-color: #f3ca40;
+                background-color: var(--color-green-label-light);
                 padding-top: 4px;
                 padding-bottom: 4px;
                 padding-left: 6px;
                 padding-right: 6px;
                 border-radius: 4px;
                 font-style: normal;
-                font-size: 12px;
-                color: black !important;
+                color: var(--color-black) !important;
                 margin:  0 0 5px 0;
 
-                font-size: 8px;
+                font-size: 2.5vw;
                 @media (min-width: 480px)  {
                     font-size: 12px;
                 }
-        
             }
 
             .tool-title {
                 line-height: 1;
+                
                 font-weight: bold;
                 margin: 5px 0 3px 0;
 
@@ -93,12 +80,11 @@ a.tool {
                 @media (min-width: 480px)  {
                     font-size: 24px;
                 }
-                
             }
 
             .tool-description {
                 margin: 3px 0 0 0;
-
+// background-color: red;
                 font-size: 4vw;
                 @media (min-width: 480px)  {
                     font-size: 14px;
@@ -108,3 +94,16 @@ a.tool {
     }
 }
 
+
+body.dark {
+    a.tool {
+        background-color: var(--color-green-back-dark);
+        background-image: linear-gradient(0deg, var(--color-green-gradient-dark), 20%, var(--color-green-back-dark));
+        color: var(--color-green-grey-dark);
+        &:hover { color: var(--color-white); }
+        div.tool-container div.tool-abstract em {
+            background-color: var(--color-green-label-dark);
+            color: var(--color-white) !important;
+        }
+    }
+}

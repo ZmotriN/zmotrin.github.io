@@ -8,10 +8,10 @@ register_tag('exercice', function($html, $attrs, $data) {
     if(!is_file(($file = realpath(pathinfo($this->file, PATHINFO_DIRNAME).S.$attrs['href']).S.'_index.php'))) return;
     if(!$info = php_file_info($file)) return;
     $url = !empty($info->url) ? $info->url : $attrs['href'];
-    
     $thumb = rtrim($attrs['href'], '/') . '/' . (!empty($info->image) ? $info->image : $info->icon);
+    $target = !empty($info->url) ? '_blank' : '_self';
     return <<<EOD
-        <a class="exercice" href="{$url}">
+        <a class="exercice" target="{$target}" href="{$url}">
             <div class="exercice-container">
                 <div class="exercice-thumb" style="background-image: url({$thumb})"></div>
                 <div class="exercice-abstract">
@@ -33,7 +33,7 @@ register_tag('tool', function($html, $attrs, $data) {
     if(!is_file(($file = realpath(pathinfo($this->file, PATHINFO_DIRNAME).S.$attrs['href']).S.'_index.php'))) return;
     if(!$info = php_file_info($file)) return;
     $url = !empty($info->url) ? $info->url : $attrs['href'];
-    $thumb = rtrim($attrs['href'], '/').'/'.$info->icon;
+    $thumb = rtrim($attrs['href'], '/') . '/' . (!empty($info->image) ? $info->image : $info->icon);
     $target = !empty($info->url) ? '_blank' : '_self';
     return <<<EOD
         <a class="tool" target="{$target}" href="{$url}">

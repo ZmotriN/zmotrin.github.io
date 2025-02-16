@@ -14,6 +14,10 @@
 $light: 45%;
 $dark: 65%;
 
+$subhead_height: 200px;
+$footer_height: 100px;
+$article_padding: 40px;
+
 $main_color: #4976bf;
 $second_color: #e5a00d;
 
@@ -31,13 +35,8 @@ $second_color_hex: unquote('#{str-slice(ie-hex-str($second_color), 4)}');
 $color_black_hex: unquote('#{str-slice(ie-hex-str($color_black), 4)}');
 $color_white_hex: unquote('#{str-slice(ie-hex-str($color_white), 4)}');
 
-$subhead_height: 200px;
-$footer_height: 100px;
-$article_padding: 40px;
-
 
 :root {
-   
     --grostitre-size-desktop: 36px;
     --h1-size-desktop: 48px;
 
@@ -73,6 +72,15 @@ $article_padding: 40px;
     --color-blue-gradient-dark: #{color.adjust($color_blue, $blackness: 40%)};
     --color-blue-label-dark: #{color.adjust($color_blue, $whiteness: 30%)};
     --color-blue-grey-dark: #{color.adjust($color_white, $alpha: -0.3)};
+
+    --color-green-back-light: #{lighten($color_green, 48%)};
+    --color-green-gradient-light: #{lighten($color_green, 20%)};
+    --color-green-label-light: #{lighten($color_green, 30%)};
+    --color-green-grey-light: #{color.adjust($color_black, $alpha: -0.3)};
+    --color-green-back-dark: #{color.adjust($color_green, $blackness: 60%)};
+    --color-green-gradient-dark: #{color.adjust($color_green, $blackness: 40%)};
+    --color-green-label-dark: #{color.adjust($color_green, $whiteness: 30%)};
+    --color-green-grey-dark: #{color.adjust($color_white, $alpha: -0.3)};
 
     --color-blue-back-light: #{color.adjust($color_blue, $lightness: $light)};
     --color-blue-back-dark: #{color.adjust($color_blue, $blackness: $dark)};
