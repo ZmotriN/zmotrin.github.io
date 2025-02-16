@@ -1,23 +1,9 @@
-@use 'sass:color';
-@use '../partials/variables';
-
-$back_light: lighten(variables.$color_blue, 48%);
-$gradient_light: lighten(variables.$color_blue, 20%);
-$label_light: lighten(variables.$color_blue, 30%);
-$grey_light: color.adjust(variables.$color_black, $alpha: -0.3);
-
-$back_dark: color.adjust(variables.$color_blue, $blackness: 60%);
-$gradient_dark: color.adjust(variables.$color_blue, $blackness: 40%);
-$label_dark: color.adjust(variables.$color_blue, $whiteness: 30%);
-$grey_dark: color.adjust(variables.$color_white, $alpha: -0.3);
-
-  
 a.exercice {
     display: block;
-    background-image: linear-gradient(0deg, #{$gradient_light}, 1%, #{$back_light});
-    background-color: #{$back_light};
+    background-image: linear-gradient(0deg, var(--color-blue-gradient-light), 1%, var(--color-blue-back-light));
+    background-color: var(--color-blue-back-light);
     margin-bottom: 25px;
-    color: #{$grey_light};
+    color: var(--color-blue-grey-light);
     margin-left: -25px;
     margin-right: -25px;
 
@@ -26,7 +12,7 @@ a.exercice {
     }
 
     &:hover {
-        color: #{variables.$color_black};
+        color: var(--color-black);
     }
 
     div.exercice-container {
@@ -68,14 +54,14 @@ a.exercice {
             }
 
             em {
-                background-color: #{$label_light};
+                background-color: var(--color-blue-label-light);
                 padding-top: 4px;
                 padding-bottom: 4px;
                 padding-left: 6px;
                 padding-right: 6px;
                 border-radius: 4px;
                 font-style: normal;
-                color: #{variables.$color_black} !important;
+                color: var(--color-black) !important;
                 margin:  0 0 5px 0;
 
                 font-size: 2.5vw;
@@ -111,13 +97,13 @@ a.exercice {
 
 body.dark {
     a.exercice {
-        background-color: #{$back_dark};
-        background-image: linear-gradient(0deg, #{$gradient_dark}, 20%, #{$back_dark});
-        color: #{$grey_dark};
-        &:hover { color: #{variables.$color_white}; }
+        background-color: var(--color-blue-back-dark);
+        background-image: linear-gradient(0deg, var(--color-blue-gradient-dark), 20%, var(--color-blue-back-dark));
+        color: var(--color-blue-grey-dark);
+        &:hover { color: var(--color-white); }
         div.exercice-container div.exercice-abstract em {
-            background-color: #{$label_dark};
-            color: #{variables.$color_white} !important;
+            background-color: var(--color-blue-label-dark);
+            color: var(--color-white) !important;
         }
     }
 }

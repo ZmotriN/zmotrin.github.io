@@ -1,16 +1,16 @@
 @use 'sass:color';
-@use '../partials/variables';
+@use '../partials/config';
 
-$back_light: lighten(variables.$color_green, 48%);
-$gradient_light: lighten(variables.$color_green, 10%);
-$label_light: color.adjust(variables.$color_green, $saturation: 50%);
+$back_light: lighten(config.$color_green, 48%);
+$gradient_light: lighten(config.$color_green, 10%);
+$label_light: color.adjust(config.$color_green, $saturation: 50%);
 $label_light: lighten($label_light, 30%);
-$grey_light: color.adjust(variables.$color_black, $alpha: -0.3);
+$grey_light: color.adjust(config.$color_black, $alpha: -0.3);
 
-$back_dark: color.adjust(variables.$color_green, $blackness: 70%);
-$gradient_dark: color.adjust(variables.$color_green, $blackness: 50%);
-$grey_dark: color.adjust(variables.$color_white, $alpha: -0.3);
-$label_dark: color.adjust(variables.$color_green, $whiteness: 40%);
+$back_dark: color.adjust(config.$color_green, $blackness: 70%);
+$gradient_dark: color.adjust(config.$color_green, $blackness: 50%);
+$grey_dark: color.adjust(config.$color_white, $alpha: -0.3);
+$label_dark: color.adjust(config.$color_green, $whiteness: 40%);
 $label_dark: color.adjust($label_dark, $saturation: 50%);
 
 

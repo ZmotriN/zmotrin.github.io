@@ -26,12 +26,12 @@ pre code.hljs {
 
 code.hljs {
     padding: 3px 5px;
-    font-family: 'Consolas';
+    font-family: var(--font-monospace);
 }
 
 .hljs {
     color: #383a42;
-    background: var(--highlight);
+    background-color: var(--highlight);
 }
 
 .hljs ::selection,

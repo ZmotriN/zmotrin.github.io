@@ -1,6 +1,3 @@
-@use '../partials/variables';
-@use 'sass:color';
-
 .correction {
     
     margin-left: -25px;
@@ -8,14 +5,13 @@
 
 
     & th {
-        background-color: color.adjust(variables.$main_color, $alpha: -0.3);
+        background-color: var(--main-color-alpha3);
         text-align: center;
         font-size: 1.1em;
     }
 
     & tfoot {
-        // background-color: #ff003c10;
-        background-color: color.adjust(variables.$main_color, $alpha: -0.9);
+        background-color: var(--main-color-alpha9);
         
         td:nth-child(1) {
             font-size: 1.4em;
@@ -31,7 +27,7 @@
         line-height: 32px;
 
         button {
-            color: black;
+            color: var(--color-black);
             padding: 4px;
             margin-left: 8px;
             font-size: 0.8em;
@@ -42,7 +38,7 @@
             vertical-align: middle;
             -webkit-appearance: none;
             border: 0;
-            background-color: color.adjust(variables.$main_color, $alpha: -0.6);
+            background-color: var(--main-color-alpha6);
             border-radius: 4px;
             cursor: pointer;
 
@@ -95,7 +91,7 @@
 
         &__scale {
             display: inline-block;
-            background-color: color.adjust(variables.$main_color, $alpha: -0.6);
+            background-color: var(--main-color-alpha6);
             width: 100%;
             margin: auto 0.5%;
             height: 40px;
@@ -109,7 +105,6 @@
                 background-color: var(--main-color);
                 font-weight: bold;
             }
-
         }
     }
 }
@@ -121,8 +116,8 @@
     transform: translate(-50%, -50%);
     width: 98vw;
     max-width: 720px;
-    background-color: white;
-    border: 1px solid black;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-black);
 
     table {
         margin: 0;
@@ -155,10 +150,10 @@
 
     input[type="text"] {
         width: 100%;
-        border: 1px solid black;
+        border: 1px solid var(--color-black);
         font-size: 1em;
         padding: 4px;
-        font-family: Rubik;
+        font-family: var(--font);
         &:invalid {
             border-color: var(--main-color);
         }
@@ -166,24 +161,24 @@
 
     textarea {
         width: 100%;
-        border: 1px solid black;
+        border: 1px solid var(--color-black);
         resize: vertical;
         height: 120px;
         font-size: 1em;
         padding: 4px;
-        font-family: Rubik;
+        font-family: var(--font);
     }
 }
 
 body.dark .correction tfoot td:nth-child(2) button {
-    color: white;
+    color: var(--color-white);
 }
 
 body.dark .correction-modal {
-    background-color: black;
-    border: 1px solid white;
+    background-color: var(--color-black);
+    border: 1px solid var(--color-white);
     textarea, input[type="text"] {
-        border: 1px solid white;
+        border: 1px solid var(--color-white);
         &:invalid {
             border-color: var(--main-color);
         }

@@ -1,4 +1,13 @@
-<!-- 
+<?php
+
+// echo ;
+
+
+// echo $PAGE->root . 'styles/styles.min.css';
+
+$styles = is_file($PAGE->root . 'styles/styles.min.css') ? getRelativePath($PAGE->file, $PAGE->root) . 'styles/styles.min.css' : $PAGE->shared . 'styles/styles.min.css';
+
+?><!-- 
 
 ██████╗ ██╗ █████╗ ███╗   ███╗███████╗████████╗██████╗ ██╗ ██████╗██╗  ██╗
 ██╔══██╗██║██╔══██╗████╗ ████║██╔════╝╚══██╔══╝██╔══██╗██║██╔════╝██║ ██╔╝
@@ -22,7 +31,8 @@
         <meta property="og:url" content="<?php echo $PAGE->ogtags->url; ?>">
         <meta property="og:image" content="<?php echo $PAGE->ogtags->image; ?>">
         <link rel="icon" type="image/x-icon" href="<?php echo $PAGE->shared; ?>images/favicon.ico">
-        <link rel="stylesheet" href="<?php echo $PAGE->shared; ?>styles/styles.min.css">
+        <!-- <link rel="stylesheet" href="<?php echo $PAGE->shared; ?>styles/styles.min.css"> -->
+        <link rel="stylesheet" href="<?php echo $styles; ?>">
         <script src="<?php echo $PAGE->shared; ?>jscripts/highlight.min.js"></script>
         <script src="<?php echo $PAGE->shared; ?>jscripts/swiper-bundle.min.js"></script>
         <script src="<?php echo $PAGE->shared; ?>jscripts/vue.global.prod.js"></script>

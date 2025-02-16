@@ -48,5 +48,6 @@
             "keep_fnames": false,
             "keep_classnames": false
         }
-    }
+    },
+    "liveSassCompile.settings.watchOnLaunch": false,
 }
