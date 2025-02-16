@@ -427,6 +427,22 @@ class PasswordModal extends Modal {
 
 
 /******************************************************
+ *                 Load Language File                 *
+ ******************************************************/
+let data = null;
+let langdata = null;
+const meta_lang = document.querySelector('meta[itemprop="lang"]').content;
+const lang_cache = 'lang_cache_2_' + meta_lang;
+if(data = localStorage.getItem(lang_cache)) {
+    langdata = JSON.parse(data);
+} else {
+    langdata = syncjson(shared + 'langs/' + meta_lang + '.json');
+    localStorage.setItem(lang_cache, JSON.stringify(langdata));
+}
+const lang = langdata;
+
+
+/******************************************************
  *                 Load Forced Theme                  *
  ******************************************************/
 const darkmode_cache = 'darkmode_cache_1';
@@ -531,7 +547,7 @@ app.component('tabledesmatieres', {
     template:
         `<div id="contents_table" v-if="this.$root.tableOfContents.length > 0">` +
             `<div class="contents_table__table">` +
-                `<a href="#" class="no-underline"><strong>Table des matières</strong></a>` +
+                `<a href="#" class="no-underline"><strong>${lang.tableOfContents}</strong></a>` +
                 `<ul>` +
                     `<li v-for="elm in this.$root.tableOfContents"><a :href="'#'+elm.id">{{ elm.name }}</a></li>` +
                 `</ul>` +
