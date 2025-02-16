@@ -760,7 +760,7 @@ app.component('codepen', {
         const dark = 43847;
         const light = 44431;
         const clean = 44168;
-        const user = 'ZmotriN';
+        const user = 'pxdoc';
         props.height || (props.height = 400);
         props.tab ||  (props.tab = props.notab == 'true' ? 'result' : 'html,result');
         props.tab = encodeURIComponent(props.tab);

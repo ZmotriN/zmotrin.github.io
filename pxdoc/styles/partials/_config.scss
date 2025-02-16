@@ -37,9 +37,9 @@ $color_white_hex: unquote('#{str-slice(ie-hex-str($color_white), 4)}');
 
 
 :root {
-    --grostitre-size-desktop: 36px;
     --h1-size-desktop: 48px;
-
+    --grostitre-size-desktop: 36px;
+    
     --font: "Rubik", sans-serif;
     --font-monospace: "Consolas", sans-serif;
     
@@ -57,6 +57,9 @@ $color_white_hex: unquote('#{str-slice(ie-hex-str($color_white), 4)}');
 
     --color-white: #{$color_white};
     --color-black: #{$color_black};
+
+    --color-white-alpha9: #{color.adjust($color_white, $alpha: -0.9)};
+    --color-black-alpha9: #{color.adjust($color_black, $alpha: -0.9)};
 
     --color-blue: #{$color_blue};
     --color-yellow: #{$color_yellow};
