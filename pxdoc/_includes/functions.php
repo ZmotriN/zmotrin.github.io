@@ -72,13 +72,13 @@ function print_breadcrumb_index() {
 }
 
 
-
 function getProjectRoot() {
     global $PAGE;
     $path = getRelativePath($PAGE->file, $PAGE->root);
     if(!$path) $path = './';
     return $path;
 }
+
 
 function getIndexPath() {
     global $PAGE;
@@ -87,6 +87,19 @@ function getIndexPath() {
     return getRelativePath($PAGE->file, $index);
 }
 
+
+function lang($idx) {
+    static $index = null;
+    global $PAGE;
+
+    if($index === null) {
+        if(!$file = realpath($PAGE->root . 'pxdoc/langs/' . $PAGE->lang . '.json')) return false;
+        if(!$data = @file_get_contents($file)) return false;
+        if(!$index = @json_decode($data)) return false;
+    }
+
+    return empty($index->{$idx}) ? false : $index->{$idx};
+}
 
 
 /**

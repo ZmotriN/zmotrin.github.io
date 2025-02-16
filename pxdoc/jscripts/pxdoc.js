@@ -432,12 +432,12 @@ class PasswordModal extends Modal {
 let data = null;
 let langdata = null;
 const meta_lang = document.querySelector('meta[itemprop="lang"]').content;
-const lang_cache = 'lang_cache_2_' + meta_lang;
+const lang_cache = 'lang_cache_3_' + meta_lang;
 if(data = localStorage.getItem(lang_cache)) {
     langdata = JSON.parse(data);
 } else {
     langdata = syncjson(shared + 'langs/' + meta_lang + '.json');
-    localStorage.setItem(lang_cache, JSON.stringify(langdata));
+    // localStorage.setItem(lang_cache, JSON.stringify(langdata));
 }
 const lang = langdata;
 

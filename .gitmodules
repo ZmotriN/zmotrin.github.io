@@ -1,6 +1,3 @@
-[submodule "pxdoc/pxpros"]
-	path = pxdoc/pxpros
-	url = https://github.com/ZmotriN/pxpros.git
 [submodule "pxdoc/_bin/pxpros"]
 	path = pxdoc/_bin/pxpros
 	url = https://github.com/ZmotriN/pxpros.git

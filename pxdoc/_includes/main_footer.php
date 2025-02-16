@@ -1,7 +1,7 @@
         <!-- MAIN FOOTER SOF -->
         </main>
         <footer>
-            <div id="copyright">Copyright (c) <?php echo date('Y'); ?><br>Maxime Larrivée-Roy</div>
+            <div id="copyright">© <?php echo lang('copyright'); ?><br><?php echo $PAGE->author; ?>, <?php echo date('Y'); ?></div>
         </footer>
         <script>app.mount('body');</script>
     </body>
