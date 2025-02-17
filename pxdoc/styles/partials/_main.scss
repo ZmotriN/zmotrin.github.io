@@ -1,6 +1,3 @@
-@use 'sass:color';
-@use 'config';
-
 * {
     margin: 0;
     padding: 0;
@@ -36,9 +33,8 @@ span.inline-code {
     padding-bottom: 4px;
     font-size: 16px;
     font-style: normal;
-    color: black;
+    color: var(--color-black);
     cursor: pointer;
-
 }
 
 
@@ -145,7 +141,9 @@ header {
     position: relative;
     display: flex;
     flex-flow: column;
-    background-color: #e1e4f2;
+    background-color: var(--highlight);
+
+
     width: 100%;
     margin: auto;
     margin-left: auto;
@@ -275,7 +273,6 @@ footer {
     margin-right: auto;
     margin-bottom: 100px;
     padding: 0 25px;
-    // height: calc(100% - 100px);
 
     ul, ol {
         margin-left: 25px;
@@ -439,10 +436,6 @@ footer {
 }
 
 
-
-
-
-
 table{
     width: 100%;
     font-size: 80%;
@@ -454,10 +447,10 @@ table{
         text-align: left;
     }
     th{
-        background-color: #ff003a;
+        background-color: var(--main-color);
     }
     tr:nth-child(even) td{
-        background-color: rgba(0,0,0,0.05)
+        background-color: var(--color-black-alpha9);
     }
 
     &.table-couleurs{
@@ -595,36 +588,8 @@ table{
     }
 }
 
-.chiffres-svg{
-    .cls-1{
-        fill: #e1e4f2;
-    }
-    width: 30px;
-    height: 30px;
-    margin-bottom: -5px;
-}
 
-q.on-hover[cite]::before {
-    content: "« ";
-    font-size: 150%;
-    
-    color: var(--main-color);
-}
 
-q.on-hover[cite]::after {
-    content: " »";
-    font-size: 150%;
-    color: var(--main-color);
-}
-
-q.on-hover[cite]:hover::after {
-    content: " » (source: " attr(cite) ") ";
-    color: var(--main-color);
-}
-
-// body:has(div#wiki) {
-//     padding-bottom: 0;
-// }
 
 .number {
     margin: 0 6px 0 0;
@@ -637,7 +602,6 @@ q.on-hover[cite]:hover::after {
 
 
 .fontsize-width-calc {
-    // display: none;
     position: absolute;
     visibility: hidden;
     font-size: 60px;

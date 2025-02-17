@@ -14,10 +14,6 @@
 $light: 45%;
 $dark: 65%;
 
-$subhead_height: 200px;
-$footer_height: 100px;
-$article_padding: 40px;
-
 $main_color: #4976bf;
 $second_color: #e5a00d;
 
@@ -51,6 +47,7 @@ $color_white_hex: unquote('#{str-slice(ie-hex-str($color_white), 4)}');
     --main-color-dark: #{color.adjust($main_color, $blackness: 35%)};
     --main-color-alpha3: #{color.adjust($main_color, $alpha: -0.3)};
     --main-color-alpha6: #{color.adjust($main_color, $alpha: -0.6)};
+    --main-color-alpha8: #{color.adjust($main_color, $alpha: -0.8)};
     --main-color-alpha9: #{color.adjust($main_color, $alpha: -0.9)};
 
     --second-color: #{$second_color};
@@ -63,6 +60,8 @@ $color_white_hex: unquote('#{str-slice(ie-hex-str($color_white), 4)}');
 
     --color-white-alpha1: #{color.adjust($color_white, $alpha: -0.1)};
     --color-black-alpha1: #{color.adjust($color_black, $alpha: -0.1)};
+    --color-white-alpha5: #{color.adjust($color_white, $alpha: -0.5)};
+    --color-black-alpha5: #{color.adjust($color_black, $alpha: -0.5)};
     --color-white-alpha7: #{color.adjust($color_white, $alpha: -0.7)};
     --color-black-alpha7: #{color.adjust($color_black, $alpha: -0.7)};
     --color-white-alpha9: #{color.adjust($color_white, $alpha: -0.9)};
