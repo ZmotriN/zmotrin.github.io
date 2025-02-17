@@ -791,9 +791,9 @@ app.component('codepen', {
         lightSwitchOff() { if(this.notab != 'true') this.theme = this.dark; },
     },
     template:
-    `<div class="codepen-container" :style="'height: ' + (+this.height + 2) + 'px'">` +
-        `<iframe :src="'https://codepen.io/' + this.user + '/embed/' + id + '?default-tab=' + this.tab + '&theme-id=' + theme" class="codepen" scrolling="no" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true" :style="'height: ' + this.height + 'px;'"></iframe>` +
-    `</div>`
+        `<div class="codepen-container" :style="'height: ' + (+this.height + 2) + 'px'">` +
+            `<iframe :src="'https://codepen.io/' + this.user + '/embed/' + id + '?default-tab=' + this.tab + '&theme-id=' + theme" class="codepen" scrolling="no" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true" :style="'height: ' + this.height + 'px;'"></iframe>` +
+        `</div>`
 });
 
 

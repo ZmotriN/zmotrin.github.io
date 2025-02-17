@@ -37,9 +37,12 @@ $color_white_hex: unquote('#{str-slice(ie-hex-str($color_white), 4)}');
 
 
 :root {
+    --subhead-height: 200px;
+    --footer-height: 100px;
+    --article-padding: 40px;
     --h1-size-desktop: 48px;
     --grostitre-size-desktop: 36px;
-    
+
     --font: "Rubik", sans-serif;
     --font-monospace: "Consolas", sans-serif;
     
@@ -58,6 +61,8 @@ $color_white_hex: unquote('#{str-slice(ie-hex-str($color_white), 4)}');
     --color-white: #{$color_white};
     --color-black: #{$color_black};
 
+    --color-white-alpha1: #{color.adjust($color_white, $alpha: -0.1)};
+    --color-black-alpha1: #{color.adjust($color_black, $alpha: -0.1)};
     --color-white-alpha7: #{color.adjust($color_white, $alpha: -0.7)};
     --color-black-alpha7: #{color.adjust($color_black, $alpha: -0.7)};
     --color-white-alpha9: #{color.adjust($color_white, $alpha: -0.9)};
