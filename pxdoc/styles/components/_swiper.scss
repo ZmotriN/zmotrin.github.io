@@ -17,6 +17,8 @@
     list-style: none;
     padding: 0;
     z-index: 1;
+    max-height: min(75vmin, 578px);
+    // aspect-ratio: 16/9;
 }
 
 .swiper-vertical>.swiper-wrapper {
@@ -876,6 +878,7 @@ body.dark {
 .swiper-container{
     margin-left: -25px;
     margin-right: -25px;
+    // aspect-ratio: 4/3;
 }
 
 
