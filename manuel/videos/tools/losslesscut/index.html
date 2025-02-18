@@ -36,15 +36,19 @@
         <script>document.body.classList.add(localStorage.getItem('darkmode') === 'true' ? 'dark' : 'light');</script>
         <a id="top"></a>
         <header>
-            <div id="logo" @click="goToTop('../../../../', '')" title="Retour à l'accueil"></div>
             <div title="Interrupteur" id="lightswitch" ref="lightswitch" @click="lightswitch()"></div>
         </header>
         <main>
-            <!-- MAIN HEADER EOF -->            <div id="subhead">
-                <div id="title">LosslessCut</div>
+            <!-- MAIN HEADER EOF -->
+            <div id="subhead">
+                <div id="logo" @click="goToTop('../../../../', '')" title="Retour à l'accueil"></div>    
+                <div id="breadcrumb">
+                    <div id="breadcrumb_normal"></div>
+                    <div id="breadcrumb_index"></div>
+                </div>
+                <h1 id="title">LosslessCut</h1>
             </div>
             <article>
-                <tabledesmatieres></tabledesmatieres>
                 <div id="contents">
                     <!-- TOOL HEADER EOF -->
 <script>location.href = 'https://github.com/mifi/lossless-cut';</script>

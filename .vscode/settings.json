@@ -50,4 +50,5 @@
         }
     },
     "liveSassCompile.settings.watchOnLaunch": false,
+    "liveSassCompile.settings.showOutputWindowOn": "Debug",
 }

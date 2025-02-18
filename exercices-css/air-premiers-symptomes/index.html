@@ -36,14 +36,14 @@
         <script>document.body.classList.add(localStorage.getItem('darkmode') === 'true' ? 'dark' : 'light');</script>
         <a id="top"></a>
         <header>
-            <div id="logo" @click="goToTop('../../', '')" title="Retour à l'accueil"></div>
             <div title="Interrupteur" id="lightswitch" ref="lightswitch" @click="lightswitch()"></div>
         </header>
         <main>
             <!-- MAIN HEADER EOF -->
             <div id="subhead">
+                <div id="logo" @click="goToTop('../../', '')" title="Retour à l'accueil"></div>    
                 <div id="breadcrumb">
-                    <div id="breadcrumb_normal"><a href="../">Exercices CSS</a> ></div>
+                    <div id="breadcrumb_normal"><div class="breadcrum-logo"></div><a href="../../../">MAXIME LR</a> > <a href="../">Exercices CSS</a> ></div>
                     <div id="breadcrumb_index"></div>
                 </div>
                 <h1 id="title">AIR - Premiers Symptômes</h1>

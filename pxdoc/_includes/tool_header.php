@@ -1,11 +1,12 @@
-<?php
-$target = pathinfo($PAGE->file, PATHINFO_DIRNAME).S.'tool.json';
-file_put_contents($target, json_encode(php_file_info($PAGE->file), JSON_PRETTY_PRINT));
-?>
+
             <div id="subhead">
-                <div id="title"><?php echo $PAGE->title; ?></div>
+                <div id="logo" @click="goToTop('<?php echo getProjectRoot(); ?>', '<?php echo getIndexPath(); ?>')" title="<?php echo lang('returnHome'); ?>"></div>    
+                <div id="breadcrumb">
+                    <div id="breadcrumb_normal"><?php print_breadcrumb(); ?></div>
+                    <div id="breadcrumb_index"><?php print_breadcrumb_index(); ?></div>
+                </div>
+                <h1 id="title"><?php echo strip_tags($PAGE->title); ?></h1>
             </div>
             <article>
-                <tabledesmatieres></tabledesmatieres>
                 <div id="contents">
                     <!-- TOOL HEADER EOF -->
