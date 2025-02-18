@@ -18,6 +18,7 @@ body {
     font-family: var(--font);
     scrollbar-color: dark;
     font-size: 4vw;
+    overflow-x: hidden;
 
     @media (min-width: 576px)  {
         font-size: 18px;
