@@ -773,8 +773,8 @@ app.component('mediafile', {
 app.component('codepen', {
     props: ['id', 'tab', 'height', 'notab'],
     setup(props) {
-        const dark = 43847;
-        const light = 44431;
+        const dark = "dark";
+        const light = "light";
         const clean = 44168;
         const user = 'pxdoc';
         props.height || (props.height = 400);
@@ -792,7 +792,7 @@ app.component('codepen', {
     },
     template:
         `<div class="codepen-container" :style="'height: ' + (+this.height + 2) + 'px'">` +
-            `<iframe :src="'https://codepen.io/' + this.user + '/embed/' + id + '?default-tab=' + this.tab + '&theme-id=' + theme" class="codepen" scrolling="no" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true" :style="'height: ' + this.height + 'px;'"></iframe>` +
+            `<iframe :src="'https://codepen.io/' + this.user + '/embed/' + id + '?default-tab=' + this.tab + '&theme-id=' + theme + '&border=none'" class="codepen" scrolling="no" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true" :style="'height: ' + this.height + 'px;'"></iframe>` +
         `</div>`
 });
 

@@ -1,0 +1,6 @@
+- Cache worker
+- Finir langs, au moins en francais
+- Réduire le nombre de types de pages
+- scripts de medias en php
+- scripts / styles => _pxpros.json
+- codepen dark light / computed style

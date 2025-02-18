@@ -41,15 +41,18 @@ function print_breadcrumb() {
     while(realpath(pathinfo($PAGE->file, PATHINFO_DIRNAME)) != $root) {
         if(!is_file(($file = $parent.S.'_index.php'))) break;
         if(!$data = php_file_info($file)) break;
-        if($root == $parent) $link = getRelativePath($PAGE->file, $PAGE->root);
-        else $link = str_replace([$root, '\\'], ['', '/'], $parent)."/";
+        if($root != $parent) $link = str_replace([$root, '\\'], ['', '/'], $parent)."/";
+        else {
+            $link = getRelativePath($PAGE->file, $PAGE->root);
+            if(!empty($data->icon)) $icon = getRelativePath($PAGE->file, realpath($parent.S.$data->icon));
+        }
         $page = str_replace([$root, '\\'], ['', '/'], pathinfo($PAGE->file, PATHINFO_DIRNAME));
         $backwards = count(explode('/',str_replace($link, '', $page)));
         $href = join('/', array_fill(0, $backwards, '..')).'/';
         $nodes[] = '<a href="'.$href.'">'.$data->title.'</a>';
         $parent = pathinfo($parent, PATHINFO_DIRNAME);
     }
-    if(!empty($nodes)) echo '<div class="breadcrum-logo"></div>' . join(' > ', array_reverse($nodes)).' >';
+    if(!empty($nodes)) echo '<div class="breadcrum-logo"' . (!empty($icon) ? ' style="background-image: url(' . $icon . ');"' : '') . '></div>' . join(' > ', array_reverse($nodes)).' >';
 }
 
 

@@ -56,7 +56,7 @@
 
 <p>La balise <incode><children></children></incode> permet de lister les sous-dossier d'une page. Cette composante ne doit être utilisée qu'a l'intérieur d'une page de type <incode>list</incode>.</p>
 
-<highlight lang="html">
+<highlight lang="php">
 &lt;?php
 /**
  * @type     list
@@ -579,7 +579,7 @@ https://tim-montmorency.com/timdoc/582-215MO/wiki/?dark
 
 <p>La balise <incode><wiki-page></incode> ne doit être utilisée que dans une page de type <incode>wiki</incode>.</p>
 
-<highlight lang="html">
+<highlight lang="php">
 &lt;?php
 /**
  * @type     wiki
