@@ -47,7 +47,7 @@ $color_white_hex: unquote('#{str-slice(ie-hex-str($color_white), 4)}');
     
     --main-color: #{$main_color};
     --main-color-light: #{color.adjust($main_color, $lightness: 25%)};
-    --main-color-dark: #{color.adjust($main_color, $blackness: 35%)};
+    --main-color-dark: #{color.adjust($main_color, $blackness: 25%)};
     --main-color-alpha3: #{color.adjust($main_color, $alpha: -0.3)};
     --main-color-alpha6: #{color.adjust($main_color, $alpha: -0.6)};
     --main-color-alpha8: #{color.adjust($main_color, $alpha: -0.8)};
