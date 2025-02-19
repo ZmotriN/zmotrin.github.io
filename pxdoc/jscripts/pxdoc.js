@@ -325,6 +325,7 @@ const getScaledTextFontSize = (text, width) => {
         if(data) {
             if(typeof data == 'string') this.cont.innerHTML = data;
             else {
+                // remove all child, use replace instead
                 while (this.cont.firstChild) this.cont.removeChild(this.cont.lastChild);
                 this.cont.append(data);
             }
@@ -784,15 +785,26 @@ app.component('codepen', {
     },
     data() {
         this.$root.registerLightSwitch(this);
-        return { theme:  (this.notab == 'true' ? this.clean : (this.$root.theme == 'dark' ? this.dark : this.light)) }
+        return {
+            theme: this.notab == 'true' ? this.clean : (this.$root.theme == 'dark' ? this.dark : this.light),
+            colors: this.getColors(),
+        }
     },
     methods: {
         lightSwitchOn() { if(this.notab != 'true') this.theme = this.light; },
         lightSwitchOff() { if(this.notab != 'true') this.theme = this.dark; },
+        getColors() {
+            const rootstyles = getComputedStyle(document.documentElement);
+            return {
+                main_color: rootstyles.getPropertyValue('--main-color'),
+                main_color_dark: rootstyles.getPropertyValue('--main-color-dark'),
+                main_color_light: rootstyles.getPropertyValue('--main-color-light'),
+            }
+        },
     },
     template:
         `<div class="codepen-container" :style="'height: ' + (+this.height + 2) + 'px'">` +
-            `<iframe :src="'https://codepen.io/' + this.user + '/embed/' + id + '?default-tab=' + this.tab + '&theme-id=' + theme + '&border=none'" class="codepen" scrolling="no" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true" :style="'height: ' + this.height + 'px;'"></iframe>` +
+            `<iframe :src="'https://codepen.io/' + this.user + '/embed/' + id + '?default-tab=' + this.tab + '&theme-id=' + theme + '&border=none&link-logo-color=' + encodeURIComponent(this.colors.main_color) + '&active-tab-color=' + encodeURIComponent(this.$root.theme == 'dark' ? this.colors.main_color_dark : this.colors.main_color_light)" class="codepen" scrolling="no" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true" :style="'height: ' + this.height + 'px;'"></iframe>` +
         `</div>`
 });
 
@@ -837,7 +849,6 @@ app.component('doclink', {
             "cmontmorency365-my.sharepoint.com": "momo",
             "cmontmorency365.sharepoint.com":    "momo",
             "www.cmontmorency.qc.ca":            "momo",
-            "teams.microsoft.com":               "momo",
             "ccti.cmontmorency.qc.ca":           "momo",
             "github.com":                        "github",
             "developers.google.com":             "google",
@@ -1563,7 +1574,6 @@ app.component('correction', {
                 obj.pourcentage = +(obj.points / obj.scale * 100).toFixed(2);
                 obj.hash = cyrb53(obj.name+obj.date+obj.pourcentage);
                 downloadJsonObject(obj, lowslug(obj.name) + ".json");
-                // console.log(JSON.stringify(obj, null, "\t"));
             });
         },
     },
