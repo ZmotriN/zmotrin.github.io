@@ -3,3 +3,5 @@
 - Réduire le nombre de types de pages
 - scripts de medias en php
 - scripts / styles => _pxpros.json
+- Wiki
+- Migrate to submodule

@@ -59,7 +59,7 @@ $color_white_hex: unquote('#{str-slice(ie-hex-str($color_white), 4)}');
     --second-color: #{$second_color};
     --second-color-alpha8: #{color.adjust($second_color, $alpha: -0.8)};
     
-    --highlight: #{color.adjust($main_color, $lightness: 20%, $alpha: -0.80)};
+    --highlight: #{color.adjust($main_color, $lightness: 20%, $alpha: -0.70)};
 
     --color-white: #{$color_white};
     --color-black: #{$color_black};
