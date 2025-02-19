@@ -70,6 +70,8 @@ $color_white_hex: unquote('#{str-slice(ie-hex-str($color_white), 4)}');
     --color-black-alpha5: #{color.adjust($color_black, $alpha: -0.5)};
     --color-white-alpha7: #{color.adjust($color_white, $alpha: -0.7)};
     --color-black-alpha7: #{color.adjust($color_black, $alpha: -0.7)};
+    --color-white-alpha8: #{color.adjust($color_white, $alpha: -0.8)};
+    --color-black-alpha8: #{color.adjust($color_black, $alpha: -0.8)};
     --color-white-alpha9: #{color.adjust($color_white, $alpha: -0.9)};
     --color-black-alpha9: #{color.adjust($color_black, $alpha: -0.9)};
 

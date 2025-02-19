@@ -184,7 +184,7 @@ pre.highlight + small {
 body.dark {
     .hljs {
         color: #c0c5ce;
-        background: var(--color-white-alpha9);
+        background: var(--color-white-alpha8);
         &-comment, &-quote { color: #b6b18b; }
         &-deletion, &-name, &-regexp, &-selector-class, &-selector-id, &-tag, &-template-variable, &-variable { color: #eb3c54; }
         &-built_in, &-link, &-literal, &-meta, &-number, &-params, &-type { color: #e7ce56; }
