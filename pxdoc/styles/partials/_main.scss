@@ -17,12 +17,8 @@ body {
     padding-bottom: var(--footer-height);
     font-family: var(--font);
     // scrollbar-color: dark;
-    font-size: 4vw;
+    font-size: min(var(--font-size-resp), var(--font-size-base));
     overflow-x: hidden;
-
-    @media (min-width: 576px)  {
-        font-size: 18px;
-    }
 }
 
 span.inline-code {

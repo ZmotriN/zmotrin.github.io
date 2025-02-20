@@ -16,10 +16,10 @@ div.checklist {
 
         li {
             cursor: pointer;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            font-size: 18px;
-            line-height: 28px;
+            margin-top: 0.5em;
+            margin-bottom: 1em;
+            // font-size: 18px;
+            line-height: 1.5em;
             text-decoration-color: var(--main-color);
             text-decoration-thickness: 3px;
             transition-duration: 200ms;
