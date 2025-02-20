@@ -29,10 +29,7 @@ body.dark {
     #wiki__list { background-image: linear-gradient(to right, var(--main-color-light-alpha9), #000000); }
     
 
-    div.checklist {
-        ol li:hover { background-color: var(--main-color-dark); }
-        &__progressbar { background-color: var(--main-color-dark); }
-    }
+
 
     span.codepen-remark {
         margin-top: -25px;

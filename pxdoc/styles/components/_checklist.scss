@@ -55,11 +55,19 @@ div.checklist {
         height: 4px;
         margin-top: 3px;
         background-image: linear-gradient(0deg, var(--main-color), var(--main-color));
-        background-color: var(--main-color-light);
+        background-color: var(--main-color-light-alpha3);
         background-position: left;
         background-repeat: no-repeat;
         background-size: 0% 4px;
         transition-duration: 250ms;
+    }
+
+}
+
+body.dark {
+    div.checklist {
+        ol li:hover { background-color: var(--main-color-dark); }
+        &__progressbar { background-color: var(--main-color-dark-alpha3); }
     }
 
 }
