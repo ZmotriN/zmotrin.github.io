@@ -247,7 +247,7 @@
 
 <h3>&lt;incode&gt;</h3>
 <highlight lang="html">Utilisez la proprité <incode>transform</incode>.</highlight>
-Utilisez la proprité <incode>transform</incode>.<br>
+Utilisez la proprité <incode>transform</incode>.<br><br>
 <warning>Le rendu de cette composante est effectué par le pré-processeur.</warning>
 <br><br>
 
