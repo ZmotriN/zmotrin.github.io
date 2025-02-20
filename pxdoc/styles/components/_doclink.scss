@@ -5,8 +5,14 @@ a.doclink {
     margin-bottom: 1.5em;
     margin-right: 0.6em;
     border-radius: 1.4em;
+    // overflow: hidden;
+    // white-space: nowrap;
+    // overflow: hidden;
+    // white-space: nowrap;
+    // text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    text-overflow: ellipsis;
     max-width: calc(100vw - 60px);
 
     &::before {
@@ -38,7 +44,10 @@ a.doclink {
         margin-right: 0.6em;
         line-height: 1.4em;
         font-family: var(--font-monospace);
+        width: calc(100% - 2.6em);
+        overflow: hidden;
         white-space: nowrap;
+        text-overflow: ellipsis;
         font-size: 0.9em;
     }
 
