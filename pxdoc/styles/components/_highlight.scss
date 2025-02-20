@@ -31,7 +31,7 @@ code.hljs {
 
 .hljs {
     color: #383a42;
-    background-color: var(--color-black-alpha9);
+    background-color: var(--color-code-light);
 }
 
 .hljs ::selection,
@@ -184,7 +184,7 @@ pre.highlight + small {
 body.dark {
     .hljs {
         color: #c0c5ce;
-        background: var(--color-white-alpha8);
+        background-color: var(--color-code-dark);
         &-comment, &-quote { color: #b6b18b; }
         &-deletion, &-name, &-regexp, &-selector-class, &-selector-id, &-tag, &-template-variable, &-variable { color: #eb3c54; }
         &-built_in, &-link, &-literal, &-meta, &-number, &-params, &-type { color: #e7ce56; }

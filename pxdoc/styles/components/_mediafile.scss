@@ -56,7 +56,7 @@
         margin-top: 4px;
         display: block;
         width: 100%;
-        background-color: var(--highlight);
+        background-color: var(--main-color-dark-alpha9);
         color: var(--main-color-dark);
         font-size: 16px;
         padding: 8px;
@@ -139,6 +139,7 @@
 body.dark {
     .mediafile {
         &__link-text {
+            background-color: var(--main-color-light-alpha9);
             color: var(--main-color-light);
         }
         

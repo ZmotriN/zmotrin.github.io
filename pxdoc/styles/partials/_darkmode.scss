@@ -8,7 +8,7 @@ body.dark {
 
     a { color: var(--color-white); }
     hr { border: 1px dashed var(--main-color-dark); }
-    span.inline-code { color: var(--color-white); background-color: var(--color-white-alpha8); }
+    span.inline-code { color: var(--color-white); background-color: var(--color-code-dark) }
 
     #lightswitch {
         background-color: var(--main-color-dark);
@@ -26,7 +26,7 @@ body.dark {
 
     main::before { background: linear-gradient(to bottom, var(--main-color-light-alpha8), 20%, var(--color-black)); }
 
-    #wiki__list { background-image: linear-gradient(to right, #111111, #000000); }
+    #wiki__list { background-image: linear-gradient(to right, var(--main-color-light-alpha9), #000000); }
     
 
     div.checklist {

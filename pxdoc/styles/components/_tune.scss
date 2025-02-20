@@ -6,7 +6,7 @@
     margin-bottom: 25px;
     margin-left: -25px;
     margin-right: -25px;
-    background-color: var(--highlight);
+    background-color: var(--color-code-light);
     user-select: none;
 
     &__button {
@@ -57,6 +57,7 @@
 
 body.dark {
     .tune {
+        background-color: var(--color-code-dark);
         &__button {
             background-image: var(--icon-tune-play-white);
             &.pause {
