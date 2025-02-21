@@ -1,13 +1,4 @@
-<?php
-
-// echo ;
-
-
-// echo $PAGE->root . 'styles/styles.min.css';
-// print_r($PAGE);
-$styles = is_file($PAGE->root . 'styles/styles.min.css') ? getRelativePath($PAGE->file, $PAGE->root) . 'styles/styles.min.css' : $PAGE->shared . 'styles/styles.min.css';
-
-?><!-- 
+<!-- 
 
 ██████╗ ██╗ █████╗ ███╗   ███╗███████╗████████╗██████╗ ██╗ ██████╗██╗  ██╗
 ██╔══██╗██║██╔══██╗████╗ ████║██╔════╝╚══██╔══╝██╔══██╗██║██╔════╝██║ ██╔╝
@@ -25,15 +16,14 @@ $styles = is_file($PAGE->root . 'styles/styles.min.css') ? getRelativePath($PAGE
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta itemprop="digest" content="<?php echo ($PAGE->password ? md5($PAGE->password) : ''); ?>">
         <meta itemprop="lang" content="<?php echo $PAGE->lang; ?>">
-        <meta property="og:locale" content="fr_CA">
+        <meta property="og:locale" content="fr_ca">
         <meta property="og:type" content="article">
         <meta property="og:title" content="<?php echo $PAGE->ogtags->title; ?>">
         <meta property="og:description" content="<?php echo $PAGE->ogtags->description; ?>">
         <meta property="og:url" content="<?php echo $PAGE->ogtags->url; ?>">
         <meta property="og:image" content="<?php echo $PAGE->ogtags->image; ?>">
         <link rel="icon" type="image/x-icon" href="<?php echo $PAGE->shared; ?>images/favicon.ico">
-        <!-- <link rel="stylesheet" href="<?php echo $PAGE->shared; ?>styles/styles.min.css"> -->
-        <link rel="stylesheet" href="<?php echo $styles; ?>">
+        <link rel="stylesheet" href="<?php echo $PAGE->shared; ?>styles/styles.min.css">
         <script>const shared = '<?php echo $PAGE->shared; ?>';</script>
         <script src="<?php echo $PAGE->shared; ?>jscripts/highlight.min.js"></script>
         <script src="<?php echo $PAGE->shared; ?>jscripts/swiper-bundle.min.js"></script>
@@ -43,6 +33,3 @@ $styles = is_file($PAGE->root . 'styles/styles.min.css') ? getRelativePath($PAGE
     </head>
     <body>
         <script>document.body.classList.add(localStorage.getItem('darkmode') === 'true' ? 'dark' : 'light');</script>
-        <!-- <div title="<?php echo lang('lightSwitch'); ?>" id="lightswitch" ref="lightswitch" @click="lightswitch()"></div> -->
-        <wiki>
-            <!-- WIKI HEADER EOF -->

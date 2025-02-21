@@ -1,9 +1,10 @@
 <?php 
 /**
- * @type     exercice
+ * @type     article
  * @title    AIR - Premiers Symptômes
  * @icon     images/thumb.webp
  * @image    images/image.webp
+ * @hideicon true
  * @abstract Pour cet exercice, vous devez écrire du CSS afin de recréer la pochette de l’album "Premiers Symptômes" du groupe de musique électronique français Air.
  */
 ?>

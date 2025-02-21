@@ -1,9 +1,9 @@
 a.tool {
     display: block;
-    background-image: linear-gradient(0deg, var(--color-green-gradient-light), 1%, var(--color-green-back-light));
-    background-color: var(--color-green-back-light);
+    background-image: linear-gradient(0deg, var(--main-color-gradient-light), 1%, var(--main-color-back-light));
+    background-color: var(--main-color-back-light);
     margin-bottom: 25px;
-    color: var(--color-green-grey-light);
+    color: var(--color-black-alpha3);
     margin-left: -25px;
     margin-right: -25px;
 
@@ -95,9 +95,9 @@ a.tool {
 
 body.dark {
     a.tool {
-        background-color: var(--color-green-back-dark);
-        background-image: linear-gradient(0deg, var(--color-green-gradient-dark), 20%, var(--color-green-back-dark));
-        color: var(--color-green-grey-dark);
+        background-color: var(--main-color-back-dark);
+        background-image: linear-gradient(0deg, var(--main-color-gradient-dark), 20%, var(--main-color-back-dark));
+        color: var(--color-white-alpha3);
         &:hover { color: var(--color-white); }
         div.tool-container div.tool-abstract em {
             background-color: var(--color-green-label-dark);

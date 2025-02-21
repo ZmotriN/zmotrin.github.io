@@ -76,6 +76,11 @@ function print_breadcrumb_index() {
 }
 
 
+/**
+ * getProjectRoot
+ *
+ * @return void
+ */
 function getProjectRoot() {
     global $PAGE;
     $path = getRelativePath($PAGE->file, $PAGE->root);
@@ -84,6 +89,11 @@ function getProjectRoot() {
 }
 
 
+/**
+ * getIndexPath
+ *
+ * @return void
+ */
 function getIndexPath() {
     global $PAGE;
     if(!$PAGE->ref) return;
@@ -92,16 +102,20 @@ function getIndexPath() {
 }
 
 
+/**
+ * lang
+ *
+ * @param  mixed $idx
+ * @return void
+ */
 function lang($idx) {
     static $index = null;
     global $PAGE;
-
     if($index === null) {
         if(!$file = realpath($PAGE->root . 'pxdoc/langs/' . $PAGE->lang . '.json')) return false;
         if(!$data = @file_get_contents($file)) return false;
         if(!$index = @json_decode($data)) return false;
     }
-
     return empty($index->{$idx}) ? false : $index->{$idx};
 }
 
@@ -221,26 +235,20 @@ function getIndexReferences($name=null) {
  * @return void
  */
 function getRelativePath($from, $to) {
-    // some compatibility fixes for Windows paths
     $from = is_dir($from) ? rtrim($from, '\/') . '/' : $from;
     $to   = is_dir($to)   ? rtrim($to, '\/') . '/'   : $to;
     $from = str_replace('\\', '/', $from);
     $to   = str_replace('\\', '/', $to);
-
     $from     = explode('/', $from);
     $to       = explode('/', $to);
     $relPath  = $to;
 
     foreach($from as $depth => $dir) {
-        // find first non-matching dir
         if($dir === $to[$depth]) {
-            // ignore this directory
             array_shift($relPath);
         } else {
-            // get number of remaining dirs to $from
             $remaining = count($from) - $depth;
             if($remaining > 1) {
-                // add traversals up to first matching dir
                 $padLength = (count($relPath) + $remaining - 1) * -1;
                 $relPath = array_pad($relPath, $padLength, '..');
                 break;
@@ -254,206 +262,16 @@ function getRelativePath($from, $to) {
 
 
 /**
- * include_arbitrary for user defined include
+ * register_page_type
  *
- * @param  mixed $file File to include
+ * @param  mixed $type
+ * @param  mixed $info
  * @return void
  */
-function include_arbitrary($file) {
-    global $PAGE;
-    if($user = realpath($PAGE->root . '_includes/' . $file)) include($user);
-    else include($file);
-}
-
-
-/**
- * Specific header printing
- *
- * @return void
- */
-function print_header() {
-    global $PAGE;
-
-    $PAGE->shared = get_shared($PAGE->file);
-    $root = str_replace('\\', '/', realpath($PAGE->root)) . '/';
-    $image = $PAGE->domain . 'pxdoc/images/default.webp';
-    if($PAGE->image) {
-        if($img = realpath(pathinfo($PAGE->file, PATHINFO_DIRNAME) . '/' . $PAGE->image)) {
-            $image = str_replace($root, $PAGE->domain, str_replace('\\', '/', $img));
-        }
-    }
-
-    $ogtags = new stdClass;
-    $ogtags->image = $image;
-    $ogtags->title = strip_tags($PAGE->title) . ' | ' . $PAGE->project;
-    $ogtags->description  = htmlentities(html_entity_decode(strip_tags(trim($PAGE->abstract)), ENT_QUOTES, 'UTF-8'), ENT_QUOTES, 'UTF-8');
-    $ogtags->url = str_replace($root, $PAGE->domain, str_replace('\\', '/', pathinfo($PAGE->file, PATHINFO_DIRNAME) . '/'));
-    $PAGE->ogtags = $ogtags;
-
-    switch($PAGE->type) {
-        case 'article':  print_article_header(); break;
-        case 'exercice': print_exercice_header(); break;
-        case 'tool':     print_tool_header(); break;
-        case 'list':     print_list_header(); break;
-        case 'wiki':     print_wiki_header(); break;
-        default:         print_main_header();
-    }
-}
-
-
-/**
- * Specific footer printing
- *
- * @return void
- */
-function print_footer() {
-    global $PAGE;
-    switch($PAGE->type) {
-        case 'article':  print_article_footer(); break;
-        case 'exercice': print_exercice_footer(); break;
-        case 'tool':     print_tool_footer(); break;
-        case 'list':     print_list_footer(); break;
-        case 'wiki':     print_wiki_footer(); break;
-        default:         print_main_footer();
-    }
-}
-
-
-/**
- * Main header printing
- *
- * @return void
- */
-function print_main_header() {
-    global $PAGE;
-    include_arbitrary('main_header.php');
-}
-
-
-/**
- * Main footer printing
- *
- * @return void
- */
-function print_main_footer() {
-    global $PAGE;
-    include_arbitrary('main_footer.php');
-}
-
-
-/**
- * Article header printing
- *
- * @return void
- */
-function print_article_header() {
-    global $PAGE;
-    print_main_header(); 
-    include_arbitrary('article_header.php');
-}
-
-
-/**
- * Article footer printing
- *
- * @return void
- */
-function print_article_footer() {
-    global $PAGE;
-    include_arbitrary('article_footer.php');
-    print_main_footer();
-}
-
-
-/**
- * Exercice header printing
- *
- * @return void
- */
-function print_exercice_header() {
-    global $PAGE;
-    print_main_header(); 
-    include_arbitrary('exercice_header.php');
-}
-
-
-/**
- * Exercice footer printing
- *
- * @return void
- */
-function print_exercice_footer() {
-    global $PAGE;
-    include_arbitrary('exercice_footer.php');
-    print_main_footer();
-}
-
-
-/**
- * List header printing
- *
- * @return void
- */
-function print_list_header() {
-    global $PAGE;
-    print_main_header(); 
-    include_arbitrary('list_header.php');
-}
-
-
-/**
- * List footer printing
- *
- * @return void
- */
-function print_list_footer() {
-    global $PAGE;
-    include_arbitrary('list_footer.php');
-    print_main_footer();
-}
-
-
-/**
- * Tool header printing
- *
- * @return void
- */
-function print_tool_header() {
-    global $PAGE;
-    print_main_header(); 
-    include_arbitrary('tool_header.php');
-}
-
-
-/**
- * Tool footer printing
- *
- * @return void
- */
-function print_tool_footer() {
-    global $PAGE;
-    include_arbitrary('tool_footer.php');
-    print_main_footer();
-}
-
-
-/**
- * Wiki header printing
- *
- * @return void
- */
-function print_wiki_header() {
-    global $PAGE;
-    include_arbitrary('wiki_header.php');
-}
-
-
-/**
- * Wiki footer printing
- *
- * @return void
- */
-function print_wiki_footer() {
-    global $PAGE;
-    include_arbitrary('wiki_footer.php');
+function register_page_type($type = null, $info = null) {
+    static $types = [];
+    if(is_null($type)) return $types;
+    if(is_null($info)) return isset($types[$type]) ? $types[$type] : false;
+    $types[$type] = $info;
+    return true;
 }

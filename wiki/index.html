@@ -16,14 +16,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta itemprop="digest" content="">
         <meta itemprop="lang" content="fr_ca">
-        <meta property="og:locale" content="fr_CA">
+        <meta property="og:locale" content="fr_ca">
         <meta property="og:type" content="article">
         <meta property="og:title" content="Wiki - Intégration Web | Maxime Larrivée-Roy">
         <meta property="og:description" content="Int&eacute;gration Web">
         <meta property="og:url" content="https://zmotrin.github.io/wiki/">
         <meta property="og:image" content="https://zmotrin.github.io/pxdoc/images/default.webp">
         <link rel="icon" type="image/x-icon" href="../pxdoc/images/favicon.ico">
-        <!-- <link rel="stylesheet" href="../pxdoc/styles/styles.min.css"> -->
         <link rel="stylesheet" href="../pxdoc/styles/styles.min.css">
         <script>const shared = '../pxdoc/';</script>
         <script src="../pxdoc/jscripts/highlight.min.js"></script>
@@ -33,10 +32,7 @@
         <title>Wiki - Intégration Web</title>
     </head>
     <body>
-        <script>document.body.classList.add(localStorage.getItem('darkmode') === 'true' ? 'dark' : 'light');</script>
-        <!-- <div title="Interrupteur" id="lightswitch" ref="lightswitch" @click="lightswitch()"></div> -->
-        <wiki>
-            <!-- WIKI HEADER EOF -->
+        <script>document.body.classList.add(localStorage.getItem('darkmode') === 'true' ? 'dark' : 'light');</script>        <wiki>
 
 <wiki-page name="Cours 01A">
 asdf
@@ -44,15 +40,19 @@ asdf
 
 
 <wiki-page name="Cours 01B">
-asdf
+        <div class="intlink__item">
+            <div class="intlink__item__icon" style="background-image: url(../exercices-css/air-premiers-symptomes/images/thumb.webp);"></div>
+            <div class="intlink__item__description">
+                <span class="intlink__item__title"><a href="../exercices-css/air-premiers-symptomes/">AIR - Premiers Symptômes</a></span>
+                <span class="intlink__item__abstract">Pour cet exercice, vous devez écrire du CSS afin de recréer la pochette de l’album "Premiers Symptômes" du groupe de musique électronique français Air.</span>
+            </div>
+        </div>
 </wiki-page>
 
 
 <wiki-page name="Cours 02A">
 </wiki-page>
-                <!-- WIKI FOOTER SOF -->
-
-            </wiki>
-            <script>app.mount('body');</script>
+        </wiki>
+        <script>app.mount('body');</script>
     </body>
 </html>

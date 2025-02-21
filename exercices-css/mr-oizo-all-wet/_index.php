@@ -1,9 +1,10 @@
 <?php 
 /**
- * @type     exercice
+ * @type     article
  * @title    Mr. Oizo - All Wet
  * @icon     images/thumb.webp
  * @image    images/image.webp
+ * @hideicon true
  * @abstract Pour cet exercice, vous devez écrire du CSS afin de recréer la pochette de l’album "All Wet" de l'artiste multidisplinaire français Quentin Dupieux mieux connu sous le nom de Mr. Oizo.
  */
 ?>

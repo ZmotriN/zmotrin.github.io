@@ -1,8 +1,0 @@
-{
-    "type": "tool",
-    "title": "Live Server",
-    "icon": "images\/thumb.webp",
-    "image": "images\/image.webp",
-    "url": "https:\/\/marketplace.visualstudio.com\/items?itemName=ritwickdey.LiveServer",
-    "abstract": "Serveur web avec rafra\u00eechissement automatique."
-}

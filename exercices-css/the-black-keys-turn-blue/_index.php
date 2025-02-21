@@ -1,9 +1,10 @@
 <?php 
 /**
- * @type     exercice
+ * @type     article
  * @title    The Black Keys - Turn Blue
  * @icon     images/thumb.webp
  * @image    images/image.webp
+ * @hideicon true
  * @abstract Pour cet exercice, vous devez écrire du CSS afin de recréer la pochette de l’album "Turn Blue" du groupe rock The Black Keys.
  */
 ?>

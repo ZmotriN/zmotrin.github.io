@@ -1,9 +1,10 @@
 <?php 
 /**
- * @type     exercice
+ * @type     article
  * @title    <span style="font-size: 0.9em;">King Crimson - Larks' Tongues in Aspic</span>
  * @icon     images/thumb.webp
  * @image    images/image.webp
+ * @hideicon true
  * @abstract Pour cet exercice, vous devez écrire du CSS afin de recréer la pochette de l’album "Larks' Tongues in Aspic" du groupe rock progressif King Crimson.
  */
 ?>

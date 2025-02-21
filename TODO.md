@@ -6,3 +6,6 @@
 - Wiki
 - Migrate to submodule
 - Doclink lowslug 
+- register page type
+- refactor intlink / listlink
+- Qu'est-ce qu'on fait avec #logo ?

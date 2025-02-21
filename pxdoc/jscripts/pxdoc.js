@@ -440,7 +440,8 @@ if(data = localStorage.getItem(lang_cache)) {
     langdata = syncjson(shared + 'langs/' + meta_lang + '.json');
     localStorage.setItem(lang_cache, JSON.stringify(langdata));
 }
-const lang = langdata;
+const langinfo = langdata;
+const lang = (str) => { return langinfo[str]; }
 
 
 /******************************************************
@@ -548,7 +549,7 @@ app.component('tabledesmatieres', {
     template:
         `<div id="contents_table" v-if="this.$root.tableOfContents.length > 0">` +
             `<div class="contents_table__table">` +
-                `<a href="#" class="no-underline"><strong>${lang.tableOfContents}</strong></a>` +
+                `<a href="#" class="no-underline"><strong>${lang('tableOfContents')}</strong></a>` +
                 `<ul>` +
                     `<li v-for="elm in this.$root.tableOfContents"><a :href="'#'+elm.id">{{ elm.name }}</a></li>` +
                 `</ul>` +

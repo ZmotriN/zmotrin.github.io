@@ -10,6 +10,8 @@
         "pxdoc/_includes/functions.php",
         "pxdoc/_includes/hooks.php"
     ],
-    "before": "pxdoc/_includes/header.php",
-    "after": "pxdoc/_includes/footer.php"
+    "before": "pxdoc/_includes/before.php",
+    "after": "pxdoc/_includes/after.php",
+    "scripts": [],
+    "styles": []
 }

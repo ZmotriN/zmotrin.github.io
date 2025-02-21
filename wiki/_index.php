@@ -13,7 +13,7 @@ asdf
 
 
 <wiki-page name="Cours 01B">
-asdf
+<intlink href="../exercices-css/air-premiers-symptomes/"></intlink>
 </wiki-page>
 
 

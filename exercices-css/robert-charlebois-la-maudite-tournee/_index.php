@@ -1,9 +1,10 @@
 <?php 
 /**
- * @type     exercice
+ * @type     article
  * @title    <span style="font-size: 0.9em;">Robert Charlebois - La maudite tournée</span>
  * @icon     images/thumb.webp
  * @image    images/image.webp
+ * @hideicon true
  * @abstract Pour cet exercice, vous devez écrire du CSS afin de recréer la pochette de l’album live "La maudite tournée" du célèbre chanteur québécois Robert Charlebois.
  */
 ?>

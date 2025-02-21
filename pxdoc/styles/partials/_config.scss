@@ -62,6 +62,15 @@ $color_white_hex: unquote('#{str-slice(ie-hex-str($color_white), 4)}');
     --main-color-light-alpha8: #{color.adjust($main_color, $lightness: 25%, $alpha: -0.8)};
     --main-color-light-alpha9: #{color.adjust($main_color, $lightness: 25%, $alpha: -0.9)};
 
+    --main-color-back-light: #{lighten($main_color, 45%)};
+    --main-color-gradient-light: #{lighten($main_color, 20%)};
+    --main-color-label-light: #{lighten($main_color, 30%)};
+    --main-color-grey-light: #{color.adjust($main_color, $alpha: -0.3)};
+    --main-color-back-dark: #{darken(color.adjust($main_color, $blackness: 50%), 15%)};
+    --main-color-gradient-dark: #{color.adjust($main_color, $blackness: 40%)};
+    --main-color-label-dark: #{color.adjust($main_color, $whiteness: 30%)};
+    --main-color-grey-dark: #{color.adjust($main_color, $alpha: -0.3)};
+
     --second-color: #{$second_color};
     --second-color-alpha8: #{color.adjust($second_color, $alpha: -0.8)};
     

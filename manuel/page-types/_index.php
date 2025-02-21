@@ -52,7 +52,7 @@
 
  <highlight lang="php">&lt;?php 
 /**
- * @type     exercice
+ * @type     article
  * @title    Flexbox - Scrabble Potter
  * @icon     images/thumb.jpg
  * @abstract Déplacer les lettres d’un jeu de Scrabble
@@ -66,7 +66,7 @@
 
 <highlight lang="php">&lt;?php 
 /**
- * @type     exercice
+ * @type     article
  * @title    Flexbox Zombie - Chapitre 1
  * @icon     images/thumb.jpg
  * @url      https://mastery.games/flexboxzombies/chapter/1/level/1

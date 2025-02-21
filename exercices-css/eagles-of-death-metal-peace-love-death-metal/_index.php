@@ -1,9 +1,10 @@
 <?php 
 /**
- * @type     exercice
+ * @type     article
  * @title    Eagles of Death Metal - Peace Love Death Metal
  * @icon     images/thumb.webp
  * @image    images/image.webp
+ * @hideicon true
  * @abstract Pour cet exercice, vous devez écrire du CSS afin de recréer l’album "Peace Love Death Metal" du groupe rock Eagles of Death Metal.
  */
 ?>

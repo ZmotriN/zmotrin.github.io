@@ -1,6 +1,55 @@
 <?php
 
 /******************************************************
+ *                 Article Page Type                  *
+ ******************************************************/
+register_page_type('article', [
+    'header' => [
+        __DIR__ . '/templates/header.php',
+        __DIR__ . '/templates/header_main.php',
+        __DIR__ . '/templates/header_article.php',
+    ],
+    'footer' => [
+        __DIR__ . '/templates/footer_article.php',
+        __DIR__ . '/templates/footer_main.php',
+        __DIR__ . '/templates/footer.php',
+    ],
+]);
+
+
+/******************************************************
+ *                   List Page Type                   *
+ ******************************************************/
+register_page_type('list', [
+    'header' => [
+        __DIR__ . '/templates/header.php',
+        __DIR__ . '/templates/header_main.php',
+        __DIR__ . '/templates/header_list.php',
+    ],
+    'footer' => [
+        __DIR__ . '/templates/footer_list.php',
+        __DIR__ . '/templates/footer_main.php',
+        __DIR__ . '/templates/footer.php',
+    ],
+]);
+
+
+/******************************************************
+ *                   Wiki Page Type                   *
+ ******************************************************/
+register_page_type('wiki', [
+    'header' => [
+        __DIR__ . '/templates/header.php',
+        __DIR__ . '/templates/header_wiki.php',
+    ],
+    'footer' => [
+        __DIR__ . '/templates/footer_wiki.php',
+        __DIR__ . '/templates/footer.php',
+    ],
+]);
+
+
+/******************************************************
  *                Composante Exercice                 *
  ******************************************************/
 register_tag('exercice', function($html, $attrs, $data) {
