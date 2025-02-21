@@ -5,3 +5,4 @@
 - scripts / styles => _pxpros.json
 - Wiki
 - Migrate to submodule
+- Doclink lowslug 
