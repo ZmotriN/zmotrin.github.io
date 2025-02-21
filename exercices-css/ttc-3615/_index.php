@@ -34,8 +34,8 @@
 
 <br>
 
-<warning>Pour une meilleure exécution de l'exercice, certains des éléments HTML ont été cachés par défaut dans le fichier CSS. Rendez-les visible au fur et à mesure que vous avancez dans l'exercice.</warning>
 <thumbsup>Prenez le temps d'analyser le fichier HTML.</thumbsup>
+<warning>Pour une meilleure exécution de l'exercice, certains des éléments HTML ont été cachés par défaut dans le fichier CSS. Rendez-les visible au fur et à mesure que vous avancez dans l'exercice.</warning>
 <alert>Il est <strong>INTERDIT</strong> de modifier le fichier HTML.</alert>
 
 <dots></dots>
