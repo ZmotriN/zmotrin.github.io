@@ -8,4 +8,4 @@
 - Doclink lowslug 
 - refactor intlink / listlink
 - Qu'est-ce qu'on fait avec #logo ?
-- 
+- git clone --recurse-submodules https://github.com/ZmotriN/zmotrin.github.io.git
