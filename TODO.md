@@ -1,11 +1,15 @@
 - Cache worker
 - Finir langs, au moins en francais
-- Réduire le nombre de types de pages
 - scripts de medias en php
 - scripts / styles => _pxpros.json
-- Wiki
-- Migrate to submodule
 - Doclink lowslug 
 - refactor intlink / listlink
 - Qu'est-ce qu'on fait avec #logo ?
+- pxpros timezone
+
+
+
+
+
+
 - git clone --recurse-submodules https://github.com/ZmotriN/zmotrin.github.io.git
