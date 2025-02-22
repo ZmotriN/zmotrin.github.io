@@ -1,3 +1,0 @@
-                </div>
-                <tabledesmatieres></tabledesmatieres>
-            </article>
