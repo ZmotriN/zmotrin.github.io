@@ -1,16 +1,16 @@
 {
     "terminal.integrated.env.windows": {
-        "PATH": "${workspaceFolder}\\pxdoc\\_bin\\pxpros;${workspaceFolder}\\pxdoc\\_bin\\windows;${env:PATH};${workspaceFolder}"
+        "PATH": "${workspaceFolder}\\pxdoc\\_bin\\windows;${env:PATH};${workspaceFolder}"
     },
     "terminal.integrated.env.osx": {
-        "PATH": "${workspaceFolder}/pxdoc/_bin/pxpros:${workspaceFolder}/pxdoc/_bin/mac:${env:PATH}:${workspaceFolder}"
+        "PATH": "${workspaceFolder}/pxdoc/_bin/mac:${env:PATH}:${workspaceFolder}"
     },
     "emeraldwalk.runonsave": {
         "autoClearConsole": true,
         "commands": [
             {
                 "match": "_.*\\.php$",
-                "cmd": "php \"${workspaceFolder}/pxdoc/_bin/pxpros/pxpros.php\" \"${file}\""
+                "cmd": "php \"${workspaceFolder}/pxdoc/_bin/scripts/pxdoc.php\" \"${file}\""
             }
         ]
     },
