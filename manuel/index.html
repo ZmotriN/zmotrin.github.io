@@ -33,18 +33,16 @@
     </head>
     <body>
         <script>document.body.classList.add(localStorage.getItem('darkmode') === 'true' ? 'dark' : 'light');</script>        <a id="top"></a>
+        <div id="logo" @click="goToTop('../', '')" title="Retour à l'accueil"></div>
+        <div title="Interrupteur" id="lightswitch" ref="lightswitch" @click="lightswitch()"></div>
         <header>
-            <div title="Interrupteur" id="lightswitch" ref="lightswitch" @click="lightswitch()"></div>
+            <div id="breadcrumb">
+                <div id="breadcrumb_normal"><div class="breadcrum-logo" style="background-image: url(../pxdoc/images/logo.svg);"></div><a href="../../">Maxime L. Roy</a> ></div>
+                <div id="breadcrumb_index"></div>
+            </div>
+            <h1 id="title"><img src="images/icon.webp">&nbsp;Manuel</h1>
         </header>
         <main>
-            <div id="subhead">
-                <div id="logo" @click="goToTop('../', '')" title="Retour à l'accueil"></div>
-                <div id="breadcrumb">
-                    <div id="breadcrumb_normal"><div class="breadcrum-logo" style="background-image: url(../pxdoc/images/logo.svg);"></div><a href="../../">Maxime L. Roy</a> ></div>
-                    <div id="breadcrumb_index"></div>
-                </div>
-                <h1 id="title"><img src="images/icon.webp">&nbsp;Manuel</h1>
-            </div>
             <article>
                 <div id="listing">
                     <div class="list-grid">
@@ -54,41 +52,48 @@
                                 <span class="list-grid__item__title"><a href="audios/">Audios</a></span>
                                 <span class="list-grid__item__abstract">Utiliser Github et la composante &lt;tune&gt;</span>
                             </div>
-                        </div>                        <div class="list-grid__item">
+                        </div>
+                        <div class="list-grid__item">
                             <div class="list-grid__item__icon" style="background-image: url(components/images/icon.webp);"></div>
                             <div class="list-grid__item__description">
                                 <span class="list-grid__item__title"><a href="components/">Composantes</a></span>
                                 <span class="list-grid__item__abstract">Manuel d'utilisation des composantes</span>
                             </div>
-                        </div>                        <div class="list-grid__item">
+                        </div>
+                        <div class="list-grid__item">
                             <div class="list-grid__item__icon" style="background-image: url(installation/images/icon.webp);"></div>
                             <div class="list-grid__item__description">
                                 <span class="list-grid__item__title"><a href="installation/">Installation</a></span>
                                 <span class="list-grid__item__abstract">Installation GIT, VS Code, PXPros</span>
                             </div>
-                        </div>                        <div class="list-grid__item">
+                        </div>
+                        <div class="list-grid__item">
                             <div class="list-grid__item__icon" style="background-image: url(pxpros/images/icon.webp);"></div>
                             <div class="list-grid__item__description">
                                 <span class="list-grid__item__title"><a href="pxpros/">PXPros</a></span>
                                 <span class="list-grid__item__abstract">PHP Preprocessor</span>
                             </div>
-                        </div>                        <div class="list-grid__item">
+                        </div>
+                        <div class="list-grid__item">
                             <div class="list-grid__item__icon" style="background-image: url(page-types/images/icon.webp);"></div>
                             <div class="list-grid__item__description">
                                 <span class="list-grid__item__title"><a href="page-types/">Types de pages</a></span>
                                 <span class="list-grid__item__abstract">Liste, article, exercice, outil</span>
                             </div>
-                        </div>                        <div class="list-grid__item">
+                        </div>
+                        <div class="list-grid__item">
                             <div class="list-grid__item__icon" style="background-image: url(videos/images/icon.webp);"></div>
                             <div class="list-grid__item__description">
                                 <span class="list-grid__item__title"><a href="videos/">Vidéos</a></span>
                                 <span class="list-grid__item__abstract">Utiliser Github, Youtube et Vimeo</span>
                             </div>
-                        </div>                    </div>
+                        </div>
+                    </div>
                 </div>
-            </article>        </main>
+            </article>
+        </main>
         <footer>
-            <div id="copyright">© Tous droits réservés<br>Maxime Larrivée-Roy, 2025</div>
+            © Tous droits réservés<br>Maxime Larrivée-Roy, 2025            
         </footer>
         <script>app.mount('body');</script>
     </body>

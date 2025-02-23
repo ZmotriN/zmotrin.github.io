@@ -33,18 +33,16 @@
     </head>
     <body>
         <script>document.body.classList.add(localStorage.getItem('darkmode') === 'true' ? 'dark' : 'light');</script>        <a id="top"></a>
+        <div id="logo" @click="goToTop('../../', '')" title="Retour à l'accueil"></div>
+        <div title="Interrupteur" id="lightswitch" ref="lightswitch" @click="lightswitch()"></div>
         <header>
-            <div title="Interrupteur" id="lightswitch" ref="lightswitch" @click="lightswitch()"></div>
+            <div id="breadcrumb">
+                <div id="breadcrumb_normal"><div class="breadcrum-logo" style="background-image: url(../../pxdoc/images/logo.svg);"></div><a href="../../../">Maxime L. Roy</a> > <a href="../">Exercices CSS</a> ></div>
+                <div id="breadcrumb_index"></div>
+            </div>
+            <h1 id="title">Pink Floyd - The Dark Side of the Moon</h1>
         </header>
         <main>
-            <div id="subhead">
-                <div id="logo" @click="goToTop('../../', '')" title="Retour à l'accueil"></div>
-                <div id="breadcrumb">
-                    <div id="breadcrumb_normal"><div class="breadcrum-logo" style="background-image: url(../../pxdoc/images/logo.svg);"></div><a href="../../../">Maxime L. Roy</a> > <a href="../">Exercices CSS</a> ></div>
-                    <div id="breadcrumb_index"></div>
-                </div>
-                <h1 id="title">Pink Floyd - The Dark Side of the Moon</h1>
-            </div>
             <article>
                 <div id="contents">
 
@@ -163,12 +161,13 @@
 <doclink href="https://codepen.io/ZmotriN/pen/rNoxeMz">Pen / Pink Floyd - The Dark Side of the Moon</doclink><br>
 <doclink href="./corrige/">Démo / Pink Floyd - The Dark Side of the Moon</doclink>
 
-<dots></dots>                </div>
+<dots></dots>
+                </div>
                 <tabledesmatieres></tabledesmatieres>
             </article>
         </main>
         <footer>
-            <div id="copyright">© Tous droits réservés<br>Maxime Larrivée-Roy, 2025</div>
+            © Tous droits réservés<br>Maxime Larrivée-Roy, 2025            
         </footer>
         <script>app.mount('body');</script>
     </body>
