@@ -5,10 +5,12 @@
 - refactor intlink / listlink
 - Qu'est-ce qu'on fait avec #logo ?
 - pxpros timezone
-- repair footer
-
-
-
+- composant extlink
+- page type blank et extern
+- cache class
+- scraper
+- title like OG:title
+- refactor index
 
 
 - git clone --recurse-submodules https://github.com/ZmotriN/zmotrin.github.io.git

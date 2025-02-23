@@ -1,7 +1,7 @@
 {
     "data": {
         "project": "Maxime Larrivée-Roy",
-        "domain": "https://zmotrin.github.io/",
+        "baseurl": "https://zmotrin.github.io/",
         "author": "Maxime Larrivée-Roy",
         "lang": "fr_ca",
         "gtag": ""
@@ -13,5 +13,5 @@
     "before": "pxdoc/_includes/before.php",
     "after": "pxdoc/_includes/after.php",
     "scripts": [],
-    "styles": []
+    "styles": ""
 }
