@@ -24,6 +24,7 @@
         <meta property="og:image" content="https://zmotrin.github.io/manuel/images/image.webp">
         <link rel="icon" type="image/x-icon" href="../../pxdoc/images/favicon.ico">
         <link rel="stylesheet" href="../../pxdoc/styles/styles.min.css">
+        <link rel="stylesheet" href="../../theme/styles/styles.min.css">
         <script>const shared = '../../pxdoc/';</script>
         <script src="../../pxdoc/jscripts/highlight.min.js"></script>
         <script src="../../pxdoc/jscripts/swiper-bundle.min.js"></script>
@@ -32,7 +33,8 @@
         <title>Composantes</title>
     </head>
     <body>
-        <script>document.body.classList.add(localStorage.getItem('darkmode') === 'true' ? 'dark' : 'light');</script>        <a id="top"></a>
+        <script>document.body.classList.add(localStorage.getItem('darkmode') === 'true' ? 'dark' : 'light');</script>
+        <a id="top"></a>
         <div id="logo" @click="goToTop('../../', '')" title="Retour à l'accueil"></div>
         <div title="Interrupteur" id="lightswitch" ref="lightswitch" @click="lightswitch()"></div>
         <header>
@@ -487,7 +489,7 @@ Utilisez la proprité <span class="inline-code">transform</span>.<br><br>
 
 <h3>&lt;clip&gt;</h3>
 <highlight lang="html" scroll="true">&lt;clip title=&quot;Qu&#039;est-ce que le boson de Higgs?&quot; src=&quot;videos/le-boson-de-higgs.mp4&quot;&gt;&lt;/clip&gt;</highlight>
-<clip src="videos/le-boson-de-higgs.mp4" title="Qu'est-ce que le boson de Higgs?"></clip>
+<clip src="videos/le-boson-de-higgs.mp4" title="Qu&#039;est-ce que le boson de Higgs?" aspect="16/9"></clip>
 <doclink href="../videos">Manuel / Vidéos</doclink>
 <br><br>
 

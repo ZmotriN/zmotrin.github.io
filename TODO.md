@@ -11,6 +11,11 @@
 - scraper
 - title like OG:title
 - refactor index
+- favicon and default image in _pxpros.json
+- rename _pxpros.json to _pxdoc.json
+- html indent
+- boxlink
+- no breadcrumb
 
 
 - git clone --recurse-submodules https://github.com/ZmotriN/zmotrin.github.io.git

@@ -24,6 +24,7 @@
         <meta property="og:image" content="https://zmotrin.github.io/exercices-css/mr-oizo-all-wet/images/image.webp">
         <link rel="icon" type="image/x-icon" href="../../pxdoc/images/favicon.ico">
         <link rel="stylesheet" href="../../pxdoc/styles/styles.min.css">
+        <link rel="stylesheet" href="../../theme/styles/styles.min.css">
         <script>const shared = '../../pxdoc/';</script>
         <script src="../../pxdoc/jscripts/highlight.min.js"></script>
         <script src="../../pxdoc/jscripts/swiper-bundle.min.js"></script>
@@ -32,7 +33,8 @@
         <title>Mr. Oizo - All Wet</title>
     </head>
     <body>
-        <script>document.body.classList.add(localStorage.getItem('darkmode') === 'true' ? 'dark' : 'light');</script>        <a id="top"></a>
+        <script>document.body.classList.add(localStorage.getItem('darkmode') === 'true' ? 'dark' : 'light');</script>
+        <a id="top"></a>
         <div id="logo" @click="goToTop('../../', '')" title="Retour à l'accueil"></div>
         <div title="Interrupteur" id="lightswitch" ref="lightswitch" @click="lightswitch()"></div>
         <header>
