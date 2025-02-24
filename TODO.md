@@ -16,6 +16,6 @@
 - html indent
 - boxlink
 - no breadcrumb
-
+- refactor function / no camel case
 
 - git clone --recurse-submodules https://github.com/ZmotriN/zmotrin.github.io.git
