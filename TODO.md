@@ -7,7 +7,6 @@
 - pxpros timezone
 - composant extlink
 - page type blank et extern
-- cache class
 - scraper
 - title like OG:title
 - refactor index
@@ -15,7 +14,10 @@
 - rename _pxpros.json to _pxdoc.json
 - html indent
 - boxlink
-- no breadcrumb
+- Parametre: no breadcrumb / no listing
 - refactor function / no camel case
+- highlight font size
+- webp partout?
+
 
 - git clone --recurse-submodules https://github.com/ZmotriN/zmotrin.github.io.git

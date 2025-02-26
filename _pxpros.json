@@ -12,6 +12,6 @@
     ],
     "before": "pxdoc/_includes/before.php",
     "after": "pxdoc/_includes/after.php",
-    "scripts": [],
+    "scripts": "theme/jscripts/components.js",
     "styles": "theme/styles/styles.min.css"
 }

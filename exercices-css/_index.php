@@ -4,6 +4,7 @@
  * @title    Exercices CSS
  * @icon     images/icon.webp
  * @image    images/image.webp
+ * @label    Exercices
  * @abstract Collection d'exercices CSS sous forme de pochettes d'albums connus.
  */
 ?>
