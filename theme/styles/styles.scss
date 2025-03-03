@@ -65,7 +65,7 @@ $color_red_hex: unquote('#{str-slice(ie-hex-str($color_red), 4)}');
     --main-color-grey-light: #{color.adjust($main_color, $alpha: -0.3)};
     --main-color-back-dark: #{darken(color.adjust($main_color, $blackness: 50%), 15%)};
     --main-color-gradient-dark: #{color.adjust($main_color, $blackness: 30%)};
-    --main-color-label-dark: #{color.adjust($main_color, $whiteness: 10%)};
+    --main-color-label-dark: #{color.adjust($main_color, $whiteness: 5%)};
     --main-color-grey-dark: #{color.adjust($main_color, $alpha: -0.3)};
 
     --second-color: #{$second_color};
